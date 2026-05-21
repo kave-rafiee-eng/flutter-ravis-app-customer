@@ -4,3 +4,23 @@ flutter doctor
 flutter devices
 
 Flutter dev tool
+
+# پاک کردن متغیرهای قبلی
+unset http_proxy
+unset https_proxy
+unset all_proxy
+
+# تنظیم پروکسی جدید برای این سشن
+export http_proxy=http://127.0.0.1:32929
+export https_proxy=http://127.0.0.1:32929
+export all_proxy=socks5://127.0.0.1:62726
+
+set http_proxy=http://127.0.0.1:32929
+set https_proxy=http://127.0.0.1:32929
+set all_proxy=socks5://127.0.0.1:62726
+
+flutter pub add intl
+
+set PUB_HOSTED_URL=https://mirror-flutter.runflare.com
+set FLUTTER_STORAGE_BASE_URL=https://mirror-gcs.runflare.com
+
