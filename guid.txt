@@ -1,0 +1,6 @@
+flutter build apk
+
+flutter doctor
+flutter devices
+
+Flutter dev tool
