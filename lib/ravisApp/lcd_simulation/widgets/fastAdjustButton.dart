@@ -96,9 +96,14 @@ class _FastAdjustButtonState extends State<FastAdjustButton> {
             height: _circleSize,
             transform: Matrix4.translationValues(0, _pressed ? 2 : 0, 0),
             decoration: BoxDecoration(
-              color: _pressed ? const Color(0xFF1A1A1A) : Colors.black,
+              color: _pressed
+                  ? const Color(0xFF1A1A1A)
+                  : const Color.fromARGB(255, 172, 13, 13),
               shape: BoxShape.circle,
-              border: Border.all(color: const Color(0xFF444444), width: 2),
+              border: Border.all(
+                color: const Color.fromARGB(255, 126, 38, 38),
+                width: 2,
+              ),
               boxShadow: _pressed
                   ? const [
                       BoxShadow(
@@ -118,6 +123,93 @@ class _FastAdjustButtonState extends State<FastAdjustButton> {
             child: Icon(widget.icon, color: Colors.white, size: 26),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class SimpleAdjustButton extends StatefulWidget {
+  final IconData icon;
+  final void Function(int step) onStep;
+  final int Function(int repeatCount)? holdStep;
+
+  const SimpleAdjustButton({
+    super.key,
+    required this.icon,
+    required this.onStep,
+    this.holdStep,
+  });
+
+  @override
+  State<SimpleAdjustButton> createState() => _SimpleAdjustButtonState();
+}
+
+class _SimpleAdjustButtonState extends State<SimpleAdjustButton> {
+  Timer? _timer;
+  int _repeatCount = 0;
+  bool _didRepeat = false;
+  bool _pressed = false;
+
+  static const double _size = 40;
+  static const double _iconSize = 18;
+
+  void _tick() {
+    if (!mounted) return;
+    _didRepeat = true;
+    if (widget.holdStep != null) {
+      widget.onStep(widget.holdStep!(_repeatCount));
+    } else {
+      widget.onStep(1);
+    }
+    _repeatCount++;
+    final delayMs = _repeatCount < 5 ? 250 : (_repeatCount < 15 ? 120 : 60);
+    _timer = Timer(Duration(milliseconds: delayMs), _tick);
+  }
+
+  void _startHold() {
+    setState(() => _pressed = true);
+    _repeatCount = 0;
+    _didRepeat = false;
+    _timer?.cancel();
+    _timer = Timer(const Duration(milliseconds: 350), _tick);
+  }
+
+  void _stopHold() {
+    _timer?.cancel();
+    if (!_didRepeat) {
+      widget.onStep(1);
+    }
+    _repeatCount = 0;
+    _didRepeat = false;
+    if (_pressed) {
+      setState(() => _pressed = false);
+    }
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Listener(
+      onPointerDown: (_) => _startHold(),
+      onPointerUp: (_) => _stopHold(),
+      onPointerCancel: (_) => _stopHold(),
+      child: Container(
+        width: _size,
+        height: _size,
+        margin: EdgeInsets.zero,
+        decoration: BoxDecoration(
+          color: _pressed
+              ? const Color(0xFF1A1A1A)
+              : const Color.fromARGB(255, 172, 13, 13),
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(color: Colors.black87, width: 1),
+        ),
+        child: Icon(widget.icon, color: Colors.white, size: _iconSize),
       ),
     );
   }

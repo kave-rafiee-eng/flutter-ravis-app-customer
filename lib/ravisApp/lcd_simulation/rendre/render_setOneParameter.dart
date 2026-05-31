@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/GridPainter.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcd_functions.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/fastAdjustButton.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/show_rendered.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
 class RendererSettingOneParameterData {
@@ -9,8 +8,10 @@ class RendererSettingOneParameterData {
   final DescriptionType description;
   late int value;
   late double factor;
+  final void Function() onBack;
 
   RendererSettingOneParameterData({
+    required this.onBack,
     required this.item,
     required this.description,
   }) {
@@ -52,7 +53,7 @@ class RenderSettingOneParameter extends StatefulWidget {
   const RenderSettingOneParameter({
     super.key,
     required this.inputData,
-    this.cellSize = 3,
+    this.cellSize = 2.2,
   });
 
   @override
@@ -96,59 +97,17 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneParameter> {
   @override
   Widget build(BuildContext context) {
     final buffer = _lcdFunctions.getBuffer();
-    final w = buffer.cols * widget.cellSize;
-    final h = buffer.rows * widget.cellSize;
 
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(
-          width: w,
-          height: h,
-          child: CustomPaint(
-            painter: BoolGridPainter(
-              lcdbuffer: buffer,
-              cellSize: widget.cellSize,
-              trueColor: const Color.fromARGB(255, 63, 12, 12),
-              falseColor: Colors.white,
-              borderColor: const Color.fromARGB(255, 41, 10, 10),
-            ),
-          ),
-        ),
-        SizedBox(height: 20),
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FastAdjustButton(
-              icon: Icons.remove,
-              onStep: (step) => _changeValue(-step),
-              holdStep: _holdStep,
-            ),
-            SizedBox(width: 10),
-            FastAdjustButton(
-              icon: Icons.add,
-              onStep: (step) => _changeValue(step),
-              holdStep: _holdStep,
-            ),
-            SizedBox(width: 10),
-            FastAdjustButton(
-              icon: Icons.exit_to_app,
-              onStep: (step) => (s) {},
-              holdStep: (s) {
-                return 0;
-              },
-            ),
-            SizedBox(width: 10),
-            FastAdjustButton(
-              icon: Icons.done,
-              onStep: (step) => (s) {},
-              holdStep: (s) {
-                return 0;
-              },
-            ),
-          ],
-        ),
-      ],
+    return ShowRendered(
+      description: 'description',
+      buffer: buffer,
+      cellSize: widget.cellSize,
+      onAdd: (step) => _changeValue(step),
+      addHoldStep: _holdStep,
+      onRemove: (step) => _changeValue(-step),
+      removeHoldStep: _holdStep,
+      onDone: (_) {},
+      onBack: (_) => widget.inputData.onBack(),
     );
   }
 }

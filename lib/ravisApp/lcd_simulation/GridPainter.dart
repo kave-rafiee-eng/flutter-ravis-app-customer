@@ -11,9 +11,9 @@ class BoolGridPainter extends CustomPainter {
   BoolGridPainter({
     required this.lcdbuffer,
     this.cellSize = 3,
-    this.trueColor = Colors.black,
-    this.falseColor = const Color.fromARGB(255, 201, 201, 201),
-    this.borderColor = const Color.fromARGB(255, 226, 226, 226),
+    this.trueColor = const Color.fromARGB(255, 39, 58, 100),
+    this.falseColor = const Color.fromARGB(255, 235, 234, 234),
+    this.borderColor = const Color.fromARGB(255, 41, 10, 10),
   });
 
   @override

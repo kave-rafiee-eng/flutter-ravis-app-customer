@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/GridPainter.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcd_functions.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/fastAdjustButton.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/show_rendered.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
 class RendererSubMenuData {
   final List<ParanetIdLableType> submenu;
+  final void Function(String id, String name) handleSelect;
+  final void Function() onBack;
   // final DescriptionType description;
   late int menuIndex;
   late int menuOffset;
+
   RendererSubMenuData({
+    required this.onBack,
+    required this.handleSelect,
     required this.submenu,
     // required this.description
   }) {
@@ -75,7 +79,6 @@ class _RenderSubMenuState extends State<RenderSubMenu> {
   void initState() {
     super.initState();
     _lcdFunctions = LcdFunctions();
-    _render();
   }
 
   void _render() {
@@ -94,48 +97,22 @@ class _RenderSubMenuState extends State<RenderSubMenu> {
 
   @override
   Widget build(BuildContext context) {
+    _render();
     final buffer = _lcdFunctions.getBuffer();
-    final w = buffer.cols * widget.cellSize;
-    final h = buffer.rows * widget.cellSize;
 
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        SizedBox(
-          width: w + 30,
-          height: h + 45,
-          child: CustomPaint(
-            painter: BoolGridPainter(
-              lcdbuffer: buffer,
-              cellSize: widget.cellSize,
-              trueColor: const Color.fromARGB(255, 63, 12, 12),
-              falseColor: Colors.white,
-              borderColor: const Color.fromARGB(255, 41, 10, 10),
-            ),
-          ),
-        ),
-        SizedBox(height: 20),
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            FastAdjustButton(
-              icon: Icons.remove,
-              onStep: (_) {
-                _changeValue(-1);
-              },
-            ),
-            FastAdjustButton(
-              icon: Icons.add,
-              onStep: (_) {
-                _changeValue(1);
-              },
-            ),
-            FastAdjustButton(icon: Icons.exit_to_app, onStep: (_) {}),
-            FastAdjustButton(icon: Icons.done, onStep: (_) {}),
-          ],
-        ),
-      ],
+    return ShowRendered(
+      description: 'description',
+      buffer: buffer,
+      cellSize: widget.cellSize,
+      onAdd: (_) => _changeValue(-1),
+      onRemove: (_) => _changeValue(1),
+      onDone: (_) {
+        widget.inputData.handleSelect(
+          widget.inputData.submenu[widget.inputData.menuIndex].id,
+          widget.inputData.submenu[widget.inputData.menuIndex].label,
+        );
+      },
+      onBack: (_) => widget.inputData.onBack(),
     );
   }
 }
