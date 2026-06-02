@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcd_functions.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/cardDescription.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/show_rendered.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/textSelector.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
 class RendererSettingMultiSelectData {
   final SettingMultySelectType item;
-  // final DescriptionType description;
+  final DescriptionType description;
   late List<int> values;
   final void Function() onBack;
   late int menuIndex;
@@ -15,7 +18,7 @@ class RendererSettingMultiSelectData {
   RendererSettingMultiSelectData({
     required this.onBack,
     required this.item,
-    // required this.description,
+    required this.description,
   }) {
     values = List.filled(item.itemLabels.length, 0);
     selected = false;
@@ -76,11 +79,13 @@ void _renderLcd(LcdFunctions lcd, RendererSettingMultiSelectData data) {
 class RenderSettingMultiSelect extends StatefulWidget {
   final RendererSettingMultiSelectData inputData;
   final double cellSize;
+  final LanguageEnum language;
 
   const RenderSettingMultiSelect({
     super.key,
     required this.inputData,
     this.cellSize = 2.2,
+    required this.language,
   });
 
   @override
@@ -188,22 +193,57 @@ class _RenderSettingMultiSelectState extends State<RenderSettingMultiSelect> {
     _render();
     final buffer = _lcdFunctions.getBuffer();
 
-    return ShowRendered(
-      description: 'description',
-      buffer: buffer,
-      cellSize: widget.cellSize,
-      onAdd: (_) {
-        _swUp();
-      },
-      onRemove: (_) {
-        _swDn();
-      },
-      onDone: (_) {
-        _swOk();
-      },
-      onBack: (_) {
-        _swExt();
-      },
+    final data = widget.inputData;
+
+    List<CarouselItem> descriptions = [];
+
+    descriptions.add(
+      CarouselItem(
+        title: 'توضیح منو',
+        content: extranctDescription(
+          widget.language,
+          widget.inputData.description,
+        ),
+      ),
+    );
+    // selcted item
+    descriptions.add(
+      CarouselItem(
+        title: data.item.itemLabels[data.menuIndex].value,
+        content: data.item.itemLabels[data.menuIndex].description.persian,
+      ),
+    );
+    // selcted
+    descriptions.add(
+      CarouselItem(
+        title: data.item.options[data.values[data.menuIndex]].value,
+        content:
+            data.item.options[data.values[data.menuIndex]].description.persian,
+      ),
+    );
+
+    return Column(
+      children: [
+        ShowRendered(
+          // language: LanguageEnum.english,
+          // description: widget.inputData.description,
+          buffer: buffer,
+          cellSize: widget.cellSize,
+          onAdd: (_) {
+            _swUp();
+          },
+          onRemove: (_) {
+            _swDn();
+          },
+          onDone: (_) {
+            _swOk();
+          },
+          onBack: (_) {
+            _swExt();
+          },
+        ),
+        Expanded(child: TextCarousel(items: descriptions)),
+      ],
     );
   }
 }

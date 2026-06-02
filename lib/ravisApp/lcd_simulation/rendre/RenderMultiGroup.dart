@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcdBuffer.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcd_functions.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/cardDescription.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/show_rendered.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/textSelector.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 import 'dart:async';
 
 class RendererSettingMultiGroupData {
   final List<SettingMultyGroupType> items;
-  // final DescriptionType description;
+  final DescriptionType description;
   late List<int> values;
   final void Function() onBack;
 
@@ -20,8 +23,6 @@ class RendererSettingMultiGroupData {
   late bool grupSelected;
   late int grupSelectedIndex;
 
-  late bool selected;
-
   late int slowBlink;
 
   late bool refreshF;
@@ -31,14 +32,13 @@ class RendererSettingMultiGroupData {
   RendererSettingMultiGroupData({
     required this.onBack,
     required this.items,
-    // required this.description,
+    required this.description,
   }) {
     values = List.filled(items.length * 12, 0);
     groupIndex = 0;
     groupOffset = 0;
     grupSelected = false;
     grupSelectedIndex = 0;
-    selected = false;
     slowBlink = 0;
     itemIndex = 0;
     itemOffset = 0;
@@ -107,7 +107,7 @@ void _renderGroupSetting(LcdFunctions lcd, RendererSettingMultiGroupData data) {
   if (data.refreshF) {
     data.refreshF = false;
     data.slowBlink++;
-    print('slowBlink ${data.slowBlink}');
+    // print('slowBlink ${data.slowBlink}');
   }
   bool blink = false;
   if (data.slowBlink > 3) data.slowBlink = 0;
@@ -240,11 +240,13 @@ void _renderLcd(LcdFunctions lcd, RendererSettingMultiGroupData data) {
 class RenderSettingMultiGroup extends StatefulWidget {
   final RendererSettingMultiGroupData inputData;
   final double cellSize;
+  final LanguageEnum language;
 
   const RenderSettingMultiGroup({
     super.key,
     required this.inputData,
     this.cellSize = 2.2,
+    required this.language,
   });
 
   @override
@@ -406,8 +408,6 @@ class _RenderSettingMultiGroupState extends State<RenderSettingMultiGroup> {
 
   void _swOk() {
     var data = widget.inputData;
-    // var items = widget.inputData.getItem;
-
     if (data.grupSelected) {
       setState(() {
         data.itemSelected = !data.itemSelected;
@@ -441,24 +441,83 @@ class _RenderSettingMultiGroupState extends State<RenderSettingMultiGroup> {
     _render();
     final buffer = _lcdFunctions.getBuffer();
 
+    var data = widget.inputData;
+    var items = widget.inputData.getItem;
+
+    List<CarouselItem> descriptions = [];
+
+    if (data.grupSelected) {
+      var activeItem = items[data.itemIndex];
+
+      if (activeItem.settingOneParameter != null) {
+        var settingOneParameter = activeItem.settingOneParameter!;
+        descriptions.add(
+          CarouselItem(
+            title: settingOneParameter.label,
+            content: extranctDescription(
+              widget.language,
+              settingOneParameter.description,
+            ),
+          ),
+        );
+      }
+
+      if (activeItem.settingOneSelect != null) {
+        var settingOneSelect = activeItem.settingOneSelect!;
+        descriptions.add(
+          CarouselItem(
+            title: settingOneSelect.label,
+            content: extranctDescription(
+              widget.language,
+              settingOneSelect.description,
+            ),
+          ),
+        );
+
+        descriptions.add(
+          CarouselItem(
+            title: settingOneSelect.options[getValueActive()].value,
+            content:
+                settingOneSelect.options[getValueActive()].description.persian,
+          ),
+        );
+      }
+    } else {
+      descriptions.add(
+        CarouselItem(
+          title: 'توضیح منو',
+          content: extranctDescription(
+            widget.language,
+            widget.inputData.description,
+          ),
+        ),
+      );
+    }
+
     LcdBuffer newBuf = buffer.copy();
-    print('_render');
-    return ShowRendered(
-      description: 'description',
-      buffer: newBuf,
-      cellSize: widget.cellSize,
-      onAdd: (_) {
-        _swUp();
-      },
-      onRemove: (_) {
-        _swDn();
-      },
-      onDone: (_) {
-        _swOk();
-      },
-      onBack: (_) {
-        _swExt();
-      },
+
+    return Column(
+      children: [
+        ShowRendered(
+          // language: LanguageEnum.english,
+          // description: widget.inputData.description,
+          buffer: newBuf,
+          cellSize: widget.cellSize,
+          onAdd: (_) {
+            _swUp();
+          },
+          onRemove: (_) {
+            _swDn();
+          },
+          onDone: (_) {
+            _swOk();
+          },
+          onBack: (_) {
+            _swExt();
+          },
+        ),
+        Expanded(child: TextCarousel(items: descriptions)),
+      ],
     );
   }
 }

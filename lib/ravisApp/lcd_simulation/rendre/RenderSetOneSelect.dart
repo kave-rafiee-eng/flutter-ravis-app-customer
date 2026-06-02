@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcd_functions.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/cardDescription.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/show_rendered.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/textSelector.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
 class RendererSettingOneSelectData {
@@ -42,11 +45,13 @@ void renderSettingOneSelect(
 class RenderSettingOneSelect extends StatefulWidget {
   final RendererSettingOneSelectData inputData;
   final double cellSize;
+  final LanguageEnum language;
 
   const RenderSettingOneSelect({
     super.key,
     required this.inputData,
     this.cellSize = 2.2,
+    required this.language,
   });
 
   @override
@@ -82,14 +87,42 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneSelect> {
   Widget build(BuildContext context) {
     final buffer = _lcdFunctions.getBuffer();
 
-    return ShowRendered(
-      description: 'description',
-      buffer: buffer,
-      cellSize: widget.cellSize,
-      onAdd: (step) => _changeValue(1),
-      onRemove: (step) => _changeValue(-1),
-      onDone: (_) {},
-      onBack: (_) => widget.inputData.onBack(),
+    final data = widget.inputData;
+
+    String titleMain = 'توضیح منو';
+    String contentMain = extranctDescription(
+      widget.language,
+      widget.inputData.description,
+    );
+
+    String titleSelectedMenu = data.item.options[data.value].value;
+    String contentSelectedMenu =
+        data.item.options[data.value].description.persian;
+
+    return Column(
+      children: [
+        ShowRendered(
+          // language: LanguageEnum.english,
+          // description: widget.inputData.description,
+          buffer: buffer,
+          cellSize: widget.cellSize,
+          onAdd: (step) => _changeValue(1),
+          onRemove: (step) => _changeValue(-1),
+          onDone: (_) {},
+          onBack: (_) => widget.inputData.onBack(),
+        ),
+        Expanded(
+          child: TextCarousel(
+            items: [
+              CarouselItem(title: titleMain, content: contentMain),
+              CarouselItem(
+                title: titleSelectedMenu,
+                content: contentSelectedMenu,
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

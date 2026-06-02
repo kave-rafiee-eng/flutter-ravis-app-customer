@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/render_multiGroup.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/render_multiSelect.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/render_setOneSelect.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/render_setOneParameter.dart';
-import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/render_sunMenu.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/RenderMultiGroup.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/RenderMultiSelect.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/RenderSetOneSelect.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/RenderSetOneParameter.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/RenderSubMenu.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
 class Rendermanager extends StatefulWidget {
-  const Rendermanager({super.key, required this.menus});
+  const Rendermanager({super.key, required this.menus, required this.language});
 
   final List<MenuType> menus;
+  final LanguageEnum language;
 
   @override
   State<Rendermanager> createState() => _RendermanagerState();
@@ -25,6 +27,27 @@ List<ParanetIdLableType> findParents(List<MenuType> allMenus, MenuType menu) {
     }
   }
   return Parents;
+}
+
+List<SubMenuVisualValues> findSubMenuVisual(
+  List<MenuType> allMenus,
+  MenuType menu,
+) {
+  List<SubMenuVisualValues> result = [];
+  for (var m in allMenus) {
+    for (var parentId in m.parentId) {
+      if (parentId.id == menu.id) {
+        result.add(
+          SubMenuVisualValues(
+            id: m.id,
+            label: parentId.label,
+            description: m.description,
+          ),
+        );
+      }
+    }
+  }
+  return result;
 }
 
 class _RendermanagerState extends State<Rendermanager> {
@@ -50,7 +73,10 @@ class _RendermanagerState extends State<Rendermanager> {
 
     if (menuSelected.type == TypeMenuEnum.submenu) {
       activeWidget = RenderSubMenu(
+        language: widget.language,
         inputData: RendererSubMenuData(
+          topBar: menuSelected.lable!,
+          description: menuSelected.description,
           handleSelect: (id, name) {
             setState(() {
               _activeId = id;
@@ -58,7 +84,7 @@ class _RendermanagerState extends State<Rendermanager> {
             });
           },
           onBack: oneBack,
-          submenu: findParents(widget.menus, menuSelected),
+          submenu: findSubMenuVisual(widget.menus, menuSelected),
         ),
       );
     }
@@ -66,7 +92,9 @@ class _RendermanagerState extends State<Rendermanager> {
     if (menuSelected.type == TypeMenuEnum.settingOnParameter &&
         menuSelected.data.settingOneParameter != null) {
       activeWidget = RenderSettingOneParameter(
+        language: widget.language,
         inputData: RendererSettingOneParameterData(
+          topBar: menuSelected.lable!,
           onBack: oneBack,
           item: menuSelected.data.settingOneParameter!,
           description: menuSelected.description,
@@ -77,6 +105,7 @@ class _RendermanagerState extends State<Rendermanager> {
     if (menuSelected.type == TypeMenuEnum.settingOnSelect &&
         menuSelected.data.settingOneSelect != null) {
       activeWidget = RenderSettingOneSelect(
+        language: widget.language,
         inputData: RendererSettingOneSelectData(
           onBack: oneBack,
           item: menuSelected.data.settingOneSelect!,
@@ -88,7 +117,9 @@ class _RendermanagerState extends State<Rendermanager> {
     if (menuSelected.type == TypeMenuEnum.settingMultySelect &&
         menuSelected.data.settingMultySelect != null) {
       activeWidget = RenderSettingMultiSelect(
+        language: widget.language,
         inputData: RendererSettingMultiSelectData(
+          description: menuSelected.description,
           onBack: oneBack,
           item: menuSelected.data.settingMultySelect!,
           // description: menuSelected.description,
@@ -99,7 +130,9 @@ class _RendermanagerState extends State<Rendermanager> {
     if (menuSelected.type == TypeMenuEnum.settingMultyGroup &&
         menuSelected.data.settingMultyGroup != null) {
       activeWidget = RenderSettingMultiGroup(
+        language: widget.language,
         inputData: RendererSettingMultiGroupData(
+          description: menuSelected.description,
           onBack: oneBack,
           items: menuSelected.data.settingMultyGroup!,
           // description: menuSelected.description,
@@ -107,21 +140,21 @@ class _RendermanagerState extends State<Rendermanager> {
       );
     }
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.start,
+      // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Card(
           child: Wrap(
-            spacing: 8.0,
-            runSpacing: 4.0,
+            spacing: 4.0,
+            // runSpacing: 2.0,
             alignment: WrapAlignment.start,
             children: [
               for (int index = 0; index < navList.length; index++)
                 TextButton(
                   style: TextButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 8,
+                      // horizontal: 2,
+                      // vertical: 2,
                     ),
                     backgroundColor: _activeId == navList[index].id
                         ? Colors.blue.withValues(alpha: 0.5)
@@ -133,24 +166,24 @@ class _RendermanagerState extends State<Rendermanager> {
                       navList = navList.sublist(0, index + 1);
                     });
                   },
-                  child: Text('${navList[index].label} -> '),
+                  child: Text(navList[index].label),
                 ),
             ],
           ),
         ),
-        const SizedBox(height: 5),
-        Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.amber,
-            borderRadius: BorderRadiusGeometry.circular(14),
-          ),
-          child: Text(
-            menuSelected.lable!,
-            style: TextStyle(fontSize: 24),
-            textAlign: TextAlign.center,
-          ),
-        ),
+        // const SizedBox(height: 5),
+        // Container(
+        //   width: double.infinity,
+        //   decoration: BoxDecoration(
+        //     color: Colors.amber,
+        //     borderRadius: BorderRadiusGeometry.circular(14),
+        //   ),
+        //   child: Text(
+        //     menuSelected.lable!,
+        //     style: TextStyle(fontSize: 24),
+        //     textAlign: TextAlign.center,
+        //   ),
+        // ),
         const SizedBox(height: 20),
         Expanded(child: activeWidget),
       ],

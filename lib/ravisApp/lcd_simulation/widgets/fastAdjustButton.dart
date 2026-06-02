@@ -151,8 +151,8 @@ class _SimpleAdjustButtonState extends State<SimpleAdjustButton> {
   bool _didRepeat = false;
   bool _pressed = false;
 
-  static const double _size = 40;
-  static const double _iconSize = 18;
+  static const double _size = 45;
+  static const double _iconSize = 35;
 
   void _tick() {
     if (!mounted) return;
@@ -206,7 +206,7 @@ class _SimpleAdjustButtonState extends State<SimpleAdjustButton> {
         decoration: BoxDecoration(
           color: _pressed
               ? const Color(0xFF1A1A1A)
-              : const Color.fromARGB(255, 172, 13, 13),
+              : const Color.fromARGB(255, 122, 121, 121),
           borderRadius: BorderRadius.circular(6),
           border: Border.all(color: Colors.black87, width: 1),
         ),

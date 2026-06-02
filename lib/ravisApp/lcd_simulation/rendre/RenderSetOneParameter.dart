@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcd_functions.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/cardDescription.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/show_rendered.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/textSelector.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
 class RendererSettingOneParameterData {
+  final String topBar;
   final SettingOneParameterType item;
   final DescriptionType description;
   late int value;
@@ -11,6 +15,7 @@ class RendererSettingOneParameterData {
   final void Function() onBack;
 
   RendererSettingOneParameterData({
+    required this.topBar,
     required this.onBack,
     required this.item,
     required this.description,
@@ -34,6 +39,9 @@ void renderSettingOneParameter(
   LcdFunctions lcd,
   RendererSettingOneParameterData data,
 ) {
+  lcd.fillRect(0, 0, X_PIXELS, 12, false);
+  lcd.lcdPrint(3, 3, true, data.topBar, 1);
+
   lcd.fillRect(0, 13, X_PIXELS, Y_PIXELS - 13, false);
   lcd.drawLine(0, 13, X_PIXELS - 1, 13, true);
   lcd.fillRect(0, 14, X_PIXELS, 16, true);
@@ -49,11 +57,13 @@ void renderSettingOneParameter(
 class RenderSettingOneParameter extends StatefulWidget {
   final RendererSettingOneParameterData inputData;
   final double cellSize;
+  final LanguageEnum language;
 
   const RenderSettingOneParameter({
     super.key,
     required this.inputData,
     this.cellSize = 2.2,
+    required this.language,
   });
 
   @override
@@ -98,16 +108,33 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneParameter> {
   Widget build(BuildContext context) {
     final buffer = _lcdFunctions.getBuffer();
 
-    return ShowRendered(
-      description: 'description',
-      buffer: buffer,
-      cellSize: widget.cellSize,
-      onAdd: (step) => _changeValue(step),
-      addHoldStep: _holdStep,
-      onRemove: (step) => _changeValue(-step),
-      removeHoldStep: _holdStep,
-      onDone: (_) {},
-      onBack: (_) => widget.inputData.onBack(),
+    String titleMain = 'توضیح منو';
+    String contentMain = extranctDescription(
+      widget.language,
+      widget.inputData.description,
+    );
+
+    return Column(
+      children: [
+        ShowRendered(
+          // language: widget.language,
+          // description: widget.inputData.description,
+          buffer: buffer,
+          cellSize: widget.cellSize,
+          onAdd: (step) => _changeValue(step),
+          addHoldStep: _holdStep,
+          onRemove: (step) => _changeValue(-step),
+          removeHoldStep: _holdStep,
+          onDone: (_) {},
+          onBack: (_) => widget.inputData.onBack(),
+        ),
+
+        Expanded(
+          child: TextCarousel(
+            items: [CarouselItem(title: titleMain, content: contentMain)],
+          ),
+        ),
+      ],
     );
   }
 }

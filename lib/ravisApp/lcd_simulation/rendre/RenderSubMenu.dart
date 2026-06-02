@@ -1,27 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcd_functions.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/cardDescription.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/show_rendered.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/textSelector.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
+class SubMenuVisualValues {
+  final String id;
+  final String label;
+  final DescriptionType description;
+
+  SubMenuVisualValues({
+    required this.id,
+    required this.label,
+    required this.description,
+  });
+}
+
 class RendererSubMenuData {
-  final List<ParanetIdLableType> submenu;
+  final String topBar;
+  final List<SubMenuVisualValues> submenu;
   final void Function(String id, String name) handleSelect;
   final void Function() onBack;
-  // final DescriptionType description;
+  final DescriptionType description;
   late int menuIndex;
   late int menuOffset;
 
   RendererSubMenuData({
+    required this.topBar,
     required this.onBack,
     required this.handleSelect,
     required this.submenu,
-    // required this.description
+    required this.description,
   }) {
     menuIndex = 0;
     menuOffset = 0;
   }
 
-  List<ParanetIdLableType> get getSubmenuList => submenu;
+  List<SubMenuVisualValues> get getSubmenuList => submenu;
 }
 
 void _renderLcd(LcdFunctions lcd, RendererSubMenuData data) {
@@ -56,16 +73,21 @@ void _renderLcd(LcdFunctions lcd, RendererSubMenuData data) {
   }
 
   lcd.drawScrollBar(data.menuOffset, data.submenu.length, menuVisibleItems);
+
+  lcd.fillRect(0, 0, X_PIXELS, 12, false);
+  lcd.lcdPrint(3, 3, true, data.topBar, 1);
 }
 
 class RenderSubMenu extends StatefulWidget {
   final RendererSubMenuData inputData;
   final double cellSize;
+  final LanguageEnum language;
 
   const RenderSubMenu({
     super.key,
     required this.inputData,
     this.cellSize = 2.2,
+    required this.language,
   });
 
   @override
@@ -98,21 +120,50 @@ class _RenderSubMenuState extends State<RenderSubMenu> {
   @override
   Widget build(BuildContext context) {
     _render();
+    final data = widget.inputData;
+
     final buffer = _lcdFunctions.getBuffer();
 
-    return ShowRendered(
-      description: 'description',
-      buffer: buffer,
-      cellSize: widget.cellSize,
-      onAdd: (_) => _changeValue(-1),
-      onRemove: (_) => _changeValue(1),
-      onDone: (_) {
-        widget.inputData.handleSelect(
-          widget.inputData.submenu[widget.inputData.menuIndex].id,
-          widget.inputData.submenu[widget.inputData.menuIndex].label,
-        );
-      },
-      onBack: (_) => widget.inputData.onBack(),
+    String titleMain = 'توضیح منو';
+    String contentMain = extranctDescription(
+      widget.language,
+      widget.inputData.description,
+    );
+
+    String titleSelectedMenu = data.submenu[data.menuIndex].label;
+    String contentSelectedMenu = extranctDescription(
+      widget.language,
+      data.submenu[data.menuIndex].description,
+    );
+
+    return Column(
+      children: [
+        ShowRendered(
+          buffer: buffer,
+          cellSize: widget.cellSize,
+          onAdd: (_) => _changeValue(-1),
+          onRemove: (_) => _changeValue(1),
+          onDone: (_) {
+            widget.inputData.handleSelect(
+              widget.inputData.submenu[widget.inputData.menuIndex].id,
+              widget.inputData.submenu[widget.inputData.menuIndex].label,
+            );
+          },
+          onBack: (_) => widget.inputData.onBack(),
+        ),
+
+        Expanded(
+          child: TextCarousel(
+            items: [
+              CarouselItem(title: titleMain, content: contentMain),
+              CarouselItem(
+                title: titleSelectedMenu,
+                content: contentSelectedMenu,
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

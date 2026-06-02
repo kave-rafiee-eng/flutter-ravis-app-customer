@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/GridPainter.dart';
+import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/lcdBuffer.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/cardDescription.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/widgets/fastAdjustButton.dart';
+import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
 
 class ShowRendered extends StatelessWidget {
-  final String description;
+  // final LanguageEnum language;
+  // final DescriptionType description;
   final LcdBuffer buffer;
   final double cellSize;
   final void Function(int step) onAdd;
@@ -20,7 +23,8 @@ class ShowRendered extends StatelessWidget {
 
   const ShowRendered({
     super.key,
-    required this.description,
+    // required this.language,
+    // required this.description,
     required this.buffer,
     required this.onAdd,
     required this.onRemove,
@@ -43,45 +47,38 @@ class ShowRendered extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        CardDescription(description: description),
-        const SizedBox(height: 20),
+        // CardDescription(description: description, language: language),
+        // const SizedBox(height: 20),
+        SizedBox(
+          width: w + 30,
+          height: panelHeight,
+          child: CustomPaint(
+            painter: BoolGridPainter(
+              lcdbuffer: buffer,
+              cellSize: cellSize,
+              trueColor: trueColor,
+              falseColor: falseColor,
+              borderColor: borderColor,
+            ),
+          ),
+        ),
+
+        SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              width: w + 30,
-              height: panelHeight,
-              child: CustomPaint(
-                painter: BoolGridPainter(
-                  lcdbuffer: buffer,
-                  cellSize: cellSize,
-                  trueColor: trueColor,
-                  falseColor: falseColor,
-                  borderColor: borderColor,
-                ),
-              ),
+            SimpleAdjustButton(
+              icon: Icons.add,
+              onStep: onAdd,
+              holdStep: addHoldStep,
             ),
-            SizedBox(
-              height: panelHeight,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SimpleAdjustButton(
-                    icon: Icons.add,
-                    onStep: onAdd,
-                    holdStep: addHoldStep,
-                  ),
-                  SimpleAdjustButton(
-                    icon: Icons.remove,
-                    onStep: onRemove,
-                    holdStep: removeHoldStep,
-                  ),
-                  SimpleAdjustButton(icon: Icons.done, onStep: onDone),
-                  SimpleAdjustButton(icon: Icons.exit_to_app, onStep: onBack),
-                ],
-              ),
+            SimpleAdjustButton(
+              icon: Icons.remove,
+              onStep: onRemove,
+              holdStep: removeHoldStep,
             ),
+            SimpleAdjustButton(icon: Icons.done, onStep: onDone),
+            SimpleAdjustButton(icon: Icons.exit_to_app, onStep: onBack),
           ],
         ),
       ],
