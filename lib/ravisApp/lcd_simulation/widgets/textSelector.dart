@@ -8,7 +8,8 @@ class CarouselItem {
   CarouselItem({
     required this.title,
     required this.content,
-    this.textDir = TextDirection.ltr,
+    // this.textDir = TextDirection.ltr,
+    required this.textDir,
   });
 }
 

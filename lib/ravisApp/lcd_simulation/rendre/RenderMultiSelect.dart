@@ -204,6 +204,7 @@ class _RenderSettingMultiSelectState extends State<RenderSettingMultiSelect> {
           widget.language,
           widget.inputData.description,
         ),
+        textDir: claculateTextDir(widget.language),
       ),
     );
     // selcted item
@@ -211,6 +212,7 @@ class _RenderSettingMultiSelectState extends State<RenderSettingMultiSelect> {
       CarouselItem(
         title: data.item.itemLabels[data.menuIndex].value,
         content: data.item.itemLabels[data.menuIndex].description.persian,
+        textDir: TextDirection.rtl,
       ),
     );
     // selcted
@@ -219,6 +221,7 @@ class _RenderSettingMultiSelectState extends State<RenderSettingMultiSelect> {
         title: data.item.options[data.values[data.menuIndex]].value,
         content:
             data.item.options[data.values[data.menuIndex]].description.persian,
+        textDir: TextDirection.rtl,
       ),
     );
 

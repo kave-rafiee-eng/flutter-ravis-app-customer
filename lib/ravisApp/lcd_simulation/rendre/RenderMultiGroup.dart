@@ -458,6 +458,7 @@ class _RenderSettingMultiGroupState extends State<RenderSettingMultiGroup> {
               widget.language,
               settingOneParameter.description,
             ),
+            textDir: claculateTextDir(widget.language),
           ),
         );
       }
@@ -471,6 +472,7 @@ class _RenderSettingMultiGroupState extends State<RenderSettingMultiGroup> {
               widget.language,
               settingOneSelect.description,
             ),
+            textDir: claculateTextDir(widget.language),
           ),
         );
 
@@ -479,6 +481,7 @@ class _RenderSettingMultiGroupState extends State<RenderSettingMultiGroup> {
             title: settingOneSelect.options[getValueActive()].value,
             content:
                 settingOneSelect.options[getValueActive()].description.persian,
+            textDir: TextDirection.rtl,
           ),
         );
       }
@@ -490,6 +493,7 @@ class _RenderSettingMultiGroupState extends State<RenderSettingMultiGroup> {
             widget.language,
             widget.inputData.description,
           ),
+          textDir: claculateTextDir(widget.language),
         ),
       );
     }

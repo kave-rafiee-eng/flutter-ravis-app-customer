@@ -89,15 +89,26 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneSelect> {
 
     final data = widget.inputData;
 
-    String titleMain = 'توضیح منو';
-    String contentMain = extranctDescription(
-      widget.language,
-      widget.inputData.description,
+    List<CarouselItem> descriptions = [];
+
+    descriptions.add(
+      CarouselItem(
+        title: 'توضیح منو',
+        content: extranctDescription(
+          widget.language,
+          widget.inputData.description,
+        ),
+        textDir: claculateTextDir(widget.language),
+      ),
     );
 
-    String titleSelectedMenu = data.item.options[data.value].value;
-    String contentSelectedMenu =
-        data.item.options[data.value].description.persian;
+    descriptions.add(
+      CarouselItem(
+        title: data.item.options[data.value].value,
+        content: data.item.options[data.value].description.persian,
+        textDir: TextDirection.rtl,
+      ),
+    );
 
     return Column(
       children: [
@@ -111,17 +122,7 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneSelect> {
           onDone: (_) {},
           onBack: (_) => widget.inputData.onBack(),
         ),
-        Expanded(
-          child: TextCarousel(
-            items: [
-              CarouselItem(title: titleMain, content: contentMain),
-              CarouselItem(
-                title: titleSelectedMenu,
-                content: contentSelectedMenu,
-              ),
-            ],
-          ),
-        ),
+        Expanded(child: TextCarousel(items: descriptions)),
       ],
     );
   }

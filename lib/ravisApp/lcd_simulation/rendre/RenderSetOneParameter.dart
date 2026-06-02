@@ -108,10 +108,17 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneParameter> {
   Widget build(BuildContext context) {
     final buffer = _lcdFunctions.getBuffer();
 
-    String titleMain = 'توضیح منو';
-    String contentMain = extranctDescription(
-      widget.language,
-      widget.inputData.description,
+    List<CarouselItem> descriptions = [];
+
+    descriptions.add(
+      CarouselItem(
+        title: 'توضیح منو',
+        content: extranctDescription(
+          widget.language,
+          widget.inputData.description,
+        ),
+        textDir: claculateTextDir(widget.language),
+      ),
     );
 
     return Column(
@@ -129,11 +136,7 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneParameter> {
           onBack: (_) => widget.inputData.onBack(),
         ),
 
-        Expanded(
-          child: TextCarousel(
-            items: [CarouselItem(title: titleMain, content: contentMain)],
-          ),
-        ),
+        Expanded(child: TextCarousel(items: descriptions)),
       ],
     );
   }
