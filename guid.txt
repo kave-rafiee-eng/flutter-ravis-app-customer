@@ -32,3 +32,5 @@ flutter pub add json_annotation
  flutter pub add json_serializable
 
 dart run build_runner build
+
+lutter pub run pdfx

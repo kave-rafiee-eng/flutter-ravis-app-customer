@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_application_1/ravisApp/PdfViwer.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/enum.dart';
 import 'package:flutter_application_1/ravisApp/lcd_simulation/rendre/RenderHome.dart';
 import 'package:flutter_application_1/ravisApp/models/menu_model.dart';
@@ -24,7 +25,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       scrollBehavior: MyScrollBehavior(),
       debugShowCheckedModeBanner: false,
+
       home: LoadDataMenu(),
+      // home: PdfViwer(pdfPath: 'assets/sample.pdf'),
       theme: ThemeData(useMaterial3: true),
     );
   }
