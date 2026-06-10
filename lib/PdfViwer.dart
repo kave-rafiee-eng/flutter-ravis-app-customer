@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:pdfx/pdfx.dart';
 
-class PdfViwer extends StatefulWidget {
+//http://localhost:3000/pdf/download
+class PdfViwerKave extends StatefulWidget {
   final String pdfPath;
 
-  const PdfViwer({super.key, required this.pdfPath});
+  const PdfViwerKave({super.key, required this.pdfPath});
 
   @override
-  State<PdfViwer> createState() => _PdfViwerState();
+  State<PdfViwerKave> createState() => _PdfViwerState();
 }
 
-class _PdfViwerState extends State<PdfViwer> {
+class _PdfViwerState extends State<PdfViwerKave> {
   late PdfControllerPinch pdfControllerPinch;
   int totoalPage = 0;
   int currentPage = 1;
   @override
   void initState() {
     pdfControllerPinch = PdfControllerPinch(
-      document: PdfDocument.openAsset(widget.pdfPath),
+      // document: PdfDocument.openAsset(widget.pdfPath),
+      document: PdfDocument.openFile(widget.pdfPath),
     );
     super.initState();
   }
