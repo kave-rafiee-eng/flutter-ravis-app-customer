@@ -71,6 +71,7 @@ flutter:
         - assets/images/img1.jpg
         - assets/data/menu_json.json
         - assets/sample.pdf
+        - assets/errorCodes.json
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/to/resolution-aware-images
 

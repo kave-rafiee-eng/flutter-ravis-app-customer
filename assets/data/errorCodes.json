@@ -1,0 +1,1052 @@
+[
+  {
+    "code": "0",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-rls ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "1",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-cutRls ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "10",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-MT_dir",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "11",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-ENC_dir",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "12",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-CAL_ref",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "13",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-ENC_PTM",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "14",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-CalSp_01",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "15",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-CrData",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "16",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-DrvCom",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "17",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-DayCounter",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "18",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-PH Lost",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "19",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-PH Over",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "2",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-TC ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "20",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-PH Under",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "21",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-PH Rev",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "22",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-PH UNB",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "23",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-EncZero",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "24",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-Travel T",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "25",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-OverLoad",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "26",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-1CF Lost",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "27",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-CAx",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "28",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-CFx",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "29",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-Cut68",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "3",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-EndDoor ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "30",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-Cut69",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "31",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-Safty71",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "32",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-Safty90",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "33",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-T_level",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "34",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-FTO",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "35",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-STP",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "36",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-CF3",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "37",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-pulseLost",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "38",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-ZADO",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "39",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-Cut66",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "4",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-URA ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "40",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-SoftWare",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "5",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-EndDoor ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "6",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-CutSerial ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "7",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-Safty ",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "8",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-OverFloor",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "9",
+    "origin": "ADVANCE_TERSE",
+    "name": "E-FltDrv",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "code": "99",
+    "origin": "ADVANCE_TERSE",
+    "name": "test terse",
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "solution": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  }
+]
