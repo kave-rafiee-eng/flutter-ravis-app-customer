@@ -1,0 +1,83 @@
+[
+  {
+    "id": "9bd12300-bdd7-4e0f-b10d-4d79b5a80ae9",
+    "category": {
+      "arabic": "التدريبات",
+      "german": "Schulungen",
+      "english": "trainings",
+      "persian": "آموزش‌ها",
+      "russian": "обучения",
+      "turkish": "eğitimler"
+    },
+    "files": [
+      {
+        "name": {
+          "arabic": "إنترنت الأشياء",
+          "german": "Internet der Dinge",
+          "english": "Internet of Things",
+          "persian": "اینترنت اشیا",
+          "russian": "Интернет вещей",
+          "turkish": "Nesnelerin İnterneti"
+        },
+        "fileName": "serial qma.pdf"
+      },
+      {
+        "name": {
+          "arabic": "الاتصال بمحرك الأقراص",
+          "german": "Mit dem Laufwerk verbinden",
+          "english": "Connect to the drive",
+          "persian": "اتصال به درایو",
+          "russian": "Подключение к диску",
+          "turkish": "Sürücüye bağlan"
+        },
+        "fileName": "general advance.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ad29a9d1-b599-4370-ab33-56f067380374",
+    "category": {
+      "arabic": "منتجات",
+      "german": "Produkte",
+      "english": "Products",
+      "persian": "محصولات",
+      "russian": "Продукты",
+      "turkish": "Ürünler"
+    },
+    "files": [
+      {
+        "name": {
+          "arabic": "لوحة التحكم الهيدروليكية",
+          "german": "Hydraulische Steuerungstafel",
+          "english": "Hydraulic control panel",
+          "persian": "تابلو فرمان هیدرولیک",
+          "russian": "Гидравлическая панель управления",
+          "turkish": "Hidrolik kontrol paneli"
+        },
+        "fileName": "mc60_mqtt.pdf"
+      },
+      {
+        "name": {
+          "arabic": "لوحة التحكم المتقدمة",
+          "german": "Fortgeschrittenes Bedienfeld",
+          "english": "Advanced control panel",
+          "persian": "تابلو فرمان پیشرفته",
+          "russian": "Продвинутая панель управления",
+          "turkish": "Gelişmiş kontrol paneli"
+        },
+        "fileName": "l1000a_users_manual_en.pdf"
+      },
+      {
+        "name": {
+          "arabic": "لوحة التحكم",
+          "german": "Steuerungstafel",
+          "english": "control panel",
+          "persian": "تابلو فرمان",
+          "russian": "панель управления",
+          "turkish": "kontrol paneli"
+        },
+        "fileName": "sn75176b.pdf"
+      }
+    ]
+  }
+]

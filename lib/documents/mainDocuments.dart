@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/errorCodes/models/errorCode_model.dart';
-import 'package:flutter_application_1/errorCodes/screens/selectBorad.dart';
-import 'package:flutter_application_1/errorCodes/service/errorCode_service.dart';
+import 'package:flutter_application_1/documents/models/groupDoc_model.dart';
+import 'package:flutter_application_1/documents/screen/selectGroup.dart';
+import 'package:flutter_application_1/documents/service/groupDocFronJsonService.dart';
 import 'package:flutter_application_1/widgets/LoadingView.dart';
 import 'dart:ui';
 
@@ -26,23 +26,23 @@ class MyApp extends StatelessWidget {
       scrollBehavior: MyScrollBehavior(),
       debugShowCheckedModeBanner: false,
 
-      home: LoadDataErrorCode(),
+      home: LoadDataGroupDocs(),
       theme: ThemeData(useMaterial3: true),
     );
   }
 }
 
-class LoadDataErrorCode extends ConsumerWidget {
-  final ErrorCodeServiceJosn _service = ErrorCodeServiceJosn();
+class LoadDataGroupDocs extends ConsumerWidget {
+  final GroupDocTypeServiceJosn _service = GroupDocTypeServiceJosn();
 
-  LoadDataErrorCode({super.key});
+  LoadDataGroupDocs({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // final errorLoad = ref.watch(errorPrivider);
 
-    return FutureBuilder<List<ErrorCodeType>>(
-      future: _service.loadMenus(),
+    return FutureBuilder<List<GroupDocType>>(
+      future: _service.loadData(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return LoadingView();
@@ -50,10 +50,10 @@ class LoadDataErrorCode extends ConsumerWidget {
           return Text('Error: ${snapshot.error}');
         }
 
-        List<ErrorCodeType> errorCodes = snapshot.data!;
+        List<GroupDocType> listGroupDoc = snapshot.data!;
 
-        // return errorLoad;
-        return SelectboradForErrorCode(listErrorCode: errorCodes);
+        // return Text(listGroupDoc[0].files[0].name.english);
+        return Selectgroup(listGroupDoc: listGroupDoc);
       },
     );
   }

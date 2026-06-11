@@ -5,7 +5,7 @@ import 'package:flutter_application_1/lcd_simulation/Renderes/Rendermanager.dart
 import 'package:flutter_application_1/lcd_simulation/models/menu_model.dart';
 import 'package:flutter_application_1/lcd_simulation/service/menu_service.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
-import 'package:flutter_application_1/selectLanguage.dart';
+import 'package:flutter_application_1/widgets/selectLanguage.dart';
 import 'package:flutter_application_1/widgets/LoadingView.dart';
 // import 'package:flutter_application_1/ravisApp/widgets/home_drawer.dart';
 import 'dart:ui';

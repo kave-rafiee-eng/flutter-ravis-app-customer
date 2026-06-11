@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/errorCodes/models/errorCode_model.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
-import 'package:flutter_application_1/errorCodes/screens.dart/errorDetail.dart';
-import 'package:flutter_application_1/errorCodes/screens.dart/listErrors.dart';
+import 'package:flutter_application_1/errorCodes/screens/errorDetail.dart';
+import 'package:flutter_application_1/errorCodes/screens/listErrors.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
-import 'package:flutter_application_1/selectLanguage.dart';
+import 'package:flutter_application_1/widgets/selectLanguage.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SelectboradForErrorCode extends ConsumerWidget {

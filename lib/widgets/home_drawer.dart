@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/documents/mainDocuments.dart';
 import 'package:flutter_application_1/errorCodes/mainError.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/lcd_simulation/mainLcd.dart';
@@ -51,6 +52,16 @@ class HomeDrawer extends ConsumerWidget {
             subtitleEn: 'LCD settings and parameters',
             language: language,
             onTap: () => _navigateTo(context, LoadDataMenu()),
+          ),
+          _DrawerMenuItem(
+            icon: Icons.tune_rounded,
+            iconColor: theme.colorScheme.primary,
+            titleFa: 'فایل ها',
+            titleEn: 'Documents',
+            subtitleFa: 'اموزش ها و محصولات',
+            subtitleEn: 'product manual ...',
+            language: language,
+            onTap: () => _navigateTo(context, LoadDataGroupDocs()),
           ),
           const Spacer(),
           const Divider(height: 1),
