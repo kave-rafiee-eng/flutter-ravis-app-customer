@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/chatbot/chatbotScreen.dart';
 import 'package:flutter_application_1/screens/HomeScreen.dart';
 import 'package:flutter_application_1/serverAndStorage/models/appInternalData.dart';
 import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
@@ -60,15 +61,16 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
 
     Widget activeScreen = Homescreen();
     if (_selectedPageIndex == 1) {
-      activeScreen = Center(
-        child: Column(
-          children: [
-            Text('update:${appData.openByUpdate}'),
-            Text('version:${appData.dataVersion}'),
-            Text('id:${appData.appId}'),
-          ],
-        ),
-      );
+      activeScreen = ChatScreen();
+      // activeScreen = Center(
+      //   child: Column(
+      //     children: [
+      //       Text('update:${appData.openByUpdate}'),
+      //       Text('version:${appData.dataVersion}'),
+      //       Text('id:${appData.appId}'),
+      //     ],
+      //   ),
+      // );
     }
 
     return Scaffold(
