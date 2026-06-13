@@ -87,7 +87,7 @@ class SelectboradForErrorCode extends ConsumerWidget {
                 title: _pageText(language, 'terse'),
                 subtitle: _pageText(language, 'terse_desc'),
                 countLabel: _errorCountLabel(language, terseCount),
-                icon: Icons.speed_rounded,
+                icon: Icons.eco_sharp,
                 gradientColors: [
                   theme.colorScheme.tertiary,
                   theme.colorScheme.tertiary.withValues(alpha: 0.7),
@@ -167,7 +167,7 @@ class _HeaderBanner extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: theme.colorScheme.primaryContainer.withValues(alpha: 0.45),
+        color: theme.colorScheme.errorContainer.withValues(alpha: 0.45),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -176,12 +176,12 @@ class _HeaderBanner extends StatelessWidget {
             width: 56,
             height: 56,
             decoration: BoxDecoration(
-              color: theme.colorScheme.primary,
+              color: theme.colorScheme.error,
               borderRadius: BorderRadius.circular(14),
             ),
             child: Icon(
               Icons.developer_board_outlined,
-              color: theme.colorScheme.onPrimary,
+              color: theme.colorScheme.onError,
               size: 30,
             ),
           ),

@@ -4,6 +4,7 @@ import 'package:flutter_application_1/errorCodes/mainError.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/lcd_simulation/mainLcd.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
+import 'package:flutter_application_1/utils/ravis_localization.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomeDrawer extends ConsumerWidget {
@@ -13,7 +14,7 @@ class HomeDrawer extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final language = ref.watch(languageNotifierProvider);
     final theme = Theme.of(context);
-    final textDir = _textDirection(language);
+    final textDir = textDirection(language);
 
     return Drawer(
       child: Column(
@@ -24,7 +25,7 @@ class HomeDrawer extends ConsumerWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Text(
-              _bilingualText('ماژول‌ها', 'Modules', language),
+              bilingualText('ماژول‌ها', 'Modules', language),
               style: theme.textTheme.labelLarge?.copyWith(
                 color: theme.colorScheme.onSurfaceVariant,
                 fontWeight: FontWeight.w600,
@@ -77,7 +78,7 @@ class HomeDrawer extends ConsumerWidget {
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
-                    _bilingualText('نسخه ۱.۰.۰', 'Version 1.0.0', language),
+                    bilingualText('نسخه ۱.۰.۰', 'Version 1.0.0', language),
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: theme.colorScheme.onSurfaceVariant,
                     ),
@@ -138,7 +139,7 @@ class _DrawerHeader extends StatelessWidget {
           ),
           const Spacer(),
           Text(
-            _bilingualText('راویس', 'Ravis', language),
+            bilingualText('راویس', 'Ravis', language),
             style: theme.textTheme.headlineSmall?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -147,7 +148,7 @@ class _DrawerHeader extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            _bilingualText('اپلیکیشن مشتریان', 'Customers App', language),
+            bilingualText('اپلیکیشن مشتریان', 'Customers App', language),
             style: theme.textTheme.bodyMedium?.copyWith(
               color: Colors.white.withValues(alpha: 0.88),
             ),
@@ -183,7 +184,7 @@ class _DrawerMenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final textDir = _textDirection(language);
+    final textDir = textDirection(language);
     final isPersianPrimary = language == LanguageEnum.persian;
 
     final title = isPersianPrimary ? titleFa : titleEn;
@@ -266,18 +267,4 @@ class _DrawerMenuItem extends StatelessWidget {
       ),
     );
   }
-}
-
-TextDirection _textDirection(LanguageEnum language) {
-  if (language == LanguageEnum.persian || language == LanguageEnum.arabic) {
-    return TextDirection.rtl;
-  }
-  return TextDirection.ltr;
-}
-
-String _bilingualText(String persian, String english, LanguageEnum language) {
-  if (language == LanguageEnum.persian) {
-    return persian;
-  }
-  return english;
 }

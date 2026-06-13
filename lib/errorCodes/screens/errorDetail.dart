@@ -74,7 +74,7 @@ class _HeaderCard extends StatelessWidget {
 
     return Card(
       elevation: 0,
-      color: theme.colorScheme.primaryContainer.withValues(alpha: 0.45),
+      color: theme.colorScheme.errorContainer.withValues(alpha: 0.45),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -84,7 +84,7 @@ class _HeaderCard extends StatelessWidget {
               width: 64,
               height: 64,
               decoration: BoxDecoration(
-                color: theme.colorScheme.primary,
+                color: theme.colorScheme.error,
                 borderRadius: BorderRadius.circular(14),
               ),
               alignment: Alignment.center,

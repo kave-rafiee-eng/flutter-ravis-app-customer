@@ -36,3 +36,10 @@ String localizedPageText(
 ) {
   return texts[key]![language] ?? texts[key]![LanguageEnum.english]!;
 }
+
+String bilingualText(String persian, String english, LanguageEnum language) {
+  if (language == LanguageEnum.persian) {
+    return persian;
+  }
+  return english;
+}

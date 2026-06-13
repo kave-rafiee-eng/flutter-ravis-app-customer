@@ -41,6 +41,7 @@ class ErrorCodeList extends ConsumerWidget {
         ),
       );
     }
+    errorCodes.sort((a, b) => int.parse(a.code).compareTo(int.parse(b.code)));
 
     return ListView.separated(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
@@ -145,8 +146,8 @@ class _CodeBadge extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            theme.colorScheme.primary,
-            theme.colorScheme.primary.withValues(alpha: 0.75),
+            theme.colorScheme.error,
+            theme.colorScheme.error.withValues(alpha: 0.75),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,

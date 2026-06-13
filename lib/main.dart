@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/ravis_tabs.dart';
+import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
+// import 'package:flutter_application_1/screens/ravis_tabs.dart';
 // import 'package:flutter_application_1/quiz/Quiz.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -36,7 +37,7 @@ class App extends StatelessWidget {
       theme: theme,
       scrollBehavior: MyScrollBehavior(),
       debugShowCheckedModeBanner: false,
-      home: RavisTabs(),
+      home: ServerconnectionStart(),
     );
   }
 }

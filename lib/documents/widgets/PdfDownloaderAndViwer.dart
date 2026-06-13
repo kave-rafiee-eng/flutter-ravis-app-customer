@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/PdfViwer.dart';
+import 'package:flutter_application_1/documents/widgets/PdfViwer.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<String> downloadFile(String url, String fileName) async {
