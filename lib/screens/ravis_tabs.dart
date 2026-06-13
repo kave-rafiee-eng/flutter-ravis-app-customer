@@ -6,6 +6,8 @@ import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
 import 'package:flutter_application_1/widgets/home_drawer.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
+import 'package:flutter_application_1/providers/themeModeProvider.dart';
+import 'package:flutter_application_1/widgets/selectLanguage.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class RavisTabs extends ConsumerStatefulWidget {
@@ -48,7 +50,9 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
   @override
   Widget build(BuildContext context) {
     final language = ref.watch(languageNotifierProvider);
+    final themeMode = ref.watch(themeModeProvider);
     final theme = Theme.of(context);
+    final isDarkMode = themeMode == ThemeMode.dark;
 
     const langs = <LanguageEnum, String>{
       LanguageEnum.persian: 'فارسی',
@@ -75,37 +79,41 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ravis"),
+        // title: Text("Ravis"),
         actions: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 8),
             child: Center(
-              child: DropdownButtonHideUnderline(
-                child: DropdownButton<String>(
-                  value: language.name,
-                  borderRadius: BorderRadius.circular(12),
-                  icon: const Icon(Icons.language),
-                  dropdownColor: theme.colorScheme.surface,
-                  style: theme.textTheme.titleMedium?.copyWith(
-                    color: theme.colorScheme.onSurface,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.light_mode_rounded,
+                    size: 20,
+                    color: theme.colorScheme.onSurfaceVariant,
                   ),
-                  onChanged: (value) {
-                    if (value == null) return;
-                    ref
-                        .read(languageNotifierProvider.notifier)
-                        .changeLanguage(LanguageEnum.values.byName(value));
-                  },
-                  items: langs.entries
-                      .map(
-                        (e) => DropdownMenuItem<String>(
-                          value: e.key.name,
-                          child: Text(e.value),
-                        ),
-                      )
-                      .toList(),
-                ),
+                  Switch(
+                    value: isDarkMode,
+                    onChanged: (value) {
+                      ref
+                          .read(themeModeProvider.notifier)
+                          .setThemeMode(
+                            value ? ThemeMode.dark : ThemeMode.light,
+                          );
+                    },
+                  ),
+                  Icon(
+                    Icons.dark_mode_rounded,
+                    size: 20,
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ],
               ),
             ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12),
+            child: Center(child: Selectlanguage()),
           ),
         ],
       ),

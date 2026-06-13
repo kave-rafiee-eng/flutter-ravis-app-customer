@@ -67,14 +67,14 @@ class HomeDrawer extends ConsumerWidget {
   }
 }
 
-class _DrawerHeader extends StatelessWidget {
+class _DrawerHeader extends ConsumerWidget {
   final LanguageEnum language;
   final TextDirection textDir;
 
   const _DrawerHeader({required this.language, required this.textDir});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
 
     return DrawerHeader(

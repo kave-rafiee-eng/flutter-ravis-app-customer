@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/providers/themeModeProvider.dart';
 import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
 // import 'package:flutter_application_1/screens/ravis_tabs.dart';
 // import 'package:flutter_application_1/quiz/Quiz.dart';
@@ -6,13 +7,22 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:ui';
 
-final theme = ThemeData(
+final lightTheme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
-    seedColor: const Color.fromARGB(255, 3, 74, 133),
+    seedColor: const Color(0xFF034A85),
     brightness: Brightness.light,
   ),
   textTheme: GoogleFonts.latoTextTheme(),
+);
+
+final darkTheme = ThemeData(
+  useMaterial3: true,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: const Color(0xFF034A85),
+    brightness: Brightness.dark,
+  ),
+  textTheme: GoogleFonts.latoTextTheme(ThemeData.dark().textTheme),
 );
 
 void main() {
@@ -27,14 +37,18 @@ class MyScrollBehavior extends MaterialScrollBehavior {
   };
 }
 
-class App extends StatelessWidget {
+class App extends ConsumerWidget {
   const App({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeModeProvider);
     // return MaterialApp(theme: theme, home: TabsScreen());
     return MaterialApp(
-      theme: theme,
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      // themeMode: ThemeMode.system,
+      themeMode: themeMode,
       scrollBehavior: MyScrollBehavior(),
       debugShowCheckedModeBanner: false,
       home: ServerconnectionStart(),
