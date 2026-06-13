@@ -46,15 +46,6 @@ class ErrorDetailPage extends ConsumerWidget {
             icon: Icons.build_circle_outlined,
             color: theme.colorScheme.tertiary,
           ),
-          const SizedBox(height: 12),
-          _DetailSection(
-            title: sectionTitle(language, 'ai_assistant'),
-            content: aiDescription,
-            language: language,
-            textDir: textDir,
-            icon: Icons.smart_toy_outlined,
-            color: theme.colorScheme.secondary,
-          ),
         ],
       ),
     );
@@ -275,14 +266,6 @@ String sectionTitle(LanguageEnum language, String section) {
       LanguageEnum.turkish: 'Çözüm',
       LanguageEnum.russian: 'Решение',
       LanguageEnum.german: 'Lösung',
-    },
-    'ai_assistant': {
-      LanguageEnum.persian: 'توضیحات دستیار هوشمند',
-      LanguageEnum.english: 'AI Assistant Notes',
-      LanguageEnum.arabic: 'ملاحظات المساعد الذكي',
-      LanguageEnum.turkish: 'Yapay Zeka Notları',
-      LanguageEnum.russian: 'Заметки ИИ-ассистента',
-      LanguageEnum.german: 'KI-Assistent Hinweise',
     },
     'empty': {
       LanguageEnum.persian: 'اطلاعاتی ثبت نشده است',

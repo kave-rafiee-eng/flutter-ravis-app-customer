@@ -20,6 +20,7 @@ const _dataEndpoints = {
   'menu_json.json': '$_serverBaseUrl/menu-advance/',
   'errorCodes.json': '$_serverBaseUrl/error-code/',
   'documents.json': '$_serverBaseUrl/documents/',
+  'phonebook.json': '$_serverBaseUrl/phonebook/',
 };
 
 class ServerconnectionStart extends ConsumerStatefulWidget {

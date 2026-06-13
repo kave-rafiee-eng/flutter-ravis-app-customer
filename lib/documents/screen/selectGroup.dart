@@ -169,7 +169,8 @@ class Selectgroup extends ConsumerWidget {
       title: localizedDescriptionDoc(language, group.category),
       subtitle: _firstFileName(language, group),
       badgeLabel: _fileCountLabel(language, group.files.length),
-      icon: _groupIcons[index % _groupIcons.length],
+      // icon: _groupIcons[index % _groupIcons.length],
+      icon: Icons.folder_copy_outlined,
       gradientColors: gradientColors,
       textDirection: textDir,
       onTap: () {

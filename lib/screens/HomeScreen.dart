@@ -3,6 +3,7 @@ import 'package:flutter_application_1/documents/mainDocuments.dart';
 import 'package:flutter_application_1/errorCodes/mainError.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/lcd_simulation/mainLcd.dart';
+import 'package:flutter_application_1/phonebook/mainPhonebook.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
 import 'package:flutter_application_1/utils/ravis_localization.dart';
 import 'package:flutter_application_1/widgets/ravis_list_card.dart';
@@ -88,6 +89,18 @@ class Homescreen extends ConsumerWidget {
             ],
             textDirection: textDir,
             onTap: () => _navigateTo(context, LoadDataGroupDocs()),
+          ),
+          const SizedBox(height: 14),
+          RavisListCard(
+            title: bilingualText('بشتیبانی', 'support', language),
+            subtitle: bilingualText('', '', language),
+            icon: Icons.folder_copy_rounded,
+            gradientColors: [
+              theme.colorScheme.tertiary,
+              theme.colorScheme.tertiary.withValues(alpha: 0.7),
+            ],
+            textDirection: textDir,
+            onTap: () => _navigateTo(context, LoadDataPhonebook()),
           ),
           const SizedBox(height: 28),
           _HomeFooter(language: language, textDir: textDir),
