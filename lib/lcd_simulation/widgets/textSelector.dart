@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CarouselItem {
   final String title;
@@ -13,16 +14,16 @@ class CarouselItem {
   });
 }
 
-class TextCarousel extends StatefulWidget {
+class TextCarousel extends ConsumerStatefulWidget {
   final List<CarouselItem> items;
 
   const TextCarousel({super.key, required this.items});
 
   @override
-  State<TextCarousel> createState() => _TextCarouselState();
+  ConsumerState<TextCarousel> createState() => _TextCarouselState();
 }
 
-class _TextCarouselState extends State<TextCarousel>
+class _TextCarouselState extends ConsumerState<TextCarousel>
     with SingleTickerProviderStateMixin<TextCarousel> {
   late final PageController pageController;
   late final TabController tabController;
@@ -65,11 +66,13 @@ class _TextCarouselState extends State<TextCarousel>
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Center(
       child: Container(
         width: double.infinity,
         // height: 250,
-        color: Colors.white,
+        color: theme.colorScheme.surfaceContainer,
         child: Column(
           children: [
             Expanded(
@@ -101,20 +104,21 @@ class _TextCarouselState extends State<TextCarousel>
                               Text(
                                 item.title,
                                 textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.deepPurple,
-                                ),
+                                style: Theme.of(context).textTheme.titleLarge
+                                    ?.copyWith(
+                                      color: theme.colorScheme.primary,
+                                      height: 1.5,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                               ),
                               const SizedBox(height: 12),
                               Text(
                                 textDirection: item.textDir,
                                 item.content,
                                 textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.bodyMedium
+                                style: Theme.of(context).textTheme.bodyLarge
                                     ?.copyWith(
-                                      color: Colors.black87,
+                                      color: theme.colorScheme.onSurface,
                                       height: 1.5,
                                     ),
                               ),
