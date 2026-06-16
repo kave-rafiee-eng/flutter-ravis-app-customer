@@ -36,6 +36,14 @@ class SyncErrorView extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
+              Text(
+                'خطا در اتصال به سرور',
+                style: theme.textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w700,
+                ),
+                textAlign: TextAlign.center,
+                textDirection: TextDirection.rtl,
+              ),
               const SizedBox(height: 8),
               Text(
                 message,
@@ -48,12 +56,12 @@ class SyncErrorView extends StatelessWidget {
               FilledButton.icon(
                 onPressed: onRetry,
                 icon: const Icon(Icons.refresh_rounded),
-                label: const Text('Retry'),
+                label: const Text('Retry / تست مجدد'),
               ),
               const SizedBox(height: 10),
               OutlinedButton(
                 onPressed: onContinue,
-                child: const Text('Continue offline'),
+                child: const Text('ورود offline'),
               ),
             ],
           ),

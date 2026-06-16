@@ -22,9 +22,15 @@ final _errorCodesLoader = JsonLoader<ErrorCodeType>(
   fromJson: ErrorCodeType.fromJson,
 );
 
-final _menuLoader = JsonLoader<MenuType>(
-  fileName: 'menu_json.json',
-  assetPath: 'assets/data/menu_json.json',
+final _menuAdvanceLoader = JsonLoader<MenuType>(
+  fileName: 'menu_advance.json',
+  assetPath: 'assets/data/menu_advance.json',
+  fromJson: MenuType.fromJson,
+);
+
+final _menuTerseLoader = JsonLoader<MenuType>(
+  fileName: 'menu_terse.json',
+  assetPath: 'assets/data/menu_terse.json',
   fromJson: MenuType.fromJson,
 );
 
@@ -89,8 +95,7 @@ class Homescreen extends ConsumerWidget {
             onTap: () => _openModule(
               context,
               loader: _errorCodesLoader.loadData,
-              builder: (data) =>
-                  SelectboradForErrorCode(listErrorCode: data),
+              builder: (data) => SelectboradForErrorCode(listErrorCode: data),
             ),
           ),
           const SizedBox(height: 14),
@@ -109,8 +114,30 @@ class Homescreen extends ConsumerWidget {
             textDirection: textDir,
             onTap: () => _openModule(
               context,
-              loader: _menuLoader.loadData,
-              builder: (data) => MenusScreen(menus: data),
+              loader: _menuAdvanceLoader.loadData,
+              builder: (data) =>
+                  MenusScreen(menus: data, board: BoardEnum.advance),
+            ),
+          ),
+          const SizedBox(height: 14),
+          RavisListCard(
+            title: bilingualText('منوی terse', 'terse Menu', language),
+            subtitle: bilingualText(
+              'تنظیمات و پارامترهای LCD',
+              'LCD settings and parameters',
+              language,
+            ),
+            icon: Icons.memory_rounded,
+            gradientColors: [
+              theme.colorScheme.primary,
+              theme.colorScheme.primary.withValues(alpha: 0.7),
+            ],
+            textDirection: textDir,
+            onTap: () => _openModule(
+              context,
+              loader: _menuTerseLoader.loadData,
+              builder: (data) =>
+                  MenusScreen(menus: data, board: BoardEnum.terse),
             ),
           ),
           const SizedBox(height: 14),
@@ -168,10 +195,7 @@ class Homescreen extends ConsumerWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => LoadDataWidget<T>(
-          loader: loader,
-          builder: builder,
-        ),
+        builder: (_) => LoadDataWidget<T>(loader: loader, builder: builder),
       ),
     );
   }

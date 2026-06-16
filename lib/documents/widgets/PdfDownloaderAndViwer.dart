@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/documents/widgets/PdfViwer.dart';
+import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<String> downloadFile(String url, String fileName) async {
@@ -45,7 +46,7 @@ class PdfDownloaderAndViwer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<String>(
-      future: downloadFile('http://10.38.181.179:3000/pdf/download', fileName),
+      future: downloadFile(pdfUrl, fileName),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return _PdfLoadingView(fileName: fileName);

@@ -8,18 +8,13 @@ import 'package:flutter_application_1/lcd_simulation/models/menu_model.dart';
 
 class RendererSettingMultiSelectData {
   final SettingMultySelectType item;
-  final DescriptionType description;
   late List<int> values;
   final void Function() onBack;
   late int menuIndex;
   late int menuOffset;
   late bool selected;
 
-  RendererSettingMultiSelectData({
-    required this.onBack,
-    required this.item,
-    required this.description,
-  }) {
+  RendererSettingMultiSelectData({required this.onBack, required this.item}) {
     values = List.filled(item.itemLabels.length, 0);
     selected = false;
     menuIndex = 0;
@@ -202,7 +197,7 @@ class _RenderSettingMultiSelectState extends State<RenderSettingMultiSelect> {
         title: 'توضیح منو',
         content: extranctDescription(
           widget.language,
-          widget.inputData.description,
+          widget.inputData.item.description,
         ),
         textDir: claculateTextDir(widget.language),
       ),

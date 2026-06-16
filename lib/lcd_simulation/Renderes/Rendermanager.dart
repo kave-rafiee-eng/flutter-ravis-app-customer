@@ -5,11 +5,18 @@ import 'package:flutter_application_1/lcd_simulation/Renderes/RenderMultiSelect.
 import 'package:flutter_application_1/lcd_simulation/Renderes/RenderSetOneSelect.dart';
 import 'package:flutter_application_1/lcd_simulation/Renderes/RenderSetOneParameter.dart';
 import 'package:flutter_application_1/lcd_simulation/Renderes/RenderSubMenu.dart';
+import 'package:flutter_application_1/lcd_simulation/mainLcd.dart';
 import 'package:flutter_application_1/lcd_simulation/models/menu_model.dart';
 
 class Rendermanager extends StatefulWidget {
-  const Rendermanager({super.key, required this.menus, required this.language});
+  const Rendermanager({
+    super.key,
+    required this.menus,
+    required this.language,
+    required this.board,
+  });
 
+  final BoardEnum board;
   final List<MenuType> menus;
   final LanguageEnum language;
 
@@ -37,11 +44,30 @@ List<SubMenuVisualValues> findSubMenuVisual(
   for (var m in allMenus) {
     for (var parentId in m.parentId) {
       if (parentId.id == menu.id) {
+        DescriptionType description = DescriptionType(
+          arabic: '',
+          persian: '',
+          english: '',
+          german: '',
+          russian: '',
+          turkish: '',
+        );
+        if (m.type == TypeMenuEnum.settingOnParameter) {
+          description = m.data.settingOneParameter!.description;
+        } else if (m.type == TypeMenuEnum.settingOnSelect) {
+          description = m.data.settingOneSelect!.description;
+        } else if (m.type == TypeMenuEnum.settingMultySelect) {
+          description = m.data.settingMultySelect!.description;
+        } else if (m.type == TypeMenuEnum.submenu) {
+          description = m.description;
+        } else if (m.type == TypeMenuEnum.settingMultyGroup) {
+          description = m.description;
+        }
         result.add(
           SubMenuVisualValues(
             id: m.id,
             label: parentId.label,
-            description: m.description,
+            description: description,
           ),
         );
       }
@@ -53,9 +79,25 @@ List<SubMenuVisualValues> findSubMenuVisual(
 class _RendermanagerState extends State<Rendermanager> {
   String _activeId = '0';
 
-  List<ParanetIdLableType> navList = [
-    ParanetIdLableType(id: '0', label: 'main'),
-  ];
+  List<ParanetIdLableType> navList = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    final founded = widget.menus.firstWhere(
+      (menu) => menu.lable?.toLowerCase() == 'main',
+      orElse: () => widget.menus.firstWhere(
+        (menu) => menu.parentId.isEmpty,
+        orElse: () => widget.menus.first,
+      ),
+    );
+
+    _activeId = founded.id;
+    navList.add(
+      ParanetIdLableType(id: founded.id, label: founded.lable ?? 'main'),
+    );
+  }
 
   void oneBack() {
     setState(() {
@@ -97,7 +139,6 @@ class _RendermanagerState extends State<Rendermanager> {
           topBar: menuSelected.lable!,
           onBack: oneBack,
           item: menuSelected.data.settingOneParameter!,
-          description: menuSelected.description,
         ),
       );
     }
@@ -109,7 +150,6 @@ class _RendermanagerState extends State<Rendermanager> {
         inputData: RendererSettingOneSelectData(
           onBack: oneBack,
           item: menuSelected.data.settingOneSelect!,
-          description: menuSelected.description,
         ),
       );
     }
@@ -119,10 +159,8 @@ class _RendermanagerState extends State<Rendermanager> {
       activeWidget = RenderSettingMultiSelect(
         language: widget.language,
         inputData: RendererSettingMultiSelectData(
-          description: menuSelected.description,
           onBack: oneBack,
           item: menuSelected.data.settingMultySelect!,
-          // description: menuSelected.description,
         ),
       );
     }

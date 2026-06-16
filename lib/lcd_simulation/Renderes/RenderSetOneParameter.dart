@@ -9,7 +9,6 @@ import 'package:flutter_application_1/lcd_simulation/models/menu_model.dart';
 class RendererSettingOneParameterData {
   final String topBar;
   final SettingOneParameterType item;
-  final DescriptionType description;
   late int value;
   late double factor;
   final void Function() onBack;
@@ -18,7 +17,6 @@ class RendererSettingOneParameterData {
     required this.topBar,
     required this.onBack,
     required this.item,
-    required this.description,
   }) {
     value = item.minValue;
     factor = item.factor == 0
@@ -115,7 +113,7 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneParameter> {
         title: 'توضیح منو',
         content: extranctDescription(
           widget.language,
-          widget.inputData.description,
+          widget.inputData.item.description,
         ),
         textDir: claculateTextDir(widget.language),
       ),

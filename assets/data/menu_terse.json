@@ -1,0 +1,494 @@
+[
+  {
+    "id": "0",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Num Of Stop"
+      }
+    ],
+    "lable": "Num Of Stop",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Num Of Stop",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 60,
+        "minValue": 2,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "1",
+    "parentId": [],
+    "lable": "main",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "10",
+    "parentId": [
+      {
+        "id": "5",
+        "label": "Music Volume"
+      }
+    ],
+    "lable": "Music Volume",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Music Volume",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 0,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "11",
+    "parentId": [
+      {
+        "id": "5",
+        "label": "Talk Volume"
+      }
+    ],
+    "lable": "Talk Volume",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Talk Volume",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 0,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "12",
+    "parentId": [
+      {
+        "id": "5",
+        "label": "Gang Select"
+      }
+    ],
+    "lable": "Gang Select",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Gang Select",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "OFF",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "1",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "2",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "3",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "2",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Service Type"
+      }
+    ],
+    "lable": "Service Type",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Service Type",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Collective DN",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "Full Collective",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "Push Button",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "3",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Travel Time"
+      }
+    ],
+    "lable": "Travel Time",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Travel Time",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "4",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Door"
+      }
+    ],
+    "lable": "Door",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "5",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Sound"
+      }
+    ],
+    "lable": "Sound",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "6",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Floor"
+      }
+    ],
+    "lable": "Floor",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "7",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Timer"
+      }
+    ],
+    "lable": "Timer",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "8",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Motor Safe"
+      }
+    ],
+    "lable": "Motor Safe",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "9",
+    "parentId": [
+      {
+        "id": "4",
+        "label": "Door Time"
+      }
+    ],
+    "lable": "Door Time",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  }
+]

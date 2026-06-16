@@ -74,12 +74,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "قم بتمكين وضع التصحيح للاتصال بالبرنامج على نظام ويندوز وقم بتعطيله لتشخيص الأخطاء في البرنامج من أجل الأداء العادي.",
+          "german": "Aktivieren Sie den Debug-Modus, um eine Verbindung zur Windows-Software herzustellen, und deaktivieren Sie ihn, um die Software zur normalen Funktion zu debuggen.",
+          "english": "Enable debug mode to connect to the Windows software and disable it for troubleshooting the software to ensure normal operation.",
+          "persian": "فعال کردن حالت debug برای اتصال به نرم افزار ویندوز و ایرادیابی از نرم افزار برای عملکرد عادی غیرفعال کنید.",
+          "russian": "Включите режим отладки для подключения к программному обеспечению Windows и отключите его для устранения неполадок в программном обеспечении для обеспечения нормальной работы.",
+          "turkish": "Windows yazılımına bağlanmak için hata ayıklama modunu etkinleştirin ve yazılımın normal çalışması için sorun gidermeyi devre dışı bırakın."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -88,12 +88,12 @@
       }
     },
     "description": {
-      "arabic": "قم بتمكين وضع التصحيح للاتصال بالبرنامج على نظام ويندوز وقم بتعطيله لتشخيص الأخطاء في البرنامج من أجل الأداء العادي.",
-      "german": "Aktivieren Sie den Debug-Modus, um eine Verbindung zur Windows-Software herzustellen, und deaktivieren Sie ihn, um die Software zur normalen Funktion zu debuggen.",
-      "english": "Enable debug mode to connect to the Windows software and disable it for troubleshooting the software to ensure normal operation.",
-      "persian": "فعال کردن حالت debug برای اتصال به نرم افزار ویندوز و ایرادیابی از نرم افزار برای عملکرد عادی غیرفعال کنید.",
-      "russian": "Включите режим отладки для подключения к программному обеспечению Windows и отключите его для устранения неполадок в программном обеспечении для обеспечения нормальной работы.",
-      "turkish": "Windows yazılımına bağlanmak için hata ayıklama modunu etkinleştirin ve yazılımın normal çalışması için sorun gidermeyi devre dışı bırakın."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -364,12 +364,12 @@
     "id": "105",
     "parentId": [
       {
-        "id": "1",
-        "label": "Num Of Stop"
+        "id": "87",
+        "label": "Num Of Stops"
       },
       {
-        "id": "87",
-        "label": "Num Of Stop"
+        "id": "1",
+        "label": "Num Of Stops"
       }
     ],
     "lable": "Num Of Stops",
@@ -389,7 +389,7 @@
           "arabic": "",
           "german": "",
           "english": "",
-          "persian": "",
+          "persian": "dsdsd",
           "russian": "",
           "turkish": ""
         },
@@ -400,12 +400,12 @@
       }
     },
     "description": {
-      "arabic": "عدد توقفات المصعد، في حالة تجاوز المستشعر، قم بضبط هذا المعامل بدقة. في حالة تجاوز المستشعر مع المشفر، يتم تصحيحه تلقائيًا بعد تنفيذ المعايرة إذا لزم الأمر.",
-      "german": "Die Anzahl der Aufzugshaltestellen, im Sensorausweichmodus, stellen Sie diesen Parameter genau ein. Im Encoder-Bypass-Modus wird es nach der Durchführung der Kalibrierung bei Bedarf automatisch korrigiert.",
-      "english": "The number of elevator stops, in the sensor bypass mode, adjust this parameter precisely. In the encoder bypass mode, it is automatically corrected after performing calibration if necessary.",
-      "persian": "تعداد توقف‌های آسانسور، در حالت دوراندازی سنسور، این پارامتر را دقیق تنظیم کنید. در حالت دوراندازی با انکودر، بعد از اجرای کالیبراسیون در صورت نیاز به‌صورت خودکار اصلاح می‌شود.",
-      "russian": "Количество остановок лифта, в режиме обхода датчика, точно настройте этот параметр. В режиме обхода с энкодером он автоматически корректируется после выполнения калибровки, если необходимо.",
-      "turkish": "Asansör durak sayısı, sensör atlama modunda bu parametreyi hassas bir şekilde ayarlayın. Enkoder atlama modunda, kalibrasyon yapıldıktan sonra gerekirse otomatik olarak düzeltilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -438,12 +438,12 @@
         "maxValue": 200,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "الحد الأقصى للوقت المسموح به لبقاء المصعد في الحركة بعد رؤية مستشعر المسافة، في حال بقاءه في الحركة لأكثر من الوقت المحدد، يتم إنشاء خطأ في المسافة ويتوقف المصعد بشكل إجباري.",
+          "german": "Die maximal zulässige Zeit, die der Aufzug nach dem Erkennen des Entfernungssensors in Bewegung bleiben darf, wird überschritten. Wenn er sich über die eingestellte Zeit hinaus in Bewegung bleibt, tritt ein Entfernungsfehler auf und der Aufzug stoppt zwangsweise.",
+          "english": "The maximum allowed time for the elevator to remain in motion after detecting the distance sensor is exceeded, if it remains in motion beyond the set time, a distance error occurs and the elevator stops forcibly.",
+          "persian": "حداکثر زمان مجاز برای در حرکت ماندن آسانسور بعد از دیدن سنسور دورانداز، در صورتی که بیش از زمان تنظیم‌شده در حرکت بماند، خطای دوراندازی ایجاد می‌شود و آسانسور به‌صورت توقف اجباری متوقف می‌شود.",
+          "russian": "Максимально допустимое время нахождения лифта в движении после обнаружения датчика расстояния превышено. Если он остается в движении дольше установленного времени, возникает ошибка расстояния, и лифт принудительно останавливается.",
+          "turkish": "Mesafe sensörünü gördükten sonra asansörün hareket halinde kalmasına izin verilen maksimum süre aşıldığında, ayarlanan sürenin ötesinde hareket etmeye devam ederse, bir mesafe hatası oluşur ve asansör zorla durdurulur."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -452,12 +452,12 @@
       }
     },
     "description": {
-      "arabic": "الحد الأقصى للوقت المسموح به لبقاء المصعد في الحركة بعد رؤية مستشعر المسافة، في حال بقاءه في الحركة لأكثر من الوقت المحدد، يتم إنشاء خطأ في المسافة ويتوقف المصعد بشكل إجباري.",
-      "german": "Die maximal zulässige Zeit, die der Aufzug nach dem Erkennen des Entfernungssensors in Bewegung bleiben darf, wird überschritten. Wenn er sich über die eingestellte Zeit hinaus in Bewegung bleibt, tritt ein Entfernungsfehler auf und der Aufzug stoppt zwangsweise.",
-      "english": "The maximum allowed time for the elevator to remain in motion after detecting the distance sensor is exceeded, if it remains in motion beyond the set time, a distance error occurs and the elevator stops forcibly.",
-      "persian": "حداکثر زمان مجاز برای در حرکت ماندن آسانسور بعد از دیدن سنسور دورانداز، در صورتی که بیش از زمان تنظیم‌شده در حرکت بماند، خطای دوراندازی ایجاد می‌شود و آسانسور به‌صورت توقف اجباری متوقف می‌شود.",
-      "russian": "Максимально допустимое время нахождения лифта в движении после обнаружения датчика расстояния превышено. Если он остается в движении дольше установленного времени, возникает ошибка расстояния, и лифт принудительно останавливается.",
-      "turkish": "Mesafe sensörünü gördükten sonra asansörün hareket halinde kalmasına izin verilen maksimum süre aşıldığında, ayarlanan sürenin ötesinde hareket etmeye devam ederse, bir mesafe hatası oluşur ve asansör zorla durdurulur."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -490,98 +490,12 @@
         "maxValue": 50,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "الحد الأقصى للوقت المسموح به لحركة المصعد بعد تجاوز مستشعر الطابق، إذا استمر في الحركة لأكثر من الوقت المحدد، يتم إنشاء خطأ ويتوقف المصعد بشكل إجباري. لتصحيح الخطأ، هناك حاجة لإعادة تشغيل الأجهزة.",
-      "german": "Die maximal zulässige Zeit für die Bewegung des Aufzugs nach dem Passieren des Etagen-Sensors, wenn er sich länger als die eingestellte Zeit bewegt, tritt ein Fehler auf und der Aufzug stoppt mit einem erzwungenen Stopp. Um den Fehler zu beheben, ist ein Hardware-Neustart erforderlich.",
-      "english": "The maximum allowed time for the elevator to move after passing the floor sensor, if it remains in motion beyond the set time, an error occurs and the elevator stops with a forced stop. To clear the error, a hardware restart is required.",
-      "persian": "حداکثر زمان مجاز حرکت آسانسور بعد از عبور از سنسور طبقه، در صورتی که بیش از زمان تنظیم‌شده در حرکت بماند، خطا ایجاد می‌شود و آسانسور به صورت توقف اجباری متوقف می‌شود. جهت برطرف کردن خطا نیاز به ری‌استارت سخت‌افزاری است.",
-      "russian": "Максимально допустимое время движения лифта после прохождения датчика этажа, если он остается в движении дольше установленного времени, возникает ошибка, и лифт останавливается принудительно. Для устранения ошибки требуется перезагрузка оборудования.",
-      "turkish": "Asansörün kat sensöründen geçtikten sonra hareket etmesine izin verilen maksimum süre, ayarlanan süreden daha uzun süre hareket etmeye devam ederse, bir hata oluşur ve asansör zorunlu durdurma ile durur. Hatanın giderilmesi için donanımın yeniden başlatılması gereklidir."
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "108",
-    "parentId": [],
-    "lable": "Open Delay",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "S",
-        "label": "Open Delay",
-        "factor": -10,
-        "offset": 0,
-        "address": 11,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 200,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "109",
-    "parentId": [],
-    "lable": "Close Delay",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "S",
-        "label": "Close Delay",
-        "factor": -10,
-        "offset": 0,
-        "address": 12,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 200,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "الحد الأقصى للوقت المسموح به لحركة المصعد بعد تجاوز مستشعر الطابق، إذا استمر في الحركة لأكثر من الوقت المحدد، يتم إنشاء خطأ ويتوقف المصعد بشكل إجباري. لتصحيح الخطأ، هناك حاجة لإعادة تشغيل الأجهزة.",
+          "german": "Die maximal zulässige Zeit für die Bewegung des Aufzugs nach dem Passieren des Etagen-Sensors, wenn er sich länger als die eingestellte Zeit bewegt, tritt ein Fehler auf und der Aufzug stoppt mit einem erzwungenen Stopp. Um den Fehler zu beheben, ist ein Hardware-Neustart erforderlich.",
+          "english": "The maximum allowed time for the elevator to move after passing the floor sensor, if it remains in motion beyond the set time, an error occurs and the elevator stops with a forced stop. To clear the error, a hardware restart is required.",
+          "persian": "حداکثر زمان مجاز حرکت آسانسور بعد از عبور از سنسور طبقه، در صورتی که بیش از زمان تنظیم‌شده در حرکت بماند، خطا ایجاد می‌شود و آسانسور به صورت توقف اجباری متوقف می‌شود. جهت برطرف کردن خطا نیاز به ری‌استارت سخت‌افزاری است.",
+          "russian": "Максимально допустимое время движения лифта после прохождения датчика этажа, если он остается в движении дольше установленного времени, возникает ошибка, и лифт останавливается принудительно. Для устранения ошибки требуется перезагрузка оборудования.",
+          "turkish": "Asansörün kat sensöründen geçtikten sonra hareket etmesine izin verilen maksimum süre, ayarlanan süreden daha uzun süre hareket etmeye devam ederse, bir hata oluşur ve asansör zorunlu durdurma ile durur. Hatanın giderilmesi için donanımın yeniden başlatılması gereklidir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -634,12 +548,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تفعيل وضع QC هذا الوضع يستخدم فقط من قبل الشركة المصنعة على المحاكي، تأكد من أنه يجب أن يكون معطلاً للاستخدام العام.",
+          "german": "Aktivierung des QC-Modus: Dieser Modus wird nur vom Hersteller auf dem Simulator verwendet. Stellen Sie sicher, dass er für den öffentlichen Gebrauch deaktiviert ist.",
+          "english": "Activating QC mode: This mode is only used by the manufacturer on the simulator. Make sure it is disabled for public use.",
+          "persian": "فعال کردن حالت QC: این حالت فقط توسط شرکت سازنده روی شبیه‌ساز مورد استفاده قرار می‌گیرد. دقت کنید که حتماً برای استفاده عمومی غیرفعال باشد.",
+          "russian": "Активация режима QC: Этот режим используется только производителем на симуляторе. Убедитесь, что он отключен для общего использования.",
+          "turkish": "QC modunu etkinleştirme: Bu mod yalnızca üretici tarafından simülatörde kullanılır. Genel kullanım için devre dışı olduğundan emin olun."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -648,12 +562,12 @@
       }
     },
     "description": {
-      "arabic": "تفعيل وضع QC هذا الوضع يستخدم فقط من قبل الشركة المصنعة على المحاكي، تأكد من أنه يجب أن يكون معطلاً للاستخدام العام.",
-      "german": "Aktivierung des QC-Modus: Dieser Modus wird nur vom Hersteller auf dem Simulator verwendet. Stellen Sie sicher, dass er für den öffentlichen Gebrauch deaktiviert ist.",
-      "english": "Activating QC mode: This mode is only used by the manufacturer on the simulator. Make sure it is disabled for public use.",
-      "persian": "فعال کردن حالت QC: این حالت فقط توسط شرکت سازنده روی شبیه‌ساز مورد استفاده قرار می‌گیرد. دقت کنید که حتماً برای استفاده عمومی غیرفعال باشد.",
-      "russian": "Активация режима QC: Этот режим используется только производителем на симуляторе. Убедитесь, что он отключен для общего использования.",
-      "turkish": "QC modunu etkinleştirme: Bu mod yalnızca üretici tarafından simülatörde kullanılır. Genel kullanım için devre dışı olduğundan emin olun."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -682,12 +596,12 @@
         "maxValue": 10,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "إذا حدث خطأ بعد عدة مرات من الفتح والإغلاق، ولم يتكرر، وإذا زاد عدد الأخطاء المتتالية عن القيمة المحددة، سيتم الاحتفاظ بالخطأ وسيتم إعادة تعيين الأزرار مرة واحدة.",
+          "german": "Wenn nach mehrmaligem Öffnen und Schließen ein Fehler auftritt und sich nicht wiederholt, und wenn die Anzahl der aufeinanderfolgenden Fehler den eingestellten Wert überschreitet, wird der Fehler gespeichert und die Tasten werden einmal zurückgesetzt.",
+          "english": "If an error occurs after several open and close attempts and does not repeat, and if the number of consecutive errors exceeds the set value, the error will be retained and the buttons will be reset once.",
+          "persian": "در صورت ایجاد خطا بعد از چند بار دیگر باز و بسته کردن تکرار نشود، در صورت افزایش تعداد خطای بشت سر هم بیش از مقدار تنظیم شده خطا نگه داشته میشود و شاسی ها یک بار باک میشوند.",
+          "russian": "Если ошибка возникает после нескольких попыток открыть и закрыть и не повторяется, и если количество последовательных ошибок превышает установленное значение, ошибка сохраняется, и кнопки сбрасываются один раз.",
+          "turkish": "Bir hata, birkaç kez açıp kapattıktan sonra meydana gelir ve tekrarlanmazsa, ve ardışık hata sayısı ayarlanan değeri aşarsa, hata tutulur ve butonlar bir kez sıfırlanır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -696,12 +610,12 @@
       }
     },
     "description": {
-      "arabic": "إذا حدث خطأ بعد عدة مرات من الفتح والإغلاق، ولم يتكرر، وإذا زاد عدد الأخطاء المتتالية عن القيمة المحددة، سيتم الاحتفاظ بالخطأ وسيتم إعادة تعيين الأزرار مرة واحدة.",
-      "german": "Wenn nach mehrmaligem Öffnen und Schließen ein Fehler auftritt und sich nicht wiederholt, und wenn die Anzahl der aufeinanderfolgenden Fehler den eingestellten Wert überschreitet, wird der Fehler gespeichert und die Tasten werden einmal zurückgesetzt.",
-      "english": "If an error occurs after several open and close attempts and does not repeat, and if the number of consecutive errors exceeds the set value, the error will be retained and the buttons will be reset once.",
-      "persian": "در صورت ایجاد خطا بعد از چند بار دیگر باز و بسته کردن تکرار نشود، در صورت افزایش تعداد خطای بشت سر هم بیش از مقدار تنظیم شده خطا نگه داشته میشود و شاسی ها یک بار باک میشوند.",
-      "russian": "Если ошибка возникает после нескольких попыток открыть и закрыть и не повторяется, и если количество последовательных ошибок превышает установленное значение, ошибка сохраняется, и кнопки сбрасываются один раз.",
-      "turkish": "Bir hata, birkaç kez açıp kapattıktan sonra meydana gelir ve tekrarlanmazsa, ve ardışık hata sayısı ayarlanan değeri aşarsa, hata tutulur ve butonlar bir kez sıfırlanır."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -730,12 +644,12 @@
         "maxValue": 10,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "إذا تجاوز الوقت المحدد لإغلاق URA، يتم تسجيل خطأ ويتم فتح وإغلاق الباب مرة أخرى.",
+          "german": "Wenn die URA nicht innerhalb der eingestellten Zeit schließt, wird ein Fehler protokolliert und die Tür wird erneut geöffnet und geschlossen.",
+          "english": "If the URA does not close within the set time, an error is logged and the door is reopened and closed again.",
+          "persian": "حداکثر زمان بسته شدن URA در صورت گذشت بیش از زمان تنظیم شده خطا ثبت می‌شود و مجدداً درب باز و بسته می‌شود.",
+          "russian": "Если URA не закрывается в установленное время, регистрируется ошибка, и дверь снова открывается и закрывается.",
+          "turkish": "URA'nın ayarlanan süre içinde kapanmaması durumunda bir hata kaydedilir ve kapı tekrar açılıp kapanır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -744,12 +658,12 @@
       }
     },
     "description": {
-      "arabic": "إذا تجاوز الوقت المحدد لإغلاق URA، يتم تسجيل خطأ ويتم فتح وإغلاق الباب مرة أخرى.",
-      "german": "Wenn die URA nicht innerhalb der eingestellten Zeit schließt, wird ein Fehler protokolliert und die Tür wird erneut geöffnet und geschlossen.",
-      "english": "If the URA does not close within the set time, an error is logged and the door is reopened and closed again.",
-      "persian": "حداکثر زمان بسته شدن URA در صورت گذشت بیش از زمان تنظیم شده خطا ثبت می‌شود و مجدداً درب باز و بسته می‌شود.",
-      "russian": "Если URA не закрывается в установленное время, регистрируется ошибка, и дверь снова открывается и закрывается.",
-      "turkish": "URA'nın ayarlanan süre içinde kapanmaması durumunda bir hata kaydedilir ve kapı tekrar açılıp kapanır."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -776,150 +690,6 @@
         "default": 0,
         "addition": 0,
         "maxValue": 7,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "113",
-    "parentId": [
-      {
-        "id": "93",
-        "label": "Fast OverC"
-      }
-    ],
-    "lable": "Fast Over C",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "A",
-        "label": "Fast Over ",
-        "factor": 0,
-        "offset": 0,
-        "address": 36,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 100,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "114",
-    "parentId": [
-      {
-        "id": "93",
-        "label": "Slow OverC"
-      }
-    ],
-    "lable": "Slow Over C",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "A",
-        "label": "Slow Over ",
-        "factor": 0,
-        "offset": 0,
-        "address": 37,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 100,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "115",
-    "parentId": [
-      {
-        "id": "93",
-        "label": "Time OverC"
-      }
-    ],
-    "lable": "Time Over C",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "S",
-        "label": "Time Over C",
-        "factor": 10,
-        "offset": 0,
-        "address": 38,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 100,
         "minValue": 0,
         "description": {
           "arabic": "",
@@ -1004,12 +774,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط الوضع الرئيسي لإجراء إعدادات الخدمة. إذا تم ضبطه على الوضع التلقائي، يقوم اللوح بإجراء الإعدادات تلقائيًا وفقًا للنوع المحدد. في وضع Costom، يمكن ضبط الخدمة لكل طابق بشكل منفصل.",
+          "german": "Stellen Sie den Hauptmodus für die Serviceeinstellungen ein. Wenn auf Auto eingestellt, nimmt das Board die Einstellungen automatisch gemäß dem angegebenen Typ vor. Im Costom-Modus kann der Service für jede Etage separat eingestellt werden.",
+          "english": "Set the main mode for service settings. If set to auto, the board automatically configures settings according to the specified type. In Custom mode, service can be configured separately for each floor.",
+          "persian": "تنظیم mode اصلی برای انجام تنظیمات سرویس دهی. در صورت تنظیم روی auto، برد به صورت اتوماتیک تنظیمات را مطابق با نوع مشخص شده انجام می‌دهد. در حالت Custom می‌توان برای هر طبقه سرویس دهی را مجزا تنظیم کرد.",
+          "russian": "Настройте основной режим для настройки обслуживания. Если установлен режим авто, плата автоматически настраивает параметры в соответствии с указанным типом. В режиме Costom можно настроить обслуживание отдельно для каждого этажа.",
+          "turkish": "Hizmet ayarlarını yapmak için ana modu ayarlayın. Otomatik olarak ayarlandığında, kart belirtilen türe göre ayarları otomatik olarak yapar. Costom modunda, her kat için hizmet ayrı ayrı ayarlanabilir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1018,12 +788,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط الوضع الرئيسي لإجراء إعدادات الخدمة. إذا تم ضبطه على الوضع التلقائي، يقوم اللوح بإجراء الإعدادات تلقائيًا وفقًا للنوع المحدد. في وضع Costom، يمكن ضبط الخدمة لكل طابق بشكل منفصل.",
-      "german": "Stellen Sie den Hauptmodus für die Serviceeinstellungen ein. Wenn auf Auto eingestellt, nimmt das Board die Einstellungen automatisch gemäß dem angegebenen Typ vor. Im Costom-Modus kann der Service für jede Etage separat eingestellt werden.",
-      "english": "Set the main mode for service settings. If set to auto, the board automatically configures settings according to the specified type. In Custom mode, service can be configured separately for each floor.",
-      "persian": "تنظیم mode اصلی برای انجام تنظیمات سرویس دهی. در صورت تنظیم روی auto، برد به صورت اتوماتیک تنظیمات را مطابق با نوع مشخص شده انجام می‌دهد. در حالت Custom می‌توان برای هر طبقه سرویس دهی را مجزا تنظیم کرد.",
-      "russian": "Настройте основной режим для настройки обслуживания. Если установлен режим авто, плата автоматически настраивает параметры в соответствии с указанным типом. В режиме Costom можно настроить обслуживание отдельно для каждого этажа.",
-      "turkish": "Hizmet ayarlarını yapmak için ana modu ayarlayın. Otomatik olarak ayarlandığında, kart belirtilen türe göre ayarları otomatik olarak yapar. Costom modunda, her kat için hizmet ayrı ayrı ayarlanabilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1083,12 +853,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تعيين نوع خدمة المصعد لجميع الطوابق",
+          "german": "Einstellung des Aufzugsdienstes für alle Etagen",
+          "english": "Set the type of elevator service for all floors",
+          "persian": "تنظیم نوع سرویس دهی آسانسور برای همه طبقات",
+          "russian": "Настройка типа обслуживания лифта для всех этажей",
+          "turkish": "Asansör hizmet türünü tüm katlar için ayarlayın"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1097,12 +867,12 @@
       }
     },
     "description": {
-      "arabic": "تعيين نوع خدمة المصعد لجميع الطوابق",
-      "german": "Einstellung des Aufzugsdienstes für alle Etagen",
-      "english": "Set the type of elevator service for all floors",
-      "persian": "تنظیم نوع سرویس دهی آسانسور برای همه طبقات",
-      "russian": "Настройка типа обслуживания лифта для всех этажей",
-      "turkish": "Asansör hizmet türünü tüm katlar için ayarlayın"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1141,12 +911,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "إذا كانت الطوابق تحتوي على أكثر من باب ولكل باب لوحة تحكم منفصلة، قم بضبطها على \"en\".",
+          "german": "Wenn die Stockwerke mehr als eine Tür haben und jede Tür ein separates Bedienfeld hat, stellen Sie es auf \"en\" ein.",
+          "english": "If the floors have more than one door and each door has a separate control panel, set it to \"en\".",
+          "persian": "در صورتی که طبقات بیش از یک درب دارند و هر درب شاسی مجزا دارد، روی \"en\" تنظیم کنید.",
+          "russian": "Если на этажах более одной двери и у каждой двери отдельная панель управления, установите её на \"en\".",
+          "turkish": "Katlarda birden fazla kapı varsa ve her kapının ayrı bir kontrol paneli varsa, \"en\" olarak ayarlayın."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1155,12 +925,12 @@
       }
     },
     "description": {
-      "arabic": "إذا كانت الطوابق تحتوي على أكثر من باب ولكل باب لوحة تحكم منفصلة، قم بضبطها على \"en\".",
-      "german": "Wenn die Stockwerke mehr als eine Tür haben und jede Tür ein separates Bedienfeld hat, stellen Sie es auf \"en\" ein.",
-      "english": "If the floors have more than one door and each door has a separate control panel, set it to \"en\".",
-      "persian": "در صورتی که طبقات بیش از یک درب دارند و هر درب شاسی مجزا دارد، روی \"en\" تنظیم کنید.",
-      "russian": "Если на этажах более одной двери и у каждой двери отдельная панель управления, установите её на \"en\".",
-      "turkish": "Katlarda birden fazla kapı varsa ve her kapının ayrı bir kontrol paneli varsa, \"en\" olarak ayarlayın."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1261,12 +1031,12 @@
         "maxValue": 30,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "إعداد إزالة الارتداد للأجهزة للمدخل 110 فولت رقم 69؛ إزالة الارتداد تعني عدم استقرار الاتصال الأولي. من أجل إزالة هذه الضوضاء الميكانيكية على مستوى الأجهزة.",
+          "german": "Einstellung der Hardware-Entprellung für Eingang 110 Volt Nummer 69; Entprellung bedeutet die anfängliche Instabilität der Verbindung. Um diese mechanischen Geräusche auf Hardware-Ebene zu beseitigen.",
+          "english": "Setting hardware debounce for input 110 volts number 69; debounce means the initial instability of the connection. To eliminate these mechanical noises at the hardware level.",
+          "persian": "تنظیم دیبانس سخت‌افزاری برای ورودی ۱۱۰ ولت شماره 69؛ دیبانس به معنای نایداری اولیه اتصال است. به منظور حذف این نویزهای مکانیکی در سطح سخت‌افزار",
+          "russian": "Настройка аппаратного подавления дребезга для входа 110 вольт номер 69; подавление дребезга означает начальную нестабильность соединения. Для устранения этих механических шумов на уровне аппаратуры.",
+          "turkish": "110 volt giriş numarası 69 için donanım debouncing ayarı; debouncing, bağlantının başlangıçtaki kararsızlığı anlamına gelir. Bu mekanik gürültüleri donanım seviyesinde ortadan kaldırmak için."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1275,12 +1045,12 @@
       }
     },
     "description": {
-      "arabic": "إعداد إزالة الارتداد للأجهزة للمدخل 110 فولت رقم 69؛ إزالة الارتداد تعني عدم استقرار الاتصال الأولي. من أجل إزالة هذه الضوضاء الميكانيكية على مستوى الأجهزة.",
-      "german": "Einstellung der Hardware-Entprellung für Eingang 110 Volt Nummer 69; Entprellung bedeutet die anfängliche Instabilität der Verbindung. Um diese mechanischen Geräusche auf Hardware-Ebene zu beseitigen.",
-      "english": "Setting hardware debounce for input 110 volts number 69; debounce means the initial instability of the connection. To eliminate these mechanical noises at the hardware level.",
-      "persian": "تنظیم دیبانس سخت‌افزاری برای ورودی ۱۱۰ ولت شماره 69؛ دیبانس به معنای نایداری اولیه اتصال است. به منظور حذف این نویزهای مکانیکی در سطح سخت‌افزار",
-      "russian": "Настройка аппаратного подавления дребезга для входа 110 вольт номер 69; подавление дребезга означает начальную нестабильность соединения. Для устранения этих механических шумов на уровне аппаратуры.",
-      "turkish": "110 volt giriş numarası 69 için donanım debouncing ayarı; debouncing, bağlantının başlangıçtaki kararsızlığı anlamına gelir. Bu mekanik gürültüleri donanım seviyesinde ortadan kaldırmak için."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1309,12 +1079,12 @@
         "maxValue": 30,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "إعداد دبانس الأجهزة للمدخل 110 فولت رقم 68؛ الدبانس يعني عدم استقرار الاتصال الأولي. من أجل إزالة هذه الضوضاء الميكانيكية على مستوى الأجهزة.",
+          "german": "Einstellung der Hardware-Entprellung für Eingang 110 Volt Nummer 68; Entprellung bedeutet anfängliche Verbindungsinstabilität. Um diese mechanischen Geräusche auf Hardware-Ebene zu eliminieren.",
+          "english": "Setting hardware debounce for input 110 volts number 68; debounce means initial connection instability. To eliminate these mechanical noises at the hardware level.",
+          "persian": "تنظیم دیبانس سخت‌افزاری برای ورودی ۱۱۰ ولت شماره 68؛ دیبانس به معنای نایداری اولیه اتصال است. به منظور حذف این نویزهای مکانیکی در سطح سخت‌افزار",
+          "russian": "Настройка аппаратной защиты от дребезга для входа 110 вольт номер 68; защита от дребезга означает нестабильность первоначального соединения. Для устранения этих механических шумов на уровне аппаратуры.",
+          "turkish": "Giriş 110 volt numara 68 için donanım debouncing ayarı; debouncing, başlangıç bağlantı kararsızlığı anlamına gelir. Bu mekanik gürültüleri donanım seviyesinde ortadan kaldırmak için."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1323,12 +1093,12 @@
       }
     },
     "description": {
-      "arabic": "إعداد دبانس الأجهزة للمدخل 110 فولت رقم 68؛ الدبانس يعني عدم استقرار الاتصال الأولي. من أجل إزالة هذه الضوضاء الميكانيكية على مستوى الأجهزة.",
-      "german": "Einstellung der Hardware-Entprellung für Eingang 110 Volt Nummer 68; Entprellung bedeutet anfängliche Verbindungsinstabilität. Um diese mechanischen Geräusche auf Hardware-Ebene zu eliminieren.",
-      "english": "Setting hardware debounce for input 110 volts number 68; debounce means initial connection instability. To eliminate these mechanical noises at the hardware level.",
-      "persian": "تنظیم دیبانس سخت‌افزاری برای ورودی ۱۱۰ ولت شماره 68؛ دیبانس به معنای نایداری اولیه اتصال است. به منظور حذف این نویزهای مکانیکی در سطح سخت‌افزار",
-      "russian": "Настройка аппаратной защиты от дребезга для входа 110 вольт номер 68; защита от дребезга означает нестабильность первоначального соединения. Для устранения этих механических шумов на уровне аппаратуры.",
-      "turkish": "Giriş 110 volt numara 68 için donanım debouncing ayarı; debouncing, başlangıç bağlantı kararsızlığı anlamına gelir. Bu mekanik gürültüleri donanım seviyesinde ortadan kaldırmak için."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1357,12 +1127,12 @@
         "maxValue": 100,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "الحد الأقصى للوقت لإكمال إغلاق وإكمال المدخلات 68 و 69 و 66 في حالة عدم إغلاق الباب بعد الوقت المحدد، يتم تسجيل خطأ ويتم فتح وإغلاق الباب مرة أخرى.",
+          "german": "Die maximale Zeit für den Abschluss des Schließens und der Vervollständigung der Eingaben 68, 69 und 66, falls die Tür nach der eingestellten Zeit nicht geschlossen wird, wird ein Fehler protokolliert und die Tür wird erneut geöffnet und geschlossen.",
+          "english": "The maximum time for completing the closure and completion of inputs 68, 69, and 66, if the door is not closed after the set time, an error is recorded and the door is reopened and closed again.",
+          "persian": "حداکثر مدت زمان برای تکمیل شدن بسته شدن و تکمیل ورودی‌ها ۶۸ و ۶۹ و ۶۶ در صورت بسته نشدن درب بعد از زمان تنظیم شده خطا ثبت شده و درب مجدد باز و بسته می‌شود.",
+          "russian": "Максимальное время для завершения закрытия и завершения ввода 68, 69 и 66, если дверь не закрыта после установленного времени, фиксируется ошибка, и дверь снова открывается и закрывается.",
+          "turkish": "Kapının ayarlanan süreden sonra kapanmaması durumunda 68, 69 ve 66 girişlerinin kapatılması ve tamamlanması için maksimum süre, bir hata kaydedilir ve kapı tekrar açılıp kapatılır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1371,12 +1141,12 @@
       }
     },
     "description": {
-      "arabic": "الحد الأقصى للوقت لإكمال إغلاق وإكمال المدخلات 68 و 69 و 66 في حالة عدم إغلاق الباب بعد الوقت المحدد، يتم تسجيل خطأ ويتم فتح وإغلاق الباب مرة أخرى.",
-      "german": "Die maximale Zeit für den Abschluss des Schließens und der Vervollständigung der Eingaben 68, 69 und 66, falls die Tür nach der eingestellten Zeit nicht geschlossen wird, wird ein Fehler protokolliert und die Tür wird erneut geöffnet und geschlossen.",
-      "english": "The maximum time for completing the closure and completion of inputs 68, 69, and 66, if the door is not closed after the set time, an error is recorded and the door is reopened and closed again.",
-      "persian": "حداکثر مدت زمان برای تکمیل شدن بسته شدن و تکمیل ورودی‌ها ۶۸ و ۶۹ و ۶۶ در صورت بسته نشدن درب بعد از زمان تنظیم شده خطا ثبت شده و درب مجدد باز و بسته می‌شود.",
-      "russian": "Максимальное время для завершения закрытия и завершения ввода 68, 69 и 66, если дверь не закрыта после установленного времени, фиксируется ошибка, и дверь снова открывается и закрывается.",
-      "turkish": "Kapının ayarlanan süreden sonra kapanmaması durumunda 68, 69 ve 66 girişlerinin kapatılması ve tamamlanması için maksimum süre, bir hata kaydedilir ve kapı tekrar açılıp kapatılır."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1405,12 +1175,12 @@
         "maxValue": 100,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "قم بضبط مدة فتح الباب مع الأخذ في الاعتبار أن اللوحة لا تحتوي على تغذية راجعة حول الفتح الكامل للباب، قم بضبط هذا المعامل بعد القياس.",
+          "german": "Stellen Sie die Öffnungsdauer der Tür ein, wobei zu beachten ist, dass die Platine kein Feedback über das vollständige Öffnen der Tür hat. Passen Sie diesen Parameter nach der Messung an.",
+          "english": "Set the door opening duration considering that the board does not have feedback on the complete opening of the door, adjust this parameter after measurement.",
+          "persian": "تنظیم مدت زمان باز شدن درب با توجه به اینکه برد فیدبکی از کامل باز شدن درب ندارن این بارامتر را بعد از اندازه گیری تنظیم کنید.",
+          "russian": "Установите продолжительность открытия двери, учитывая, что плата не имеет обратной связи о полном открытии двери, настройте этот параметр после измерения.",
+          "turkish": "Kapının tam olarak açılmasıyla ilgili geri bildirim almayan kartı dikkate alarak kapı açılma süresini ayarlayın, bu parametreyi ölçümden sonra ayarlayın."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1419,12 +1189,12 @@
       }
     },
     "description": {
-      "arabic": "قم بضبط مدة فتح الباب مع الأخذ في الاعتبار أن اللوحة لا تحتوي على تغذية راجعة حول الفتح الكامل للباب، قم بضبط هذا المعامل بعد القياس.",
-      "german": "Stellen Sie die Öffnungsdauer der Tür ein, wobei zu beachten ist, dass die Platine kein Feedback über das vollständige Öffnen der Tür hat. Passen Sie diesen Parameter nach der Messung an.",
-      "english": "Set the door opening duration considering that the board does not have feedback on the complete opening of the door, adjust this parameter after measurement.",
-      "persian": "تنظیم مدت زمان باز شدن درب با توجه به اینکه برد فیدبکی از کامل باز شدن درب ندارن این بارامتر را بعد از اندازه گیری تنظیم کنید.",
-      "russian": "Установите продолжительность открытия двери, учитывая, что плата не имеет обратной связи о полном открытии двери, настройте этот параметр после измерения.",
-      "turkish": "Kapının tam olarak açılmasıyla ilgili geri bildirim almayan kartı dikkate alarak kapı açılma süresini ayarlayın, bu parametreyi ölçümden sonra ayarlayın."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1470,12 +1240,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط آلية التغذية الراجعة لفتح وإغلاق الباب",
+          "german": "Anpassen des Feedback-Mechanismus für das Öffnen und Schließen der Tür",
+          "english": "Adjust the feedback mechanism for the door being open or closed",
+          "persian": "تنظیم مکانیزم فیدبک برای باز و بسته بودن درب",
+          "russian": "Настройка механизма обратной связи для открывания и закрывания двери",
+          "turkish": "Kapının açık veya kapalı olmasına yönelik geri bildirim mekanizmasını ayarlayın"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1484,12 +1254,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط آلية التغذية الراجعة لفتح وإغلاق الباب",
-      "german": "Anpassen des Feedback-Mechanismus für das Öffnen und Schließen der Tür",
-      "english": "Adjust the feedback mechanism for the door being open or closed",
-      "persian": "تنظیم مکانیزم فیدبک برای باز و بسته بودن درب",
-      "russian": "Настройка механизма обратной связи для открывания и закрывания двери",
-      "turkish": "Kapının açık veya kapalı olmasına yönelik geri bildirim mekanizmasını ayarlayın"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -1535,12 +1305,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط عدد أبواب الكابينة",
+          "german": "Anzahl der Kabinentüren einstellen",
+          "english": "Adjust the number of cabin doors",
+          "persian": "تنظیم تعداد درب های کابین",
+          "russian": "Настройка количества дверей кабины",
+          "turkish": "Kabin kapılarının sayısını ayarlayın"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -1549,12 +1319,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط عدد أبواب الكابينة",
-      "german": "Anzahl der Kabinentüren einstellen",
-      "english": "Adjust the number of cabin doors",
-      "persian": "تنظیم تعداد درب های کابین",
-      "russian": "Настройка количества дверей кабины",
-      "turkish": "Kabin kapılarının sayısını ayarlayın"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -3109,129 +2879,6 @@
     }
   },
   {
-    "id": "135",
-    "parentId": [
-      {
-        "id": "95",
-        "label": "Speed"
-      }
-    ],
-    "lable": "Speed",
-    "type": "SETTING_ON_SELECT",
-    "data": {
-      "settingOneSelect": {
-        "label": "Speed",
-        "address": 6,
-        "default": 0,
-        "options": [
-          {
-            "value": "Slow",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          },
-          {
-            "value": "Rev",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          },
-          {
-            "value": "Med",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          }
-        ],
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "136",
-    "parentId": [
-      {
-        "id": "95",
-        "label": "Direction"
-      }
-    ],
-    "lable": "Direction",
-    "type": "SETTING_ON_SELECT",
-    "data": {
-      "settingOneSelect": {
-        "label": "Direction",
-        "address": 5,
-        "default": 0,
-        "options": [
-          {
-            "value": "UP",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          },
-          {
-            "value": "DOWN",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          }
-        ],
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
     "id": "137",
     "parentId": [
       {
@@ -3262,107 +2909,6 @@
             }
           }
         ],
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "138",
-    "parentId": [],
-    "lable": "Emergency_Enable",
-    "type": "SETTING_ON_SELECT",
-    "data": {
-      "settingOneSelect": {
-        "label": "Enable",
-        "address": 8,
-        "default": 0,
-        "options": [
-          {
-            "value": "Enable",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          },
-          {
-            "value": "Disable",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          }
-        ],
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "139",
-    "parentId": [
-      {
-        "id": "97",
-        "label": "Timeout"
-      }
-    ],
-    "lable": "TimeOut",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "S",
-        "label": "TimeOut",
-        "factor": 1,
-        "offset": 0,
-        "address": 35,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 200,
-        "minValue": 0,
         "description": {
           "arabic": "",
           "german": "",
@@ -3436,70 +2982,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "اختيار نوع المصعد، نوع المصعد له تأثير مباشر على جميع الإعدادات وطريقة عمل اللوحة.",
-      "german": "Die Wahl des Aufzugstyps hat direkten Einfluss auf alle Einstellungen und die Funktionsweise der Steuerung.",
-      "english": "The choice of elevator type directly affects all settings and the operation of the board.",
-      "persian": "انتخاب نوع آسانسور، نوع آسانسور تأثیر مستقیم در تمام تنظیمات و نحوه عملکرد برد خواهد داشت.",
-      "russian": "Выбор типа лифта напрямую влияет на все настройки и работу платы.",
-      "turkish": "Asansör tipi seçimi, tüm ayarlar ve kartın çalışma şekli üzerinde doğrudan etkiye sahiptir."
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "140",
-    "parentId": [
-      {
-        "id": "97",
-        "label": "Enable"
-      }
-    ],
-    "lable": "Enable",
-    "type": "SETTING_ON_SELECT",
-    "data": {
-      "settingOneSelect": {
-        "label": "Enable",
-        "address": 7,
-        "default": 0,
-        "options": [
-          {
-            "value": "Enable",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          },
-          {
-            "value": "Disable",
-            "description": {
-              "english": "",
-              "persian": ""
-            }
-          }
-        ],
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "اختيار نوع المصعد، نوع المصعد له تأثير مباشر على جميع الإعدادات وطريقة عمل اللوحة.",
+          "german": "Die Wahl des Aufzugstyps hat direkten Einfluss auf alle Einstellungen und die Funktionsweise der Steuerung.",
+          "english": "The choice of elevator type directly affects all settings and the operation of the board.",
+          "persian": "انتخاب نوع آسانسور، نوع آسانسور تأثیر مستقیم در تمام تنظیمات و نحوه عملکرد برد خواهد داشت.",
+          "russian": "Выбор типа лифта напрямую влияет на все настройки и работу платы.",
+          "turkish": "Asansör tipi seçimi, tüm ayarlar ve kartın çalışma şekli üzerinde doğrudan etkiye sahiptir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -3542,55 +3030,12 @@
         "maxValue": 40,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "يجب ضبط سرعة المصعد بما يتوافق مع السرعة الفعلية للمحرك.",
-      "german": "Die Geschwindigkeit des Aufzugs muss an die tatsächliche Geschwindigkeit des Motors angepasst werden.",
-      "english": "The elevator speed must be adjusted to match the actual speed of the motor.",
-      "persian": "تنظیم سرعت آسانسور حتماً باید مطابق با سرعت واقعی موتور تنظیم شود.",
-      "russian": "Скорость лифта должна быть настроена в соответствии с фактической скоростью двигателя.",
-      "turkish": "Asansör hızı mutlaka motorun gerçek hızına göre ayarlanmalıdır."
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "16",
-    "parentId": [],
-    "lable": "URA Delay",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "s",
-        "label": "URA Delay",
-        "factor": -10,
-        "offset": 0,
-        "address": 44,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 100,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "يجب ضبط سرعة المصعد بما يتوافق مع السرعة الفعلية للمحرك.",
+          "german": "Die Geschwindigkeit des Aufzugs muss an die tatsächliche Geschwindigkeit des Motors angepasst werden.",
+          "english": "The elevator speed must be adjusted to match the actual speed of the motor.",
+          "persian": "تنظیم سرعت آسانسور حتماً باید مطابق با سرعت واقعی موتور تنظیم شود.",
+          "russian": "Скорость лифта должна быть настроена в соответствии с фактической скоростью двигателя.",
+          "turkish": "Asansör hızı mutlaka motorun gerçek hızına göre ayarlanmalıdır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -3637,12 +3082,12 @@
         "maxValue": 200,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "يتم ضبط وقت الانتقال إلى وضع الاستعداد بعد فترة زمنية محددة، حيث يدخل الجهاز في وضع استهلاك منخفض للطاقة. تستخدم القطاعات الإعدادات الخاصة بهذا الوضع وتصبح أقل سطوعًا، كما يتم إطفاء ضوء الكابينة أيضًا.",
+          "german": "Stellen Sie die Zeit ein, um in den Standby-Modus zu wechseln, nachdem die festgelegte Dauer abgelaufen ist, und das Board wechselt in den Energiesparmodus. Die Segmente verwenden die Einstellungen für diesen Modus und werden gedimmt, und das Kabinenlicht wird ebenfalls ausgeschaltet.",
+          "english": "Set the time to enter standby mode after the specified duration, and the board will enter low power mode. The segments use the settings related to this mode and dim, and the cabin light also turns off.",
+          "persian": "تنظیم زمان رفتن به حالت استندبای بعد از مدت زمان تنظیم شده، برد وارد مد کم‌مصرف می‌شود. سگمنت‌ها از تنظیمات مربوط به این حالت استفاده می‌کنند و کم‌نور می‌شوند، همچنین چراغ کابین هم خاموش می‌شود.",
+          "russian": "Установите время перехода в режим ожидания после заданного времени, и плата перейдет в режим низкого энергопотребления. Сегменты используют настройки, связанные с этим режимом, и тускнеют, а свет в кабине также выключается.",
+          "turkish": "Belirtilen süre sonrasında bekleme moduna geçiş zamanını ayarlayın ve kart düşük güç moduna geçecektir. Segmentler bu moda ilişkin ayarları kullanır ve kısılır, ayrıca kabin ışığı da kapanır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -3651,12 +3096,12 @@
       }
     },
     "description": {
-      "arabic": "يتم ضبط وقت الانتقال إلى وضع الاستعداد بعد فترة زمنية محددة، حيث يدخل الجهاز في وضع استهلاك منخفض للطاقة. تستخدم القطاعات الإعدادات الخاصة بهذا الوضع وتصبح أقل سطوعًا، كما يتم إطفاء ضوء الكابينة أيضًا.",
-      "german": "Stellen Sie die Zeit ein, um in den Standby-Modus zu wechseln, nachdem die festgelegte Dauer abgelaufen ist, und das Board wechselt in den Energiesparmodus. Die Segmente verwenden die Einstellungen für diesen Modus und werden gedimmt, und das Kabinenlicht wird ebenfalls ausgeschaltet.",
-      "english": "Set the time to enter standby mode after the specified duration, and the board will enter low power mode. The segments use the settings related to this mode and dim, and the cabin light also turns off.",
-      "persian": "تنظیم زمان رفتن به حالت استندبای بعد از مدت زمان تنظیم شده، برد وارد مد کم‌مصرف می‌شود. سگمنت‌ها از تنظیمات مربوط به این حالت استفاده می‌کنند و کم‌نور می‌شوند، همچنین چراغ کابین هم خاموش می‌شود.",
-      "russian": "Установите время перехода в режим ожидания после заданного времени, и плата перейдет в режим низкого энергопотребления. Сегменты используют настройки, связанные с этим режимом, и тускнеют, а свет в кабине также выключается.",
-      "turkish": "Belirtilen süre sonrasında bekleme moduna geçiş zamanını ayarlayın ve kart düşük güç moduna geçecektir. Segmentler bu moda ilişkin ayarları kullanır ve kısılır, ayrıca kabin ışığı da kapanır."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -3685,12 +3130,12 @@
         "maxValue": 100,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "إنشاء تأخير على مدخلات 1cf لجميع الفئات",
+          "german": "Erstellen Sie eine Verzögerung bei 1cf-Eingängen für alle Klassen",
+          "english": "Create a delay on 1cf inputs for all classes",
+          "persian": "ایجاد تاخیر روی ورودی های 1cf برای همه طبقات",
+          "russian": "Создать задержку на входах 1cf для всех классов",
+          "turkish": "Tüm sınıflar için 1cf girişlerinde gecikme oluşturun"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -3699,12 +3144,12 @@
       }
     },
     "description": {
-      "arabic": "إنشاء تأخير على مدخلات 1cf لجميع الفئات",
-      "german": "Erstellen Sie eine Verzögerung bei 1cf-Eingängen für alle Klassen",
-      "english": "Create a delay on 1cf inputs for all classes",
-      "persian": "ایجاد تاخیر روی ورودی های 1cf برای همه طبقات",
-      "russian": "Создать задержку на входах 1cf для всех классов",
-      "turkish": "Tüm sınıflar için 1cf girişlerinde gecikme oluşturun"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -3853,12 +3298,12 @@
         "maxValue": 200,
         "minValue": 10,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط وقت إزالة الارتداد على شاسيهات الكابينة والطوابق: في حالة وجود ضوضاء على الشاسيهات، يمكن التخلص من تأثير الضوضاء عن طريق زيادة وقت إزالة الارتداد.",
+          "german": "Einstellung der Entprellzeit auf Kabinen- und Stockwerkschassis: Bei Vorhandensein von Störungen auf den Chassis kann die Wirkung der Störungen durch Erhöhung der Entprellzeit beseitigt werden.",
+          "english": "Setting debounce time on cabin and floor chassis: If there is noise on the chassis, the effect of the noise can be eliminated by increasing the debounce time.",
+          "persian": "تنظیم زمان دیباس روی شاسی های کابین و طبقات: در صورت وجود نویز روی شاسی ها، با افزایش زمان دیبانس می‌توان تاثیر نویزها را از بین برد.",
+          "russian": "Настройка времени дебаунса на шасси кабины и этажей: если на шасси есть шум, его влияние можно устранить, увеличив время дебаунса.",
+          "turkish": "Kabine ve kat şasilerinde debouncing süresinin ayarlanması: Şasilerde gürültü varsa, debouncing süresini artırarak gürültünün etkisi ortadan kaldırılabilir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -3867,12 +3312,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط وقت إزالة الارتداد على شاسيهات الكابينة والطوابق: في حالة وجود ضوضاء على الشاسيهات، يمكن التخلص من تأثير الضوضاء عن طريق زيادة وقت إزالة الارتداد.",
-      "german": "Einstellung der Entprellzeit auf Kabinen- und Stockwerkschassis: Bei Vorhandensein von Störungen auf den Chassis kann die Wirkung der Störungen durch Erhöhung der Entprellzeit beseitigt werden.",
-      "english": "Setting debounce time on cabin and floor chassis: If there is noise on the chassis, the effect of the noise can be eliminated by increasing the debounce time.",
-      "persian": "تنظیم زمان دیباس روی شاسی های کابین و طبقات: در صورت وجود نویز روی شاسی ها، با افزایش زمان دیبانس می‌توان تاثیر نویزها را از بین برد.",
-      "russian": "Настройка времени дебаунса на шасси кабины и этажей: если на шасси есть шум, его влияние можно устранить, увеличив время дебаунса.",
-      "turkish": "Kabine ve kat şasilerinde debouncing süresinin ayarlanması: Şasilerde gürültü varsa, debouncing süresini artırarak gürültünün etkisi ortadan kaldırılabilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -3897,121 +3342,6 @@
       "persian": "گروه تنظیمات مربوط به تایمر بیشرفته",
       "russian": "Группа настроек расширенного таймера",
       "turkish": "Gelişmiş zamanlayıcı ayarları grubu"
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "23",
-    "parentId": [],
-    "lable": "Relay_Time",
-    "type": "SUBMENU",
-    "data": {},
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "24",
-    "parentId": [
-      {
-        "id": "23",
-        "label": "Off Delay"
-      }
-    ],
-    "lable": "Off_Delay",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "s",
-        "label": "Off Delay",
-        "factor": -10,
-        "offset": 0,
-        "address": 76,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 100,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "25",
-    "parentId": [
-      {
-        "id": "23",
-        "label": "On Delay"
-      }
-    ],
-    "lable": "On_Delay",
-    "type": "SETTING_ON_PARAMETER",
-    "data": {
-      "settingOneParameter": {
-        "unit": "s",
-        "label": "On Delay",
-        "factor": -10,
-        "offset": 0,
-        "address": 75,
-        "default": 0,
-        "addition": 0,
-        "maxValue": 100,
-        "minValue": 0,
-        "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
-        },
-        "additional_description_for_ai_assistant": {
-          "english": "",
-          "persian": ""
-        }
-      }
-    },
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -4074,12 +3404,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط اتجاه المحرك، يمكن استخدام هذا الإعداد لتغيير اتجاه المحرك إذا لزم الأمر.",
+          "german": "Motorrichtungseinstellung, bei Bedarf kann diese Einstellung verwendet werden, um die Motorrichtung zu ändern.",
+          "english": "Motor direction setting, if needed, this setting can be used to change the motor direction.",
+          "persian": "تنظیم جهت موتور، در صورت نیاز می‌توان با این تنظیم جهت موتور را تعویض کرد.",
+          "russian": "Настройка направления двигателя, при необходимости, с помощью этой настройки можно изменить направление двигателя.",
+          "turkish": "Motor yön ayarı, gerekirse bu ayar motor yönünü değiştirmek için kullanılabilir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -4088,12 +3418,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط اتجاه المحرك، يمكن استخدام هذا الإعداد لتغيير اتجاه المحرك إذا لزم الأمر.",
-      "german": "Motorrichtungseinstellung, bei Bedarf kann diese Einstellung verwendet werden, um die Motorrichtung zu ändern.",
-      "english": "Motor direction setting, if needed, this setting can be used to change the motor direction.",
-      "persian": "تنظیم جهت موتور، در صورت نیاز می‌توان با این تنظیم جهت موتور را تعویض کرد.",
-      "russian": "Настройка направления двигателя, при необходимости, с помощью этой настройки можно изменить направление двигателя.",
-      "turkish": "Motor yön ayarı, gerekirse bu ayar motor yönünü değiştirmek için kullanılabilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -4132,12 +3462,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط اتجاه نبضات التشفير (المدخلات a و b) في حالة حدوث خطأ في عكس التشفير، قم بتغيير هذا الإعداد أو عكس المدخلات المادية a و b.",
+          "german": "Stellen Sie die Richtung der Encoder-Impulse (Eingänge a und b) ein. Bei einem Encoder-Umkehrfehler ändern Sie diese Einstellung oder kehren Sie die Hardware-Eingänge a und b um.",
+          "english": "Adjust the direction of the encoder pulses (inputs a and b). In case of an encoder reversal error, change this setting or reverse the hardware inputs a and b.",
+          "persian": "تنظیم جهت پالس‌های انکودر (ورودی‌های a و b) در صورت بروز خطای معکوس بودن انکودر، این تنظیم را تغییر دهید یا ورودی‌های سخت‌افزاری a و b را معکوس کنید.",
+          "russian": "Настройте направление импульсов энкодера (входы a и b). В случае ошибки реверса энкодера измените эту настройку или поменяйте местами аппаратные входы a и b.",
+          "turkish": "Enkoder darbelerinin yönünü ayarlayın (girişler a ve b). Enkoder tersine çevirme hatası durumunda, bu ayarı değiştirin veya donanım girişlerini a ve b ters çevirin."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -4146,12 +3476,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط اتجاه نبضات التشفير (المدخلات a و b) في حالة حدوث خطأ في عكس التشفير، قم بتغيير هذا الإعداد أو عكس المدخلات المادية a و b.",
-      "german": "Stellen Sie die Richtung der Encoder-Impulse (Eingänge a und b) ein. Bei einem Encoder-Umkehrfehler ändern Sie diese Einstellung oder kehren Sie die Hardware-Eingänge a und b um.",
-      "english": "Adjust the direction of the encoder pulses (inputs a and b). In case of an encoder reversal error, change this setting or reverse the hardware inputs a and b.",
-      "persian": "تنظیم جهت پالس‌های انکودر (ورودی‌های a و b) در صورت بروز خطای معکوس بودن انکودر، این تنظیم را تغییر دهید یا ورودی‌های سخت‌افزاری a و b را معکوس کنید.",
-      "russian": "Настройте направление импульсов энкодера (входы a и b). В случае ошибки реверса энкодера измените эту настройку или поменяйте местами аппаратные входы a и b.",
-      "turkish": "Enkoder darbelerinin yönünü ayarlayın (girişler a ve b). Enkoder tersine çevirme hatası durumunda, bu ayarı değiştirin veya donanım girişlerini a ve b ters çevirin."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -4176,25 +3506,6 @@
       "persian": "گروه تنظیمات مربوط به درایو موتور(vfd)",
       "russian": "Группа настроек привода двигателя (VFD)",
       "turkish": "Motor sürücü ayarları grubu (VFD)"
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "3",
-    "parentId": [],
-    "lable": "General",
-    "type": "SUBMENU",
-    "data": {},
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -5213,12 +4524,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تكوين نوع اتصال اللوحة بمحرك الأقراص",
+          "german": "Einstellung des Verbindungstyps der Platine zum Laufwerk",
+          "english": "Setting the connection type of the board to the drive",
+          "persian": "تنظیم نوع اتصال برد به درایو",
+          "russian": "Настройка типа подключения платы к приводу",
+          "turkish": "Kartın sürücüye bağlantı türünü ayarlama"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -5227,12 +4538,12 @@
       }
     },
     "description": {
-      "arabic": "تكوين نوع اتصال اللوحة بمحرك الأقراص",
-      "german": "Einstellung des Verbindungstyps der Platine zum Laufwerk",
-      "english": "Setting the connection type of the board to the drive",
-      "persian": "تنظیم نوع اتصال برد به درایو",
-      "russian": "Настройка типа подключения платы к приводу",
-      "turkish": "Kartın sürücüye bağlantı türünü ayarlama"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -5323,12 +4634,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تكوين معدل اتصال RS485 التسلسلي",
+          "german": "Konfiguration der RS485-Serienverbindungsrate",
+          "english": "Configure RS485 serial connection rate",
+          "persian": "تنظیم نرخ اتصال سریال RS485",
+          "russian": "Настройка скорости последовательного соединения RS485",
+          "turkish": "RS485 seri bağlantı hızını ayarlama"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -5337,12 +4648,12 @@
       }
     },
     "description": {
-      "arabic": "تكوين معدل اتصال RS485 التسلسلي",
-      "german": "Konfiguration der RS485-Serienverbindungsrate",
-      "english": "Configure RS485 serial connection rate",
-      "persian": "تنظیم نرخ اتصال سریال RS485",
-      "russian": "Настройка скорости последовательного соединения RS485",
-      "turkish": "RS485 seri bağlantı hızını ayarlama"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -5381,12 +4692,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط تنسيق الاتصال التسلسلي",
+          "german": "Serielle Kommunikationsformat einstellen",
+          "english": "Set serial communication format",
+          "persian": "تنظیم قالب ارتباطی سریال",
+          "russian": "Настройка формата последовательной связи",
+          "turkish": "Seri iletişim formatını ayarla"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -5395,12 +4706,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط تنسيق الاتصال التسلسلي",
-      "german": "Serielle Kommunikationsformat einstellen",
-      "english": "Set serial communication format",
-      "persian": "تنظیم قالب ارتباطی سریال",
-      "russian": "Настройка формата последовательной связи",
-      "turkish": "Seri iletişim formatını ayarla"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -5487,12 +4798,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تفعيل وتعطيل الأخطاء المتعلقة بالتحكم في الطور والجهد",
+          "german": "Aktivieren und Deaktivieren von Fehlern im Zusammenhang mit Phasen- und Spannungsregelung",
+          "english": "Activating and deactivating errors related to phase and voltage control",
+          "persian": "فعال و غیرفعال کردن خطاهای مرتبط به کنترل فاز و ولتاژ",
+          "russian": "Активирование и деактивирование ошибок, связанных с управлением фазой и напряжением",
+          "turkish": "Faz ve voltaj kontrolü ile ilgili hataların etkinleştirilmesi ve devre dışı bırakılması"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -5501,12 +4812,12 @@
       }
     },
     "description": {
-      "arabic": "تفعيل وتعطيل الأخطاء المتعلقة بالتحكم في الطور والجهد",
-      "german": "Aktivieren und Deaktivieren von Fehlern im Zusammenhang mit Phasen- und Spannungsregelung",
-      "english": "Activating and deactivating errors related to phase and voltage control",
-      "persian": "فعال و غیرفعال کردن خطاهای مرتبط به کنترل فاز و ولتاژ",
-      "russian": "Активирование и деактивирование ошибок, связанных с управлением фазой и напряжением",
-      "turkish": "Faz ve voltaj kontrolü ile ilgili hataların etkinleştirilmesi ve devre dışı bırakılması"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -5704,7 +5015,7 @@
               "arabic": "",
               "german": "",
               "english": "",
-              "persian": "",
+              "persian": "سگمنت چب",
               "russian": "",
               "turkish": ""
             },
@@ -5737,7 +5048,7 @@
               {
                 "value": "1",
                 "description": {
-                  "english": "",
+                  "english": "سیسیسی",
                   "persian": ""
                 }
               },
@@ -5893,7 +5204,7 @@
               "arabic": "",
               "german": "",
               "english": "",
-              "persian": "",
+              "persian": "سگمنت راست",
               "russian": "",
               "turkish": ""
             },
@@ -6786,6 +6097,31 @@
               "persian": ""
             }
           }
+        },
+        {
+          "settingOneParameter": {
+            "unit": "",
+            "label": "new item",
+            "factor": 0,
+            "offset": 0,
+            "address": 0,
+            "default": 0,
+            "addition": 0,
+            "maxValue": 0,
+            "minValue": 0,
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
         }
       ]
     },
@@ -6848,12 +6184,12 @@
         "maxValue": 200,
         "minValue": 170,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "الحد الأدنى للجهد الآمن لتشغيل الجهاز",
+          "german": "Die minimale sichere Spannung für den Betrieb des Geräts",
+          "english": "The minimum safe voltage for device operation",
+          "persian": "حداقل ولتاژ امن جهت کار کرد دستگاه",
+          "russian": "Минимальное безопасное напряжение для работы устройства",
+          "turkish": "Cihazın çalışması için minimum güvenli voltaj"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -6862,12 +6198,12 @@
       }
     },
     "description": {
-      "arabic": "الحد الأدنى للجهد الآمن لتشغيل الجهاز",
-      "german": "Die minimale sichere Spannung für den Betrieb des Geräts",
-      "english": "The minimum safe voltage for device operation",
-      "persian": "حداقل ولتاژ امن جهت کار کرد دستگاه",
-      "russian": "Минимальное безопасное напряжение для работы устройства",
-      "turkish": "Cihazın çalışması için minimum güvenli voltaj"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -6896,12 +6232,12 @@
         "maxValue": 255,
         "minValue": 210,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "الحد الأقصى للجهد الذي يمكن للجهاز تحمله للعمل بشكل صحيح",
+          "german": "Die maximale Spannung, die das Gerät für einen ordnungsgemäßen Betrieb aushalten kann",
+          "english": "The maximum voltage the device can withstand for proper operation",
+          "persian": "حداکثر ولتاژ قابل تحمل دستگاه جهت عملکرد صحیح",
+          "russian": "Максимальное напряжение, которое устройство может выдержать для правильной работы",
+          "turkish": "Cihazın düzgün çalışması için dayanabileceği maksimum voltaj"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -6910,12 +6246,12 @@
       }
     },
     "description": {
-      "arabic": "الحد الأقصى للجهد الذي يمكن للجهاز تحمله للعمل بشكل صحيح",
-      "german": "Die maximale Spannung, die das Gerät für einen ordnungsgemäßen Betrieb aushalten kann",
-      "english": "The maximum voltage the device can withstand for proper operation",
-      "persian": "حداکثر ولتاژ قابل تحمل دستگاه جهت عملکرد صحیح",
-      "russian": "Максимальное напряжение, которое устройство может выдержать для правильной работы",
-      "turkish": "Cihazın düzgün çalışması için dayanabileceği maksimum voltaj"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -6944,12 +6280,12 @@
         "maxValue": 10,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "خلال فترة اكتشاف خطأ انخفاض الجهد، لن يتم اكتشاف الخطأ حتى انتهاء المدة المحددة.",
+          "german": "Während der Fehlererkennungszeit für Spannungsabfall wird der Fehler nicht erkannt, bis die eingestellte Dauer abgelaufen ist.",
+          "english": "During the voltage drop fault detection time, the fault will not be detected until the set duration has elapsed.",
+          "persian": "زمان تشخیص خطای کاهش ولتاژ تا مدت تنظیم شده خطا تشخیص داده نمی‌شود.",
+          "russian": "Во время обнаружения ошибки понижения напряжения ошибка не будет обнаружена до истечения установленного времени.",
+          "turkish": "Gerilim düşüşü hata tespit süresi boyunca, hata ayarlanan süre dolana kadar tespit edilmeyecektir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -6958,12 +6294,12 @@
       }
     },
     "description": {
-      "arabic": "خلال فترة اكتشاف خطأ انخفاض الجهد، لن يتم اكتشاف الخطأ حتى انتهاء المدة المحددة.",
-      "german": "Während der Fehlererkennungszeit für Spannungsabfall wird der Fehler nicht erkannt, bis die eingestellte Dauer abgelaufen ist.",
-      "english": "During the voltage drop fault detection time, the fault will not be detected until the set duration has elapsed.",
-      "persian": "زمان تشخیص خطای کاهش ولتاژ تا مدت تنظیم شده خطا تشخیص داده نمی‌شود.",
-      "russian": "Во время обнаружения ошибки понижения напряжения ошибка не будет обнаружена до истечения установленного времени.",
-      "turkish": "Gerilim düşüşü hata tespit süresi boyunca, hata ayarlanan süre dolana kadar tespit edilmeyecektir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -7002,12 +6338,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تحديد ما إذا كان المصعد ثلاثي الطور أو أحادي الطور",
+          "german": "Einstellung, ob der Aufzug dreiphasig oder einphasig ist",
+          "english": "Setting whether the elevator is three-phase or single-phase",
+          "persian": "تنظیم سه فاز یا تکفاز بودن آسانسور",
+          "russian": "Настройка лифта на трехфазный или однофазный режим",
+          "turkish": "Asansörün üç fazlı mı yoksa tek fazlı mı olduğunu ayarlama"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -7016,12 +6352,12 @@
       }
     },
     "description": {
-      "arabic": "تحديد ما إذا كان المصعد ثلاثي الطور أو أحادي الطور",
-      "german": "Einstellung, ob der Aufzug dreiphasig oder einphasig ist",
-      "english": "Setting whether the elevator is three-phase or single-phase",
-      "persian": "تنظیم سه فاز یا تکفاز بودن آسانسور",
-      "russian": "Настройка лифта на трехфазный или однофазный режим",
-      "turkish": "Asansörün üç fazlı mı yoksa tek fazlı mı olduğunu ayarlama"
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -7091,12 +6427,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط نوع أداء اللوحة في شبكة دوبلكس في الوضع الجماعي، اللوحة التي تم ضبطها على الماستر لها أولوية الحركة وتحاول تقديم خدمة أكبر.",
+          "german": "Einstellung des Betriebsmodus der Platine in einem Duplexnetzwerk im Gruppenmodus, die auf Master eingestellte Platine hat Bewegungspriorität und versucht, mehr Service zu bieten.",
+          "english": "Setting the operation mode of the board in a duplex network in group mode, the board set to master has movement priority and tries to provide more service.",
+          "persian": "تنظیم نوع عملکرد برد در شبکه دوبلکس در حالت گروهی، بردی که روی مستر تنظیم شده باشد اولویت حرکت دارد و سعی می‌کند سرویس‌دهی بیشتری انجام دهد.",
+          "russian": "Настройка режима работы платы в дуплексной сети в групповом режиме: плата, настроенная на мастер, имеет приоритет движения и старается предоставлять больше услуг.",
+          "turkish": "Grup modunda bir çift yönlü ağda kartın çalışma türünü ayarlamak, master olarak ayarlanan kart hareket önceliğine sahiptir ve daha fazla hizmet sunmaya çalışır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -7105,12 +6441,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط نوع أداء اللوحة في شبكة دوبلكس في الوضع الجماعي، اللوحة التي تم ضبطها على الماستر لها أولوية الحركة وتحاول تقديم خدمة أكبر.",
-      "german": "Einstellung des Betriebsmodus der Platine in einem Duplexnetzwerk im Gruppenmodus, die auf Master eingestellte Platine hat Bewegungspriorität und versucht, mehr Service zu bieten.",
-      "english": "Setting the operation mode of the board in a duplex network in group mode, the board set to master has movement priority and tries to provide more service.",
-      "persian": "تنظیم نوع عملکرد برد در شبکه دوبلکس در حالت گروهی، بردی که روی مستر تنظیم شده باشد اولویت حرکت دارد و سعی می‌کند سرویس‌دهی بیشتری انجام دهد.",
-      "russian": "Настройка режима работы платы в дуплексной сети в групповом режиме: плата, настроенная на мастер, имеет приоритет движения и старается предоставлять больше услуг.",
-      "turkish": "Grup modunda bir çift yönlü ağda kartın çalışma türünü ayarlamak, master olarak ayarlanan kart hareket önceliğine sahiptir ve daha fazla hizmet sunmaya çalışır."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -7139,12 +6475,12 @@
         "maxValue": 100,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "في حالة تعطل المصعد، يتم إيقاف الخدمة من وضع الدوبلكس. يحدد هذا الإعداد المدة الزمنية التي يعود بعدها إلى وضع الدوبلكس مجددًا.",
+          "german": "Bei einem Aufzugsausfall wird der Service aus dem Duplexmodus genommen. Diese Einstellung bestimmt die Dauer, nach der er wieder in den Duplexmodus zurückkehrt.",
+          "english": "In case of an elevator malfunction, the service exits duplex mode. This setting determines the duration after which it returns to duplex mode again.",
+          "persian": "در صورت خرابی یک اسانسور سرویس دهی از حالت دوبلکس خارج میشود این تنظیم مشخص میکند بعد که مدت زمانی مجدد به حالت دوبلکس برگشته شود",
+          "russian": "В случае неисправности лифта обслуживание выходит из дуплексного режима. Эта настройка определяет, через какое время он снова вернется в дуплексный режим.",
+          "turkish": "Bir asansör arızalandığında, hizmet çift yönlü moddan çıkar. Bu ayar, tekrar çift yönlü moda dönmeden önceki süreyi belirler."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -7153,12 +6489,12 @@
       }
     },
     "description": {
-      "arabic": "في حالة تعطل المصعد، يتم إيقاف الخدمة من وضع الدوبلكس. يحدد هذا الإعداد المدة الزمنية التي يعود بعدها إلى وضع الدوبلكس مجددًا.",
-      "german": "Bei einem Aufzugsausfall wird der Service aus dem Duplexmodus genommen. Diese Einstellung bestimmt die Dauer, nach der er wieder in den Duplexmodus zurückkehrt.",
-      "english": "In case of an elevator malfunction, the service exits duplex mode. This setting determines the duration after which it returns to duplex mode again.",
-      "persian": "در صورت خرابی یک اسانسور سرویس دهی از حالت دوبلکس خارج میشود این تنظیم مشخص میکند بعد که مدت زمانی مجدد به حالت دوبلکس برگشته شود",
-      "russian": "В случае неисправности лифта обслуживание выходит из дуплексного режима. Эта настройка определяет, через какое время он снова вернется в дуплексный режим.",
-      "turkish": "Bir asansör arızalandığında, hizmet çift yönlü moddan çıkar. Bu ayar, tekrar çift yönlü moda dönmeden önceki süreyi belirler."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -7187,12 +6523,12 @@
         "maxValue": 250,
         "minValue": 0,
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "الحد الأقصى للوقت الذي إذا لم يقدم فيه مصعد خدمة بسبب مشاكل معينة، يقوم مصعد آخر بتقديم الخدمة بدلاً منه. إذا تجاوز هذا الوقت، يتم تسجيل التحذير ذي الصلة وتخرج المصاعد من وضع المجموعة، وبعد الوقت المحدد في time_otf، يتم المحاولة مرة أخرى للعودة إلى وضع المجموعة.",
+          "german": "Die maximale Zeitdauer, in der, wenn ein Aufzug aufgrund bestimmter Probleme keinen Service bietet, ein anderer Aufzug einspringt. Wenn diese Zeit überschritten wird, wird die entsprechende Warnung aufgezeichnet und die Aufzüge verlassen den Gruppenmodus. Nach der in time_otf festgelegten Zeit wird versucht, in den Gruppenmodus zurückzukehren.",
+          "english": "The maximum time duration that if an elevator does not provide service due to specific issues, another elevator will take over. If this time is exceeded, the relevant warning is recorded, and the elevators exit group mode. After the specified time in time_otf, an attempt is made to return to group mode.",
+          "persian": "حداکثر مدت زمانی که اگر یک آسانسور به دلیل مشکلات خاص سرویس‌دهی انجام نداد، آسانسور دیگر به جایش انجام دهد. در صورت گذشت این زمان، هشدار مربوطه ثبت می‌شود و آسانسورها از حالت گروهی خارج می‌شوند و بعد از زمان مشخص شده در time_otf مجدد تلاش برای بازگشت به مد گروهی می‌کنند.",
+          "russian": "Максимальная продолжительность времени, в течение которого, если лифт не предоставляет услугу из-за определенных проблем, другой лифт берет на себя выполнение. Если это время превышено, фиксируется соответствующее предупреждение, и лифты выходят из группового режима. После времени, указанного в time_otf, предпринимается попытка вернуться в групповой режим.",
+          "turkish": "Belirli sorunlar nedeniyle bir asansör hizmet vermezse, başka bir asansör devreye girer. Bu süre aşılırsa, ilgili uyarı kaydedilir ve asansörler grup modundan çıkar. Time_otf'de belirtilen süreden sonra, grup moduna geri dönmek için yeniden deneme yapılır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -7201,12 +6537,12 @@
       }
     },
     "description": {
-      "arabic": "الحد الأقصى للوقت الذي إذا لم يقدم فيه مصعد خدمة بسبب مشاكل معينة، يقوم مصعد آخر بتقديم الخدمة بدلاً منه. إذا تجاوز هذا الوقت، يتم تسجيل التحذير ذي الصلة وتخرج المصاعد من وضع المجموعة، وبعد الوقت المحدد في time_otf، يتم المحاولة مرة أخرى للعودة إلى وضع المجموعة.",
-      "german": "Die maximale Zeitdauer, in der, wenn ein Aufzug aufgrund bestimmter Probleme keinen Service bietet, ein anderer Aufzug einspringt. Wenn diese Zeit überschritten wird, wird die entsprechende Warnung aufgezeichnet und die Aufzüge verlassen den Gruppenmodus. Nach der in time_otf festgelegten Zeit wird versucht, in den Gruppenmodus zurückzukehren.",
-      "english": "The maximum time duration that if an elevator does not provide service due to specific issues, another elevator will take over. If this time is exceeded, the relevant warning is recorded, and the elevators exit group mode. After the specified time in time_otf, an attempt is made to return to group mode.",
-      "persian": "حداکثر مدت زمانی که اگر یک آسانسور به دلیل مشکلات خاص سرویس‌دهی انجام نداد، آسانسور دیگر به جایش انجام دهد. در صورت گذشت این زمان، هشدار مربوطه ثبت می‌شود و آسانسورها از حالت گروهی خارج می‌شوند و بعد از زمان مشخص شده در time_otf مجدد تلاش برای بازگشت به مد گروهی می‌کنند.",
-      "russian": "Максимальная продолжительность времени, в течение которого, если лифт не предоставляет услугу из-за определенных проблем, другой лифт берет на себя выполнение. Если это время превышено, фиксируется соответствующее предупреждение, и лифты выходят из группового режима. После времени, указанного в time_otf, предпринимается попытка вернуться в групповой режим.",
-      "turkish": "Belirli sorunlar nedeniyle bir asansör hizmet vermezse, başka bir asansör devreye girer. Bu süre aşılırsa, ilgili uyarı kaydedilir ve asansörler grup modundan çıkar. Time_otf'de belirtilen süreden sonra, grup moduna geri dönmek için yeniden deneme yapılır."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -7739,12 +7075,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "إعداد المدخلات للأجهزة القابلة للبرمجة / يتم توصيل كل مدخل للأجهزة بمدخل برمجي. في حالة تعطل مدخل واحد، يمكن ضبطه على مدخل جهاز آخر.",
+          "german": "Konfiguration von Eingängen für programmierbare Hardware / Jeder Hardware-Eingang ist mit einem Software-Eingang verbunden. Im Falle eines Ausfalls eines Eingangs kann er auf einen anderen Hardware-Eingang umgestellt werden.",
+          "english": "Configuring inputs for programmable hardware / Each hardware input is connected to a software input. In case of a failure of one input, it can be configured to another hardware input.",
+          "persian": "تنظیم ورودی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک ورودی نرم افزاری متصل میشود در صورت خرابی یک ورودی میتوان به ورودی سخت افزاری دیگری تنظیمش کرد",
+          "russian": "Настройка входов программируемого оборудования / Каждый аппаратный вход подключается к программному входу. В случае сбоя одного из входов его можно перенастроить на другой аппаратный вход.",
+          "turkish": "Programlanabilir donanım girişlerini yapılandırma / Her donanım girişi bir yazılım girişine bağlanır. Bir giriş arızalandığında, başka bir donanım girişine ayarlanabilir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -7753,12 +7089,12 @@
       }
     },
     "description": {
-      "arabic": "إعداد المدخلات للأجهزة القابلة للبرمجة / يتم توصيل كل مدخل للأجهزة بمدخل برمجي. في حالة تعطل مدخل واحد، يمكن ضبطه على مدخل جهاز آخر.",
-      "german": "Konfiguration von Eingängen für programmierbare Hardware / Jeder Hardware-Eingang ist mit einem Software-Eingang verbunden. Im Falle eines Ausfalls eines Eingangs kann er auf einen anderen Hardware-Eingang umgestellt werden.",
-      "english": "Configuring inputs for programmable hardware / Each hardware input is connected to a software input. In case of a failure of one input, it can be configured to another hardware input.",
-      "persian": "تنظیم ورودی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک ورودی نرم افزاری متصل میشود در صورت خرابی یک ورودی میتوان به ورودی سخت افزاری دیگری تنظیمش کرد",
-      "russian": "Настройка входов программируемого оборудования / Каждый аппаратный вход подключается к программному входу. В случае сбоя одного из входов его можно перенастроить на другой аппаратный вход.",
-      "turkish": "Programlanabilir donanım girişlerini yapılandırma / Her donanım girişi bir yazılım girişine bağlanır. Bir giriş arızalandığında, başka bir donanım girişine ayarlanabilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -8131,12 +7467,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تكوين مخرجات الأجهزة القابلة للبرمجة / كل إدخال للأجهزة متصل بمخرج برمجي، وفي حالة تعطل مخرج يمكن ضبطه على إدخال جهاز آخر.",
+          "german": "Konfiguration von programmierbaren Hardware-Ausgängen / jeder Hardware-Eingang ist mit einem Software-Ausgang verbunden. Im Falle eines Ausfalls eines Ausgangs kann er auf einen anderen Hardware-Eingang konfiguriert werden.",
+          "english": "Configuring programmable hardware outputs / each hardware input is connected to a software output. In case of a failure of one output, it can be configured to another hardware input.",
+          "persian": "تنظیم خروجی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک خروجی نرم افزاری متصل میشود در صورت خرابی یک خروجی میتوان به ورودی سخت افزاری دیگری تنظیمش کرد",
+          "russian": "Настройка выходов программируемого оборудования / каждый аппаратный вход подключен к программному выходу. В случае отказа одного выхода его можно перенастроить на другой аппаратный вход.",
+          "turkish": "Programlanabilir donanım çıkışlarının ayarlanması / her donanım girişi bir yazılım çıkışına bağlıdır. Bir çıkış arızalandığında, başka bir donanım girişine ayarlanabilir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -8145,12 +7481,12 @@
       }
     },
     "description": {
-      "arabic": "تكوين مخرجات الأجهزة القابلة للبرمجة / كل إدخال للأجهزة متصل بمخرج برمجي، وفي حالة تعطل مخرج يمكن ضبطه على إدخال جهاز آخر.",
-      "german": "Konfiguration von programmierbaren Hardware-Ausgängen / jeder Hardware-Eingang ist mit einem Software-Ausgang verbunden. Im Falle eines Ausfalls eines Ausgangs kann er auf einen anderen Hardware-Eingang konfiguriert werden.",
-      "english": "Configuring programmable hardware outputs / each hardware input is connected to a software output. In case of a failure of one output, it can be configured to another hardware input.",
-      "persian": "تنظیم خروجی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک خروجی نرم افزاری متصل میشود در صورت خرابی یک خروجی میتوان به ورودی سخت افزاری دیگری تنظیمش کرد",
-      "russian": "Настройка выходов программируемого оборудования / каждый аппаратный вход подключен к программному выходу. В случае отказа одного выхода его можно перенастроить на другой аппаратный вход.",
-      "turkish": "Programlanabilir donanım çıkışlarının ayarlanması / her donanım girişi bir yazılım çıkışına bağlıdır. Bir çıkış arızalandığında, başka bir donanım girişine ayarlanabilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -8327,12 +7663,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط نوع الإدخال: إذا تم ضبطه على NC، سيكون الاتصال بين الأجهزة والبرامج مباشرًا. أما إذا تم ضبطه على NO، فسيكون الإدخال البرمجي عكس الأجهزة.",
+          "german": "Einstellung des Eingabetyps: Wenn auf NC eingestellt, ist die Verbindung zwischen Hardware- und Softwareeingabe direkt. Wenn auf NO eingestellt, ist die Softwareeingabe das Gegenteil der Hardware.",
+          "english": "Setting the input type: If set to NC, the hardware and software input connection will be direct. If set to NO, the software input will be the opposite of the hardware.",
+          "persian": "تنظیم نوع ورودی: در صورت تنظیم روی NC، ارتباط ورودی سخت‌افزاری و نرم‌افزاری مستقیم خواهد بود. در صورت تنظیم روی NO، ورودی نرم‌افزاری برعکس سخت‌افزاری خواهد بود.",
+          "russian": "Настройка типа входа: если установлено на NC, соединение между аппаратным и программным входом будет прямым. Если установлено на NO, программный вход будет противоположен аппаратному.",
+          "turkish": "Giriş türünü ayarlama: NC olarak ayarlandığında, donanım ve yazılım girişi doğrudan bağlantılı olacaktır. NO olarak ayarlandığında, yazılım girişi donanımın tersi olacaktır."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -8341,12 +7677,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط نوع الإدخال: إذا تم ضبطه على NC، سيكون الاتصال بين الأجهزة والبرامج مباشرًا. أما إذا تم ضبطه على NO، فسيكون الإدخال البرمجي عكس الأجهزة.",
-      "german": "Einstellung des Eingabetyps: Wenn auf NC eingestellt, ist die Verbindung zwischen Hardware- und Softwareeingabe direkt. Wenn auf NO eingestellt, ist die Softwareeingabe das Gegenteil der Hardware.",
-      "english": "Setting the input type: If set to NC, the hardware and software input connection will be direct. If set to NO, the software input will be the opposite of the hardware.",
-      "persian": "تنظیم نوع ورودی: در صورت تنظیم روی NC، ارتباط ورودی سخت‌افزاری و نرم‌افزاری مستقیم خواهد بود. در صورت تنظیم روی NO، ورودی نرم‌افزاری برعکس سخت‌افزاری خواهد بود.",
-      "russian": "Настройка типа входа: если установлено на NC, соединение между аппаратным и программным входом будет прямым. Если установлено на NO, программный вход будет противоположен аппаратному.",
-      "turkish": "Giriş türünü ayarlama: NC olarak ayarlandığında, donanım ve yazılım girişi doğrudan bağlantılı olacaktır. NO olarak ayarlandığında, yazılım girişi donanımın tersi olacaktır."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -8523,12 +7859,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "ضبط نوع الاتصال للخروج المادي والخروج البرمجي في حالة ضبطه على NC سيكون الاتصال مباشرًا وضبطه على NO سيؤدي إلى العكس.",
+          "german": "Einstellung der Verbindungsart für Hardware-Ausgang und Software-Ausgang: Wenn auf NC eingestellt, wird die Verbindung direkt sein, und wenn auf NO eingestellt, wird sie umgekehrt.",
+          "english": "Setting the type of connection for hardware output and software output: if set to NC, the connection will be direct, and setting it to NO will cause it to be reversed.",
+          "persian": "تنظیم نوع ارتباط خروجی سخت افزاری و خروجی نرم‌افزاری: در صورت تنظیم روی NC، ارتباط مستقیم خواهد بود و تنظیم روی NO باعث معکوس شدن خواهد شد.",
+          "russian": "Настройка типа соединения для аппаратного и программного выхода: если установлено на NC, соединение будет прямым, а установка на NO приведет к его обратному изменению.",
+          "turkish": "Donanım çıkışı ve yazılım çıkışı için bağlantı türünü ayarlamak: NC'ye ayarlandığında bağlantı doğrudan olacak ve NO'ya ayarlandığında tersine dönecektir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -8537,12 +7873,12 @@
       }
     },
     "description": {
-      "arabic": "ضبط نوع الاتصال للخروج المادي والخروج البرمجي في حالة ضبطه على NC سيكون الاتصال مباشرًا وضبطه على NO سيؤدي إلى العكس.",
-      "german": "Einstellung der Verbindungsart für Hardware-Ausgang und Software-Ausgang: Wenn auf NC eingestellt, wird die Verbindung direkt sein, und wenn auf NO eingestellt, wird sie umgekehrt.",
-      "english": "Setting the type of connection for hardware output and software output: if set to NC, the connection will be direct, and setting it to NO will cause it to be reversed.",
-      "persian": "تنظیم نوع ارتباط خروجی سخت افزاری و خروجی نرم‌افزاری: در صورت تنظیم روی NC، ارتباط مستقیم خواهد بود و تنظیم روی NO باعث معکوس شدن خواهد شد.",
-      "russian": "Настройка типа соединения для аппаратного и программного выхода: если установлено на NC, соединение будет прямым, а установка на NO приведет к его обратному изменению.",
-      "turkish": "Donanım çıkışı ve yazılım çıkışı için bağlantı türünü ayarlamak: NC'ye ayarlandığında bağlantı doğrudan olacak ve NO'ya ayarlandığında tersine dönecektir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -10099,12 +9435,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تهيئة المدخلات للأجهزة القابلة للبرمجة / كل مدخل جهاز يتم توصيله بمدخل برمجي، وفي حالة تعطل أحد المدخلات يمكن تعيينه إلى مدخل جهاز آخر.",
+          "german": "Konfiguration der Eingänge für programmierbare Hardware / Jeder Hardware-Eingang ist mit einem Software-Eingang verbunden, und im Falle eines Ausfalls eines Eingangs kann er auf einen anderen Hardware-Eingang umgestellt werden.",
+          "english": "Configuring inputs for programmable hardware / Each hardware input is connected to a software input, and in case of a failure of an input, it can be configured to another hardware input.",
+          "persian": "تنظیم ورودی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک ورودی نرم افزاری متصل می‌شود. در صورت خرابی یک ورودی می‌توان آن را به ورودی سخت افزاری دیگری تنظیم کرد.",
+          "russian": "Настройка входов для программируемого оборудования / Каждый аппаратный вход подключен к программному входу, и в случае отказа одного из входов его можно перенастроить на другой аппаратный вход.",
+          "turkish": "Programlanabilir donanım için girişleri yapılandırma / Her donanım girişi bir yazılım girişine bağlanır ve bir giriş arızalandığında başka bir donanım girişine ayarlanabilir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -10113,12 +9449,12 @@
       }
     },
     "description": {
-      "arabic": "تهيئة المدخلات للأجهزة القابلة للبرمجة / كل مدخل جهاز يتم توصيله بمدخل برمجي، وفي حالة تعطل أحد المدخلات يمكن تعيينه إلى مدخل جهاز آخر.",
-      "german": "Konfiguration der Eingänge für programmierbare Hardware / Jeder Hardware-Eingang ist mit einem Software-Eingang verbunden, und im Falle eines Ausfalls eines Eingangs kann er auf einen anderen Hardware-Eingang umgestellt werden.",
-      "english": "Configuring inputs for programmable hardware / Each hardware input is connected to a software input, and in case of a failure of an input, it can be configured to another hardware input.",
-      "persian": "تنظیم ورودی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک ورودی نرم افزاری متصل می‌شود. در صورت خرابی یک ورودی می‌توان آن را به ورودی سخت افزاری دیگری تنظیم کرد.",
-      "russian": "Настройка входов для программируемого оборудования / Каждый аппаратный вход подключен к программному входу, и в случае отказа одного из входов его можно перенастроить на другой аппаратный вход.",
-      "turkish": "Programlanabilir donanım için girişleri yapılandırma / Her donanım girişi bir yazılım girişine bağlanır ve bir giriş arızalandığında başka bir donanım girişine ayarlanabilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -10623,12 +9959,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "تكوين مخرجات الأجهزة القابلة للبرمجة / يتم توصيل كل إدخال للأجهزة بمخرج برمجي، وفي حالة تعطل مخرج يمكن ضبطه على إدخال جهاز آخر.",
+          "german": "Konfiguration der Ausgänge programmierbarer Hardware / jeder Hardware-Eingang ist mit einem Software-Ausgang verbunden. Im Falle eines Ausfalls eines Ausgangs kann er auf einen anderen Hardware-Eingang umgestellt werden.",
+          "english": "Configuring outputs of programmable hardware / each hardware input is connected to a software output. In case of a failure of an output, it can be configured to another hardware input.",
+          "persian": "تنظیم خروجی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک خروجی نرم افزاری متصل میشود در صورت خرابی یک خروجی میتوان به ورودی سخت افزاری دیگری تنظیمش کرد",
+          "russian": "Настройка выходов программируемого оборудования / каждый аппаратный вход подключается к программному выходу. В случае сбоя выхода его можно перенастроить на другой аппаратный вход.",
+          "turkish": "Programlanabilir donanım çıkışlarının ayarlanması / her donanım girişi bir yazılım çıkışına bağlanır. Bir çıkış arızalandığında, başka bir donanım girişine ayarlanabilir."
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -10637,12 +9973,12 @@
       }
     },
     "description": {
-      "arabic": "تكوين مخرجات الأجهزة القابلة للبرمجة / يتم توصيل كل إدخال للأجهزة بمخرج برمجي، وفي حالة تعطل مخرج يمكن ضبطه على إدخال جهاز آخر.",
-      "german": "Konfiguration der Ausgänge programmierbarer Hardware / jeder Hardware-Eingang ist mit einem Software-Ausgang verbunden. Im Falle eines Ausfalls eines Ausgangs kann er auf einen anderen Hardware-Eingang umgestellt werden.",
-      "english": "Configuring outputs of programmable hardware / each hardware input is connected to a software output. In case of a failure of an output, it can be configured to another hardware input.",
-      "persian": "تنظیم خروجی های سخت افزار قابل برنامه ریزی / هر ورودی سخت افزاری به یک خروجی نرم افزاری متصل میشود در صورت خرابی یک خروجی میتوان به ورودی سخت افزاری دیگری تنظیمش کرد",
-      "russian": "Настройка выходов программируемого оборудования / каждый аппаратный вход подключается к программному выходу. В случае сбоя выхода его можно перенастроить на другой аппаратный вход.",
-      "turkish": "Programlanabilir donanım çıkışlarının ayarlanması / her donanım girişi bir yazılım çıkışına bağlanır. Bir çıkış arızalandığında, başka bir donanım girişine ayarlanabilir."
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
     },
     "additional_description_for_ai_assistant": {
       "english": "",
@@ -12322,12 +11658,12 @@
           }
         ],
         "description": {
-          "arabic": "",
-          "german": "",
-          "english": "",
-          "persian": "",
-          "russian": "",
-          "turkish": ""
+          "arabic": "أي نظام IoT يجب أن يستخدم سلسلة 485 للحصول على الإنترنت؟",
+          "german": "Welches 485-Serienmodell sollte das IoT-System verwenden, um das Internet zu empfangen?",
+          "english": "Which serial 485 should the IoT system use to receive the internet?",
+          "persian": "سیسیتم IoT برای جهت دریافت اینترنت از کدام سریال 485 استفاده کند؟",
+          "russian": "Какой серийный 485 должен использовать IoT-система для получения интернета?",
+          "turkish": "IoT sistemi internet almak için hangi 485 serisini kullanmalı?"
         },
         "additional_description_for_ai_assistant": {
           "english": "",
@@ -12335,25 +11671,6 @@
         }
       }
     },
-    "description": {
-      "arabic": "أي نظام IoT يجب أن يستخدم سلسلة 485 للحصول على الإنترنت؟",
-      "german": "Welches 485-Serienmodell sollte das IoT-System verwenden, um das Internet zu empfangen?",
-      "english": "Which serial 485 should the IoT system use to receive the internet?",
-      "persian": "سیسیتم IoT برای جهت دریافت اینترنت از کدام سریال 485 استفاده کند؟",
-      "russian": "Какой серийный 485 должен использовать IoT-система для получения интернета?",
-      "turkish": "IoT sistemi internet almak için hangi 485 serisini kullanmalı?"
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "90",
-    "parentId": [],
-    "lable": "Second Door",
-    "type": "SUBMENU",
-    "data": {},
     "description": {
       "arabic": "",
       "german": "",
@@ -12424,63 +11741,6 @@
     }
   },
   {
-    "id": "93",
-    "parentId": [],
-    "lable": "Motor Safe",
-    "type": "SUBMENU",
-    "data": {},
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "94",
-    "parentId": [],
-    "lable": "HYD Settings",
-    "type": "SUBMENU",
-    "data": {},
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "95",
-    "parentId": [],
-    "lable": "Calibration",
-    "type": "SUBMENU",
-    "data": {},
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
     "id": "96",
     "parentId": [
       {
@@ -12489,25 +11749,6 @@
       }
     ],
     "lable": "Emergency",
-    "type": "SUBMENU",
-    "data": {},
-    "description": {
-      "arabic": "",
-      "german": "",
-      "english": "",
-      "persian": "",
-      "russian": "",
-      "turkish": ""
-    },
-    "additional_description_for_ai_assistant": {
-      "english": "",
-      "persian": ""
-    }
-  },
-  {
-    "id": "97",
-    "parentId": [],
-    "lable": "One CF Error",
     "type": "SUBMENU",
     "data": {},
     "description": {

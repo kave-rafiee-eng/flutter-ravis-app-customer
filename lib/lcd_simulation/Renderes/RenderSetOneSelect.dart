@@ -8,15 +8,10 @@ import 'package:flutter_application_1/lcd_simulation/models/menu_model.dart';
 
 class RendererSettingOneSelectData {
   final SettingOneSelectType item;
-  final DescriptionType description;
   late int value;
   final void Function() onBack;
 
-  RendererSettingOneSelectData({
-    required this.onBack,
-    required this.item,
-    required this.description,
-  }) {
+  RendererSettingOneSelectData({required this.onBack, required this.item}) {
     value = 0;
   }
 
@@ -96,7 +91,7 @@ class _RenderSettingOneParameterState extends State<RenderSettingOneSelect> {
         title: 'توضیح منو',
         content: extranctDescription(
           widget.language,
-          widget.inputData.description,
+          widget.inputData.item.description,
         ),
         textDir: claculateTextDir(widget.language),
       ),

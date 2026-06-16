@@ -14,13 +14,15 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:uuid/uuid.dart';
 
-const _serverBaseUrl = 'http://10.38.181.179:3000';
+const serverBaseUrl = 'http://192.168.6.114:3000';
+const pdfUrl = '$serverBaseUrl/pdf/download';
 
 const _dataEndpoints = {
-  'menu_json.json': '$_serverBaseUrl/menu-advance/',
-  'errorCodes.json': '$_serverBaseUrl/error-code/',
-  'documents.json': '$_serverBaseUrl/documents/',
-  'phonebook.json': '$_serverBaseUrl/phonebook/',
+  'menu_advance.json': '$serverBaseUrl/menu-advance/',
+  'menu_terse.json': '$serverBaseUrl/menu-terse/',
+  'errorCodes.json': '$serverBaseUrl/error-code/',
+  'documents.json': '$serverBaseUrl/documents/',
+  'phonebook.json': '$serverBaseUrl/phonebook/',
 };
 
 class ServerconnectionStart extends ConsumerStatefulWidget {
@@ -198,7 +200,7 @@ class ServerAndStorage {
     final appData = await readAppInternalDataFromFile();
 
     final response = await http
-        .get(Uri.parse('$_serverBaseUrl/version'))
+        .get(Uri.parse('$serverBaseUrl/version'))
         .timeout(const Duration(seconds: 5));
 
     if (response.statusCode == 200) {
