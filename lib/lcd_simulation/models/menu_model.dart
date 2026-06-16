@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'menu_model.g.dart';
@@ -77,6 +78,7 @@ class SettingOneParameterType {
   final int addition;
   final String unit;
   final int factor;
+  final int offset;
   final int minValue;
   final int maxValue;
   final String label;
@@ -88,6 +90,7 @@ class SettingOneParameterType {
     required this.addition,
     required this.unit,
     required this.factor,
+    required this.offset,
     required this.minValue,
     required this.maxValue,
     required this.label,

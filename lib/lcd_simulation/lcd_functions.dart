@@ -558,6 +558,47 @@ void STE2007_drawChar12x15(int x, int y, char c, bool color) {
     printFixedPoint(lcdX - x, y, true, res.value, res.decimals);
   }
 
+  void drawSignedNumberWhitRectAroune(int x, int y, double number) {
+    final isNegative = number < 0;
+    final res = floatToIntWithDecimals(number.abs());
+
+    final signWidth = isNegative ? 10 : 0;
+    final decimalExtra = res.decimals > 0 ? 10 : 0;
+    final totalWidth = (countDigits(res.value) * 10) + signWidth + decimalExtra;
+    final lcdX = ((X_PIXELS - totalWidth) / 2).toInt();
+
+    printFixedPointSigned(
+      lcdX - x,
+      y,
+      true,
+      isNegative,
+      res.value,
+      res.decimals,
+    );
+  }
+
+  void printFixedPointSigned(
+    int x,
+    int y,
+    bool color,
+    bool isNegative,
+    int number,
+    int decimalPlaces,
+  ) {
+    var startX = x;
+
+    if (isNegative) {
+      _drawMinusSign10x16(startX, y, color);
+      startX += 12;
+    }
+
+    printFixedPoint(startX, y, color, number, decimalPlaces);
+  }
+
+  void _drawMinusSign10x16(int x, int y, bool color) {
+    fillRect(x + 1, y + 7, 8, 2, color);
+  }
+
   FloatResult floatToIntWithDecimals(double number) {
     int decimals = 0;
     double temp = number;

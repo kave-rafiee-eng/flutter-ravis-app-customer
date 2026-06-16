@@ -26,9 +26,9 @@ class RendererSettingOneParameterData {
         : 1.0 / item.factor.abs();
   }
 
-  double get showValue => (value - 0) * factor - item.addition;
-  double get showMin => (item.minValue - 0) * factor - item.addition;
-  double get showMax => (item.maxValue - 0) * factor - item.addition;
+  double get showValue => (value - item.offset) * factor - item.addition;
+  double get showMin => (item.minValue - item.offset) * factor - item.addition;
+  double get showMax => (item.maxValue - item.offset) * factor - item.addition;
 
   SettingOneParameterType get getItem => item;
 }
@@ -46,7 +46,7 @@ void renderSettingOneParameter(
   lcd.print12x15(3, 14, data.item.label, false);
 
   final showValue = data.showValue;
-  lcd.drawNumberWhitRectAroune(10, 35, showValue);
+  lcd.drawSignedNumberWhitRectAroune(10, 35, showValue);
   lcd.lcdPrint(75, 35, true, data.item.unit, 1);
 
   lcd.drawGauge(5, 58, 50, 8, showValue, data.showMin, data.showMax);
