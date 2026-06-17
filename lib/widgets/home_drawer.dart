@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
-import 'package:flutter_application_1/lcd_simulation/mainLcd.dart';
+// import 'package:flutter_application_1/lcd_simulation/mainLcd.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
 import 'package:flutter_application_1/utils/ravis_localization.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -61,10 +61,10 @@ class HomeDrawer extends ConsumerWidget {
     );
   }
 
-  void _navigateTo(BuildContext context, Widget page) {
-    Navigator.pop(context);
-    Navigator.push(context, MaterialPageRoute(builder: (_) => page));
-  }
+  // void _navigateTo(BuildContext context, Widget page) {
+  //   Navigator.pop(context);
+  //   Navigator.push(context, MaterialPageRoute(builder: (_) => page));
+  // }
 }
 
 class _DrawerHeader extends ConsumerWidget {

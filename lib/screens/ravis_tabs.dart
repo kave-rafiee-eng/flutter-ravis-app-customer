@@ -3,9 +3,8 @@ import 'package:flutter_application_1/chatbot/chatbotScreen.dart';
 import 'package:flutter_application_1/screens/HomeScreen.dart';
 import 'package:flutter_application_1/serverAndStorage/models/appInternalData.dart';
 import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
-import 'package:flutter_application_1/widgets/home_drawer.dart';
-import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
-import 'package:flutter_application_1/providers/languageProvider.dart';
+// import 'package:flutter_application_1/widgets/home_drawer.dart';
+// import 'package:flutter_application_1/providers/languageProvider.dart';
 import 'package:flutter_application_1/providers/themeModeProvider.dart';
 import 'package:flutter_application_1/widgets/selectLanguage.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -41,27 +40,17 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
     });
   }
 
-  void _selectPage(int index) {
-    setState(() {
-      _selectedPageIndex = index;
-    });
-  }
+  // void _selectPage(int index) {
+  //   setState(() {
+  //     _selectedPageIndex = index;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-    final language = ref.watch(languageNotifierProvider);
     final themeMode = ref.watch(themeModeProvider);
     final theme = Theme.of(context);
     final isDarkMode = themeMode == ThemeMode.dark;
-
-    const langs = <LanguageEnum, String>{
-      LanguageEnum.persian: 'فارسی',
-      LanguageEnum.english: 'English',
-      LanguageEnum.arabic: 'العربية',
-      LanguageEnum.turkish: 'Türkçe',
-      LanguageEnum.russian: 'Русский',
-      LanguageEnum.german: 'Deutsch',
-    };
 
     Widget activeScreen = Homescreen();
     if (_selectedPageIndex == 1) {
@@ -117,19 +106,19 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
           ),
         ],
       ),
-      drawer: HomeDrawer(),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedPageIndex,
-        onTap: _selectPage,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.elevator),
-            activeIcon: Icon(Icons.elevator, color: Colors.red),
-            label: 'app',
-          ),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat Ai'),
-        ],
-      ),
+      // drawer: HomeDrawer(),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: _selectedPageIndex,
+      //   onTap: _selectPage,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.elevator),
+      //       activeIcon: Icon(Icons.elevator, color: Colors.red),
+      //       label: 'app',
+      //     ),
+      //     BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat Ai'),
+      //   ],
+      // ),
       body: activeScreen,
     );
   }

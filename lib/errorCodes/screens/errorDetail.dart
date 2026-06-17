@@ -17,10 +17,6 @@ class ErrorDetailPage extends ConsumerWidget {
 
     final description = localizedDescription(language, error.description);
     final solution = localizedDescription(language, error.solution);
-    final aiDescription = localizedMiniDescription(
-      language,
-      error.additional_description_for_ai_assistant,
-    );
 
     return Scaffold(
       appBar: AppBar(title: Text(error.name.trim(), textDirection: textDir)),
@@ -144,9 +140,14 @@ class _DetailSection extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: language == LanguageEnum.persian
+              ? CrossAxisAlignment.end
+              : CrossAxisAlignment.start,
           children: [
             Row(
+              mainAxisAlignment: language == LanguageEnum.persian
+                  ? MainAxisAlignment.end
+                  : MainAxisAlignment.start,
               children: [
                 Icon(icon, size: 20, color: color),
                 const SizedBox(width: 8),

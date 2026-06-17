@@ -14,7 +14,7 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:uuid/uuid.dart';
 
-const serverBaseUrl = 'http://192.168.6.114:3000';
+const serverBaseUrl = 'http://109.125.149.108:3000';
 const pdfUrl = '$serverBaseUrl/pdf/download';
 
 const _dataEndpoints = {

@@ -1,151 +1,160 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CarouselItem {
   final String title;
   final String content;
   final TextDirection textDir;
 
-  CarouselItem({
+  const CarouselItem({
     required this.title,
     required this.content,
-    // this.textDir = TextDirection.ltr,
     required this.textDir,
   });
 }
 
-class TextCarousel extends ConsumerStatefulWidget {
+class TextCarousel extends StatefulWidget {
   final List<CarouselItem> items;
 
   const TextCarousel({super.key, required this.items});
 
   @override
-  ConsumerState<TextCarousel> createState() => _TextCarouselState();
+  State<TextCarousel> createState() => _TextCarouselState();
 }
 
-class _TextCarouselState extends ConsumerState<TextCarousel>
-    with SingleTickerProviderStateMixin<TextCarousel> {
-  late final PageController pageController;
-  late final TabController tabController;
-
-  int currentPage = 0;
+class _TextCarouselState extends State<TextCarousel>
+    with SingleTickerProviderStateMixin {
+  late final PageController _pageController;
+  late final TabController _tabController;
+  int _currentPage = 0;
 
   @override
   void initState() {
     super.initState();
-    pageController = PageController();
-    tabController = TabController(length: widget.items.length, vsync: this);
+    _pageController = PageController();
+    _tabController = TabController(length: widget.items.length, vsync: this);
   }
 
   @override
   void dispose() {
-    pageController.dispose();
-    tabController.dispose();
+    _pageController.dispose();
+    _tabController.dispose();
     super.dispose();
   }
 
-  void _goToNextPage() {
-    if (currentPage < widget.items.length - 1) {
-      pageController.animateToPage(
-        currentPage + 1,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
-
-  void _goToPreviousPage() {
-    if (currentPage > 0) {
-      pageController.animateToPage(
-        currentPage - 1,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-    }
+  void _goToPage(int index) {
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 280),
+      curve: Curves.easeOut,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final hasMultiple = widget.items.length > 1;
 
-    return Center(
-      child: Container(
-        width: double.infinity,
-        // height: 250,
-        color: theme.colorScheme.surfaceContainer,
+    if (widget.items.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    return Card(
+      elevation: 0,
+      margin: EdgeInsets.fromLTRB(5, 10, 5, 10),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+        side: BorderSide(
+          color: theme.colorScheme.outlineVariant.withValues(alpha: 0.6),
+        ),
+      ),
+      color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.35),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8),
         child: Column(
           children: [
             Expanded(
               child: Row(
                 children: [
-                  IconButton(
-                    onPressed: currentPage > 0 ? _goToPreviousPage : null,
-                    icon: const Icon(Icons.chevron_left),
-                    iconSize: 32,
-                    color: Colors.deepPurple,
+                  _NavButton(
+                    icon: Icons.chevron_left_rounded,
+                    enabled: hasMultiple && _currentPage > 0,
+                    onPressed: () => _goToPage(_currentPage - 1),
                   ),
                   Expanded(
                     child: PageView.builder(
-                      controller: pageController,
+                      controller: _pageController,
                       itemCount: widget.items.length,
                       onPageChanged: (index) {
                         setState(() {
-                          currentPage = index;
-                          tabController.animateTo(index);
+                          _currentPage = index;
+                          _tabController.animateTo(index);
                         });
                       },
                       itemBuilder: (context, index) {
                         final item = widget.items[index];
                         return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                item.title,
-                                textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.titleLarge
-                                    ?.copyWith(
-                                      color: theme.colorScheme.primary,
-                                      height: 1.5,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                              const SizedBox(height: 12),
-                              Text(
-                                textDirection: item.textDir,
-                                item.content,
-                                textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.bodyLarge
-                                    ?.copyWith(
-                                      color: theme.colorScheme.onSurface,
-                                      height: 1.5,
-                                    ),
-                              ),
-                            ],
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: SingleChildScrollView(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                if (item.title.isNotEmpty) ...[
+                                  Text(
+                                    item.title,
+                                    textAlign: TextAlign.center,
+                                    style: theme.textTheme.titleMedium
+                                        ?.copyWith(
+                                          color: theme.colorScheme.primary,
+                                          fontWeight: FontWeight.w700,
+                                          height: 1.4,
+                                          fontSize: 25,
+                                        ),
+                                  ),
+                                  const SizedBox(height: 10),
+                                ],
+                                Divider(),
+                                Text(
+                                  item.content,
+                                  textDirection: item.textDir,
+                                  textAlign: TextAlign.center,
+                                  style: theme.textTheme.bodyMedium?.copyWith(
+                                    color: theme.colorScheme.onSurface,
+                                    height: 1.5,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       },
                     ),
                   ),
-                  IconButton(
-                    onPressed: currentPage < widget.items.length - 1
-                        ? _goToNextPage
-                        : null,
-                    icon: const Icon(Icons.chevron_right),
-                    iconSize: 32,
-                    color: Colors.deepPurple,
+                  _NavButton(
+                    icon: Icons.chevron_right_rounded,
+                    enabled:
+                        hasMultiple && _currentPage < widget.items.length - 1,
+                    onPressed: () => _goToPage(_currentPage + 1),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 10),
-            TabPageSelector(
-              controller: tabController,
-              color: Colors.grey.shade300,
-              selectedColor: Colors.deepPurple,
-            ),
-            const SizedBox(height: 10),
+            if (hasMultiple) ...[
+              const SizedBox(height: 6),
+              TabPageSelector(
+                controller: _tabController,
+                color: theme.colorScheme.outlineVariant.withValues(alpha: 0.5),
+                selectedColor: theme.colorScheme.primary,
+                indicatorSize: 8,
+              ),
+              const SizedBox(height: 4),
+              Text(
+                '${_currentPage + 1} / ${widget.items.length}',
+                style: theme.textTheme.labelSmall?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
+                ),
+              ),
+            ],
           ],
         ),
       ),
@@ -153,138 +162,35 @@ class _TextCarouselState extends ConsumerState<TextCarousel>
   }
 }
 
-// const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+class _NavButton extends StatelessWidget {
+  final IconData icon;
+  final bool enabled;
+  final VoidCallback onPressed;
 
-// class TextCarousal extends StatefulWidget {
-//   const TextCarousal({super.key});
+  const _NavButton({
+    required this.icon,
+    required this.enabled,
+    required this.onPressed,
+  });
 
-//   @override
-//   State<TextCarousal> createState() => _TextCarousalState();
-// }
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
 
-// class _TextCarousalState extends State<TextCarousal>
-//     with SingleTickerProviderStateMixin<TextCarousal> {
-//   final PageController pageController = PageController();
-//   late TabController tabController;
-
-//   static const textList = [
-//     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-//   ];
-
-//   @override
-//   void initState() {
-//     tabController = TabController(length: textList.length, vsync: this);
-//     pageController.addListener(_updateTabController);
-//     super.initState();
-//   }
-
-//   @override
-//   void dispose() {
-//     pageController.removeListener(_updateTabController);
-//     super.dispose();
-//   }
-
-//   void _updateTabController() {
-//     tabController.index = pageController.page!.toInt();
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Container(
-//         width: double.infinity,
-//         height: 220,
-//         color: Colors.white,
-//         child: Column(
-//           children: [
-//             SizedBox(
-//               height: 160,
-//               width: 250,
-//               child: PageView.builder(
-//                 controller: pageController,
-//                 itemCount: textList.length,
-//                 itemBuilder: (context, index) => Center(
-//                   child: Text(
-//                     textList[index],
-//                     textAlign: TextAlign.center,
-//                     style: Theme.of(
-//                       context,
-//                     ).textTheme.bodyMedium!.copyWith(color: Colors.black),
-//                   ),
-//                 ),
-//               ),
-//             ),
-//             TabPageSelector(controller: tabController),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// class CustomTextSelector extends StatefulWidget {
-//   final List<String> items;
-//   final Function(String) onSelectionChanged;
-
-//   const CustomTextSelector({
-//     super.key,
-//     required this.items,
-//     required this.onSelectionChanged,
-//   });
-
-//   @override
-//   State<CustomTextSelector> createState() => _CustomTextSelectorState();
-// }
-
-// class _CustomTextSelectorState extends State<CustomTextSelector> {
-//   int _currentIndex = 0;
-
-//   void _next() {
-//     setState(() {
-//       _currentIndex = (_currentIndex + 1) % widget.items.length;
-//       widget.onSelectionChanged(widget.items[_currentIndex]);
-//     });
-//   }
-
-//   void _previous() {
-//     setState(() {
-//       _currentIndex =
-//           (_currentIndex - 1 + widget.items.length) % widget.items.length;
-//       widget.onSelectionChanged(widget.items[_currentIndex]);
-//     });
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(
-//       mainAxisAlignment: MainAxisAlignment.center,
-//       children: [
-//         IconButton(
-//           icon: const Icon(
-//             Icons.chevron_left,
-//             size: 30,
-//             color: Colors.deepPurple,
-//           ),
-//           onPressed: _previous,
-//         ),
-//         Container(
-//           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-//           child: Text(
-//             widget.items[_currentIndex],
-//             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-//           ),
-//         ),
-//         IconButton(
-//           icon: const Icon(
-//             Icons.chevron_right,
-//             size: 30,
-//             color: Colors.deepPurple,
-//           ),
-//           onPressed: _next,
-//         ),
-//       ],
-//     );
-//   }
-// }
+    return IconButton(
+      onPressed: enabled ? onPressed : null,
+      icon: Icon(icon),
+      iconSize: 28,
+      style: IconButton.styleFrom(
+        foregroundColor: theme.colorScheme.primary,
+        disabledForegroundColor: theme.colorScheme.onSurfaceVariant.withValues(
+          alpha: 0.35,
+        ),
+        backgroundColor: theme.colorScheme.primaryContainer.withValues(
+          alpha: 0.35,
+        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+    );
+  }
+}

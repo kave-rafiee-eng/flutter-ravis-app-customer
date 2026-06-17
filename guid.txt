@@ -34,3 +34,10 @@ flutter pub add json_annotation
 dart run build_runner build
 
 lutter pub run pdfx
+
+dart run flutter_launcher_icons
+
+flutter clean
+flutter pub get
+flutter build apk --release
+flutter build apk --split-per-abi

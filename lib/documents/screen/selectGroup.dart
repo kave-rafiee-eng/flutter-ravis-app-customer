@@ -65,12 +65,12 @@ class Selectgroup extends ConsumerWidget {
     },
   };
 
-  static const _groupIcons = [
-    Icons.menu_book_rounded,
-    Icons.inventory_2_outlined,
-    Icons.folder_special_rounded,
-    Icons.description_outlined,
-  ];
+  // static const _groupIcons = [
+  //   Icons.menu_book_rounded,
+  //   Icons.inventory_2_outlined,
+  //   Icons.folder_special_rounded,
+  //   Icons.description_outlined,
+  // ];
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
