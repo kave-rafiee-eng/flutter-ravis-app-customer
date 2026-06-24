@@ -18,13 +18,13 @@
         "address": 0,
         "default": 0,
         "addition": 0,
-        "maxValue": 60,
+        "maxValue": 8,
         "minValue": 2,
         "description": {
           "arabic": "",
           "german": "",
           "english": "",
-          "persian": "",
+          "persian": "تنظیم تعداد توقف های اسانسور ",
           "russian": "",
           "turkish": ""
         },
@@ -57,7 +57,7 @@
       "arabic": "",
       "german": "",
       "english": "",
-      "persian": "",
+      "persian": "تمام تنظیمات در این گروه قرار دارند",
       "russian": "",
       "turkish": ""
     },
@@ -78,14 +78,14 @@
     "type": "SETTING_ON_PARAMETER",
     "data": {
       "settingOneParameter": {
-        "unit": "",
+        "unit": "%",
         "label": "Music Volume",
-        "factor": 0,
+        "factor": 5,
         "offset": 0,
         "address": 0,
         "default": 0,
         "addition": 0,
-        "maxValue": 0,
+        "maxValue": 20,
         "minValue": 0,
         "description": {
           "arabic": "",
@@ -126,14 +126,14 @@
     "type": "SETTING_ON_PARAMETER",
     "data": {
       "settingOneParameter": {
-        "unit": "",
+        "unit": "%",
         "label": "Talk Volume",
-        "factor": 0,
+        "factor": 5,
         "offset": 0,
         "address": 0,
         "default": 0,
         "addition": 0,
-        "maxValue": 0,
+        "maxValue": 20,
         "minValue": 0,
         "description": {
           "arabic": "",
@@ -235,6 +235,617 @@
     }
   },
   {
+    "id": "13",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "HYD Setting"
+      }
+    ],
+    "lable": "HYD Setting",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات هیدرولیک",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "14",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Phase Control"
+      }
+    ],
+    "lable": "Phase Control",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات کنترل فاز",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "15",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Landing"
+      }
+    ],
+    "lable": "Landing",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات دور اندازی و landing",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "16",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Calibration"
+      }
+    ],
+    "lable": "Calibration",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات calibration ( موقعیت اولیه اسنسور )",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "17",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "1CF Error"
+      }
+    ],
+    "lable": "1CF Error",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات خطاهای 1cf",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "18",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Inputs Type"
+      }
+    ],
+    "lable": "Inputs Type",
+    "type": "SETTING_MULTY_SELECT",
+    "data": {
+      "settingMultySelect": {
+        "options": [
+          {
+            "value": "NO",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "NC",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "defaults": [
+          0,
+          0
+        ],
+        "addresses": [
+          0,
+          1
+        ],
+        "itemLabels": [
+          {
+            "value": "RLS",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "DRC",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "19",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Num & Talk"
+      }
+    ],
+    "lable": "Num & Talk",
+    "type": "SETTING_MULTY_GROUP",
+    "data": {
+      "settingMultyGroup": [
+        {
+          "settingOneSelect": {
+            "label": "L",
+            "address": 0,
+            "default": 0,
+            "options": [
+              {
+                "value": "0",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              }
+            ],
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        },
+        {
+          "settingOneSelect": {
+            "label": "SR",
+            "address": 0,
+            "default": 0,
+            "options": [
+              {
+                "value": "?",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "0",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "3",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "4",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "5",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "6",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "7",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "8",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "9",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "G",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "P",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "B",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "r",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "a",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "b",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "c",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "d",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "e",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "f",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "g",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "h",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              }
+            ],
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        },
+        {
+          "settingOneSelect": {
+            "label": "Talk",
+            "address": 0,
+            "default": 0,
+            "options": [
+              {
+                "value": "???",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L3",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L4",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L5",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L6",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L7",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "L8",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Grn",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Labi",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Roof",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Pool",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Par",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Par1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Par2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "B",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "B1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "B2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Tr1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Tr2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              }
+            ],
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
     "id": "2",
     "parentId": [
       {
@@ -300,6 +911,541 @@
     }
   },
   {
+    "id": "20",
+    "parentId": [
+      {
+        "id": "4",
+        "label": "Control Type"
+      }
+    ],
+    "lable": "Control Type",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Control Type",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Loaded",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "68",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "69",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "21",
+    "parentId": [
+      {
+        "id": "4",
+        "label": "Second Door"
+      }
+    ],
+    "lable": "Second Door",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "22",
+    "parentId": [
+      {
+        "id": "4",
+        "label": "5KT Type"
+      }
+    ],
+    "lable": "5KT Type",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "5KT Type",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "NO",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "NC",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "23",
+    "parentId": [
+      {
+        "id": "5",
+        "label": "WelcomeFloor"
+      }
+    ],
+    "lable": "WelcomeFloor",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "WelcomeFloor",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "0",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "1",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "2",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "3",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "4",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "5",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "6",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "OFF",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "24",
+    "parentId": [
+      {
+        "id": "6",
+        "label": "Park Floor"
+      }
+    ],
+    "lable": "Park Floor",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Park Floor",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 8,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "25",
+    "parentId": [
+      {
+        "id": "6",
+        "label": "Time To Park"
+      }
+    ],
+    "lable": "Time To Park",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "m",
+        "label": "Time To Park",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "26",
+    "parentId": [
+      {
+        "id": "6",
+        "label": "Fire Floor"
+      }
+    ],
+    "lable": "Fire Floor",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Fire Floor",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 8,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "27",
+    "parentId": [
+      {
+        "id": "6",
+        "label": "Waiting Floor"
+      }
+    ],
+    "lable": "Waiting Floor",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "Waiting Floor",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "28",
+    "parentId": [
+      {
+        "id": "7",
+        "label": "UD ReleaseDel"
+      }
+    ],
+    "lable": "UD ReleaseDel",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "UD ReleaseDel",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "29",
+    "parentId": [
+      {
+        "id": "7",
+        "label": "TC ReleaseDel"
+      }
+    ],
+    "lable": "TC ReleaseDel",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "TC ReleaseDel",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
     "id": "3",
     "parentId": [
       {
@@ -311,9 +1457,475 @@
     "type": "SETTING_ON_PARAMETER",
     "data": {
       "settingOneParameter": {
-        "unit": "",
+        "unit": "s",
         "label": "Travel Time",
         "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "30",
+    "parentId": [
+      {
+        "id": "7",
+        "label": "1CF Delay"
+      }
+    ],
+    "lable": "1CF Delay",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "31",
+    "parentId": [
+      {
+        "id": "7",
+        "label": "Leveling Time"
+      }
+    ],
+    "lable": "Leveling Time",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "S",
+        "label": "Leveling Time",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "32",
+    "parentId": [
+      {
+        "id": "7",
+        "label": "Standby Time"
+      }
+    ],
+    "lable": "Standby Time",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "S",
+        "label": "Standby Time",
+        "factor": 5,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "33",
+    "parentId": [
+      {
+        "id": "7",
+        "label": "URA Delay"
+      }
+    ],
+    "lable": "URA Delay",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "URA Delay",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "34",
+    "parentId": [
+      {
+        "id": "8",
+        "label": "Enable"
+      }
+    ],
+    "lable": "Enable",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Enable",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Disable",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "Enable",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "35",
+    "parentId": [
+      {
+        "id": "8",
+        "label": "Fast OverC"
+      }
+    ],
+    "lable": "Fast OverC",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "A",
+        "label": "Fast OverC",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 100,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "36",
+    "parentId": [
+      {
+        "id": "8",
+        "label": "Slow OverC"
+      }
+    ],
+    "lable": "Slow OverC",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "A",
+        "label": "Slow OverC",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "37",
+    "parentId": [
+      {
+        "id": "8",
+        "label": "Time OverC"
+      }
+    ],
+    "lable": "Time OverC",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Time OverC",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 100,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "38",
+    "parentId": [
+      {
+        "id": "13",
+        "label": "StartSlow Del"
+      }
+    ],
+    "lable": "StartSlow Del",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "StartSlow Del",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "39",
+    "parentId": [
+      {
+        "id": "13",
+        "label": "StartFast Del"
+      }
+    ],
+    "lable": "StartFast Del",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "StartFast Del",
+        "factor": -10,
         "offset": 0,
         "address": 0,
         "default": 0,
@@ -362,6 +1974,609 @@
       "arabic": "",
       "german": "",
       "english": "",
+      "persian": "گروه تنظیمات مربوط به درب",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "40",
+    "parentId": [
+      {
+        "id": "13",
+        "label": "Star To Delta"
+      }
+    ],
+    "lable": "Star To Delta",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "Star To Delta",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "41",
+    "parentId": [
+      {
+        "id": "13",
+        "label": "MotorStartDel"
+      }
+    ],
+    "lable": "MotorStartDel",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "MotorStartDel",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "42",
+    "parentId": [
+      {
+        "id": "17",
+        "label": "Enable"
+      }
+    ],
+    "lable": "Enable",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Enable",
+        "address": 0,
+        "default": 0,
+        "options": [],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "43",
+    "parentId": [
+      {
+        "id": "17",
+        "label": "Timeout"
+      }
+    ],
+    "lable": "Timeout",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Timeout",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 0,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "44",
+    "parentId": [
+      {
+        "id": "14",
+        "label": "Phase Reverse"
+      }
+    ],
+    "lable": "Phase Reverse",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Phase Reverse",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Disable",
+            "description": {
+              "english": "",
+              "persian": "فعال"
+            }
+          },
+          {
+            "value": "Enable",
+            "description": {
+              "english": "",
+              "persian": "غیر فعال"
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "فعال و غیر فعال کردن خطای جابه جا بودن فاز های برق سه فاز",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "45",
+    "parentId": [
+      {
+        "id": "14",
+        "label": "Phase Fault"
+      }
+    ],
+    "lable": "Phase Fault",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Phase Fault",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Disable",
+            "description": {
+              "english": "",
+              "persian": "فعال"
+            }
+          },
+          {
+            "value": "Enable",
+            "description": {
+              "english": "",
+              "persian": "غیر فعال"
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "فعال و غیر فعال کردن تشخیص خطاهای سه فاز ",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "46",
+    "parentId": [
+      {
+        "id": "14",
+        "label": "One Phase"
+      }
+    ],
+    "lable": "One Phase",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "One Phase",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Disable",
+            "description": {
+              "english": "",
+              "persian": "غیر فعال"
+            }
+          },
+          {
+            "value": "Enable",
+            "description": {
+              "english": "",
+              "persian": "فعال"
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "ماژول کنترل فاز دستگاه عملکرد تکفاز داشته باشد یا سه فاز",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "47",
+    "parentId": [
+      {
+        "id": "15",
+        "label": "CF3 Delay"
+      }
+    ],
+    "lable": "CF3 Delay",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "CF3 Delay",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "ایجاد تاخیر روی تشخیص cf3",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "48",
+    "parentId": [
+      {
+        "id": "15",
+        "label": "CF3 Flag"
+      }
+    ],
+    "lable": "CF3 Flag",
+    "type": "SETTING_MULTY_GROUP",
+    "data": {
+      "settingMultyGroup": [
+        {
+          "settingOneSelect": {
+            "label": "jmp1",
+            "address": 0,
+            "default": 0,
+            "options": [
+              {
+                "value": "0",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              }
+            ],
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        },
+        {
+          "settingOneSelect": {
+            "label": "jmp2",
+            "address": 0,
+            "default": 0,
+            "options": [
+              {
+                "value": "-2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "-1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "0",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "1",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "2",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              }
+            ],
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات مربوط به کالیبره کردن و شناسایی موقعیت",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "49",
+    "parentId": [
+      {
+        "id": "15",
+        "label": "jump1 Speed"
+      }
+    ],
+    "lable": "jump1 Speed",
+    "type": "SETTING_MULTY_GROUP",
+    "data": {
+      "settingMultyGroup": [
+        {
+          "settingOneSelect": {
+            "label": "jump1",
+            "address": 0,
+            "default": 0,
+            "options": [
+              {
+                "value": "Slow",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Rev",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              },
+              {
+                "value": "Fast",
+                "description": {
+                  "english": "",
+                  "persian": ""
+                }
+              }
+            ],
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
       "persian": "",
       "russian": "",
       "turkish": ""
@@ -382,6 +2597,537 @@
     "lable": "Sound",
     "type": "SUBMENU",
     "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات مربوط به موسیقی و سخنگوی طبقات",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "50",
+    "parentId": [
+      {
+        "id": "13",
+        "label": "MotorStopDel"
+      }
+    ],
+    "lable": "MotorStopDel",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "MotorStopDel",
+        "factor": -10,
+        "offset": 100,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "51",
+    "parentId": [
+      {
+        "id": "16",
+        "label": "Direction"
+      }
+    ],
+    "lable": "Direction",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Direction",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "DOWN",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "UP",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "شناسایی موقعیت دفعه اول بعد از روشن شدن در چه جهتی انجام شود",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "52",
+    "parentId": [
+      {
+        "id": "16",
+        "label": "Speed"
+      }
+    ],
+    "lable": "Speed",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Speed",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Slow",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "Rev",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "Fast",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "شناسایی موقعیت اولیه با چه سرعتی انجام شود",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "53",
+    "parentId": [
+      {
+        "id": "1",
+        "label": "Emergency"
+      }
+    ],
+    "lable": "Emergency",
+    "type": "SUBMENU",
+    "data": {},
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "گروه تنظیمات حالت اضطراری",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "54",
+    "parentId": [
+      {
+        "id": "53",
+        "label": "Enable"
+      }
+    ],
+    "lable": "Enable",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Enable",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "Disable",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "Enable",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "55",
+    "parentId": [
+      {
+        "id": "53",
+        "label": "Direction"
+      }
+    ],
+    "lable": "Direction",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Direction",
+        "address": 0,
+        "default": 0,
+        "options": [
+          {
+            "value": "DOWN",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          },
+          {
+            "value": "UP",
+            "description": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        ],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "56",
+    "parentId": [
+      {
+        "id": "21",
+        "label": "Num Of Door"
+      }
+    ],
+    "lable": "Num Of Door",
+    "type": "SETTING_ON_SELECT",
+    "data": {
+      "settingOneSelect": {
+        "label": "Num Of Door",
+        "address": 0,
+        "default": 0,
+        "options": [],
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "57",
+    "parentId": [
+      {
+        "id": "21",
+        "label": "Door Select"
+      }
+    ],
+    "lable": "Door Select",
+    "type": "SETTING_MULTY_GROUP",
+    "data": {
+      "settingMultyGroup": [
+        {
+          "settingOneParameter": {
+            "unit": "",
+            "label": "Door Select",
+            "factor": 0,
+            "offset": 0,
+            "address": 0,
+            "default": 0,
+            "addition": 0,
+            "maxValue": 0,
+            "minValue": 0,
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        }
+      ]
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "58",
+    "parentId": [
+      {
+        "id": "30",
+        "label": "All Floors"
+      }
+    ],
+    "lable": "All Floors",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "All Floors",
+        "factor": -20,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 0,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "59",
+    "parentId": [
+      {
+        "id": "30",
+        "label": "Up/Down Del"
+      }
+    ],
+    "lable": "Up/Down Del",
+    "type": "SETTING_MULTY_GROUP",
+    "data": {
+      "settingMultyGroup": [
+        {
+          "settingOneParameter": {
+            "unit": "",
+            "label": "UP",
+            "factor": -20,
+            "offset": 0,
+            "address": 0,
+            "default": 0,
+            "addition": 0,
+            "maxValue": 0,
+            "minValue": 0,
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        },
+        {
+          "settingOneParameter": {
+            "unit": "",
+            "label": "DN",
+            "factor": -20,
+            "offset": 0,
+            "address": 0,
+            "default": 0,
+            "addition": 0,
+            "maxValue": 0,
+            "minValue": 0,
+            "description": {
+              "arabic": "",
+              "german": "",
+              "english": "",
+              "persian": "",
+              "russian": "",
+              "turkish": ""
+            },
+            "additional_description_for_ai_assistant": {
+              "english": "",
+              "persian": ""
+            }
+          }
+        }
+      ]
+    },
     "description": {
       "arabic": "",
       "german": "",
@@ -410,6 +3156,390 @@
       "arabic": "",
       "german": "",
       "english": "",
+      "persian": "گروه تنظیمات طبقه در حالت ویژه",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "60",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "Open Delay"
+      }
+    ],
+    "lable": "Open Delay",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "Open Delay",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "61",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "Close Delay"
+      }
+    ],
+    "lable": "Close Delay",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "Close Delay",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "62",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "End Door Time"
+      }
+    ],
+    "lable": "End Door Time",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "End Door Time",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 10,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "63",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "Close Timeout"
+      }
+    ],
+    "lable": "Close Timeout",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "",
+        "label": "Close Timeout",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 10,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "64",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "Door Park"
+      }
+    ],
+    "lable": "Door Park",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "Door Park",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "65",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "69debouncer"
+      }
+    ],
+    "lable": "69debouncer",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "69 Debouncer",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 30,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "66",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "68debouncer"
+      }
+    ],
+    "lable": "68debouncer",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "68debouncer",
+        "factor": -10,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 30,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
+      "persian": "",
+      "russian": "",
+      "turkish": ""
+    },
+    "additional_description_for_ai_assistant": {
+      "english": "",
+      "persian": ""
+    }
+  },
+  {
+    "id": "67",
+    "parentId": [
+      {
+        "id": "9",
+        "label": "open time"
+      }
+    ],
+    "lable": "open time",
+    "type": "SETTING_ON_PARAMETER",
+    "data": {
+      "settingOneParameter": {
+        "unit": "s",
+        "label": "open time",
+        "factor": 0,
+        "offset": 0,
+        "address": 0,
+        "default": 0,
+        "addition": 0,
+        "maxValue": 200,
+        "minValue": 0,
+        "description": {
+          "arabic": "",
+          "german": "",
+          "english": "",
+          "persian": "",
+          "russian": "",
+          "turkish": ""
+        },
+        "additional_description_for_ai_assistant": {
+          "english": "",
+          "persian": ""
+        }
+      }
+    },
+    "description": {
+      "arabic": "",
+      "german": "",
+      "english": "",
       "persian": "",
       "russian": "",
       "turkish": ""
@@ -434,7 +3564,7 @@
       "arabic": "",
       "german": "",
       "english": "",
-      "persian": "",
+      "persian": "گروه تنظیمات تایمرها",
       "russian": "",
       "turkish": ""
     },
@@ -458,7 +3588,7 @@
       "arabic": "",
       "german": "",
       "english": "",
-      "persian": "",
+      "persian": "گروه تنظیمات ایمنی موتور و محافظت از موتور",
       "russian": "",
       "turkish": ""
     },

@@ -8,13 +8,15 @@ class MenuService {
   Future<List<MenuType>> loadMenus() async {
     String jsonString;
 
-    final directory = await getApplicationDocumentsDirectory();
-    final file = File('${directory.path}/menu_json.json');
-    if (await file.exists()) {
-      jsonString = await file.readAsString();
-    } else {
-      jsonString = await rootBundle.loadString('assets/data/menu_json.json');
-    }
+    // final directory = await getApplicationDocumentsDirectory();
+    // final file = File('${directory.path}/menu_terse.json');
+    // if (await file.exists()) {
+    //   jsonString = await file.readAsString();
+    // } else {
+    //   jsonString = await rootBundle.loadString('assets/data/menu_terse.json');
+    // }
+
+    jsonString = await rootBundle.loadString('assets/data/menu_terse.json');
 
     final dynamic jsonData = jsonDecode(jsonString);
 

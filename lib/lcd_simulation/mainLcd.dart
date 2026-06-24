@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/lcd_simulation/Renderes/Rendermanager.dart';
 import 'package:flutter_application_1/lcd_simulation/models/menu_model.dart';
+import 'package:flutter_application_1/lcd_simulation/service/menu_service.dart';
 // import 'package:flutter_application_1/lcd_simulation/service/menu_service.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
+import 'package:flutter_application_1/widgets/LoadingView.dart';
 import 'package:flutter_application_1/widgets/selectLanguage.dart';
 // import 'package:flutter_application_1/widgets/LoadingView.dart';
 // import 'package:flutter_application_1/ravisApp/widgets/home_drawer.dart';
@@ -40,55 +42,44 @@ class MenusScreen extends ConsumerWidget {
   }
 }
 
+void main() => runApp(const MyApp());
 
-// void main() => runApp(const MyApp());
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-// class MyScrollBehavior extends MaterialScrollBehavior {
-//   @override
-//   Set<PointerDeviceKind> get dragDevices => {
-//     PointerDeviceKind.touch,
-//     PointerDeviceKind.mouse,
-//   };
-// }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
+      home: LoadDataMenu(),
+      // home: PdfViwer(pdfPath: 'assets/sample.pdf'),
+      theme: ThemeData(useMaterial3: true),
+    );
+  }
+}
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       scrollBehavior: MyScrollBehavior(),
-//       debugShowCheckedModeBanner: false,
+class LoadDataMenu extends StatelessWidget {
+  final MenuService _service = MenuService();
 
-//       home: LoadDataMenu(),
-//       // home: PdfViwer(pdfPath: 'assets/sample.pdf'),
-//       theme: ThemeData(useMaterial3: true),
-//     );
-//   }
-// }
+  LoadDataMenu({super.key});
 
-// class LoadDataMenu extends StatelessWidget {
-//   final MenuService _service = MenuService();
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<MenuType>>(
+      future: _service.loadMenus(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return LoadingView();
+        } else if (snapshot.hasError) {
+          return Text('Error: ${snapshot.error}');
+        }
 
-//   LoadDataMenu({super.key});
+        final menus = snapshot.data!;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return FutureBuilder<List<MenuType>>(
-//       future: _service.loadMenus(),
-//       builder: (context, snapshot) {
-//         if (snapshot.connectionState == ConnectionState.waiting) {
-//           return LoadingView();
-//         } else if (snapshot.hasError) {
-//           return Text('Error: ${snapshot.error}');
-//         }
-
-//         final menus = snapshot.data!;
-
-//         return MenusScreen(menus: menus);
-//         // return Rendermanager(menus: menus);
-//       },
-//     );
-//   }
-// }
-
+        return MenusScreen(menus: menus, board: BoardEnum.terse);
+        // return Rendermanager(menus: menus);
+      },
+    );
+  }
+}

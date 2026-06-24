@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/lcd_simulation/Renderes/RenderMultiGroupTerse.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/lcd_simulation/Renderes/RenderMultiGroup.dart';
 import 'package:flutter_application_1/lcd_simulation/Renderes/RenderMultiSelect.dart';
@@ -166,10 +167,23 @@ class _RendermanagerState extends State<Rendermanager> {
     }
 
     if (menuSelected.type == TypeMenuEnum.settingMultyGroup &&
-        menuSelected.data.settingMultyGroup != null) {
+        menuSelected.data.settingMultyGroup != null &&
+        widget.board == BoardEnum.advance) {
       activeWidget = RenderSettingMultiGroup(
         language: widget.language,
         inputData: RendererSettingMultiGroupData(
+          description: menuSelected.description,
+          onBack: oneBack,
+          items: menuSelected.data.settingMultyGroup!,
+          // description: menuSelected.description,
+        ),
+      );
+    } else if (menuSelected.type == TypeMenuEnum.settingMultyGroup &&
+        menuSelected.data.settingMultyGroup != null &&
+        widget.board == BoardEnum.terse) {
+      activeWidget = RenderSettingMultiGroupTesre(
+        language: widget.language,
+        inputData: RendererSettingMultiGroupTerseData(
           description: menuSelected.description,
           onBack: oneBack,
           items: menuSelected.data.settingMultyGroup!,
