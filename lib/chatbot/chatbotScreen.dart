@@ -5,9 +5,6 @@ import 'package:flutter_application_1/chatbot/message_type.dart';
 import 'package:flutter_application_1/chatbot/new_conv_modal.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 
-const _accent = Color(0xFF1B3C53);
-const _accentLight = Color(0xFF456882);
-
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
 
@@ -58,8 +55,9 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   void _showError(String message) {
+    final scheme = Theme.of(context).colorScheme;
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(message), backgroundColor: Colors.red.shade700),
+      SnackBar(content: Text(message), backgroundColor: scheme.error),
     );
   }
 
@@ -115,14 +113,21 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Container(
-      decoration: const BoxDecoration(
-        color: Color(0xFFF4F7F9),
+      decoration: BoxDecoration(
+        color: scheme.surface,
         gradient: LinearGradient(
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
-          colors: [Color(0x141B3C53), Color(0x1888B7C2), Color(0xFFF4F7F9)],
-          stops: [0.0, 0.45, 1.0],
+          colors: [
+            scheme.primary.withValues(alpha: isDark ? 0.15 : 0.08),
+            scheme.secondary.withValues(alpha: isDark ? 0.1 : 0.06),
+            scheme.surface,
+          ],
+          stops: const [0.0, 0.45, 1.0],
         ),
       ),
       child: Column(
@@ -154,14 +159,16 @@ class _ChatHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
-        color: _accent,
+        color: scheme.primary,
         boxShadow: [
           BoxShadow(
-            color: _accent.withValues(alpha: 0.2),
+            color: scheme.shadow.withValues(alpha: 0.2),
             blurRadius: 16,
             offset: const Offset(0, 2),
           ),
@@ -173,20 +180,20 @@ class _ChatHeader extends StatelessWidget {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.12),
+              color: scheme.onPrimary.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: const Icon(Icons.smart_toy_outlined, color: Colors.white),
+            child: Icon(Icons.smart_toy_outlined, color: scheme.onPrimary),
           ),
           const SizedBox(width: 12),
-          const Expanded(
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'AI Assistant',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: scheme.onPrimary,
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                     height: 1.2,
@@ -194,7 +201,10 @@ class _ChatHeader extends StatelessWidget {
                 ),
                 Text(
                   'test responses and agent speed',
-                  style: TextStyle(color: Colors.white70, fontSize: 12),
+                  style: TextStyle(
+                    color: scheme.onPrimary.withValues(alpha: 0.75),
+                    fontSize: 12,
+                  ),
                 ),
               ],
             ),
@@ -204,8 +214,8 @@ class _ChatHeader extends StatelessWidget {
             icon: const Icon(Icons.add_comment_outlined, size: 18),
             label: const Text('new conversation'),
             style: FilledButton.styleFrom(
-              backgroundColor: Colors.white,
-              foregroundColor: _accent,
+              backgroundColor: scheme.surface,
+              foregroundColor: scheme.primary,
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -238,11 +248,13 @@ class _ChatPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return DecoratedBox(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: scheme.surfaceContainerLow,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.grey.shade300),
+        border: Border.all(color: scheme.outlineVariant),
       ),
       child: Column(
         children: [
@@ -264,7 +276,7 @@ class _ChatPanel extends StatelessWidget {
                     },
                   ),
           ),
-          const Divider(height: 1),
+          Divider(height: 1, color: scheme.outlineVariant),
           _ChatInputBar(
             controller: textController,
             sending: sending,
@@ -282,6 +294,8 @@ class _EmptyState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -292,20 +306,20 @@ class _EmptyState extends StatelessWidget {
               width: 72,
               height: 72,
               decoration: BoxDecoration(
-                color: _accent.withValues(alpha: 0.07),
+                color: scheme.primaryContainer.withValues(alpha: 0.5),
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.smart_toy_outlined,
                 size: 40,
-                color: _accent,
+                color: scheme.primary,
               ),
             ),
             const SizedBox(height: 16),
-            const Text(
+            Text(
               'start a conversation',
               style: TextStyle(
-                color: _accent,
+                color: scheme.primary,
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
               ),
@@ -314,7 +328,7 @@ class _EmptyState extends StatelessWidget {
             Text(
               'ask a question about error codes, menus or device settings',
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.grey.shade600, fontSize: 14),
+              style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 14),
             ),
           ],
         ),
@@ -330,7 +344,16 @@ class _MessageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final isAi = message.isAi;
+
+    final bubbleColor = isAi
+        ? scheme.surfaceContainerHighest
+        : scheme.primaryContainer;
+    final avatarBg = isAi
+        ? scheme.primaryContainer.withValues(alpha: 0.5)
+        : scheme.secondaryContainer;
+    final avatarIcon = isAi ? scheme.primary : scheme.secondary;
 
     return Align(
       alignment: isAi ? Alignment.centerLeft : Alignment.centerRight,
@@ -341,10 +364,8 @@ class _MessageBubble extends StatelessWidget {
         children: [
           _AvatarIcon(
             icon: isAi ? Icons.smart_toy_outlined : Icons.person_outline,
-            backgroundColor: isAi
-                ? _accent.withValues(alpha: 0.09)
-                : const Color(0xFFE3F2FD),
-            iconColor: isAi ? _accent : const Color(0xFF1565C0),
+            backgroundColor: avatarBg,
+            iconColor: avatarIcon,
           ),
           const SizedBox(width: 12),
           Flexible(
@@ -354,18 +375,18 @@ class _MessageBubble extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
-                color: isAi ? Colors.white : const Color(0xFFE8F1F8),
+                color: bubbleColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(isAi ? 4 : 16),
                   topRight: Radius.circular(isAi ? 16 : 4),
                   bottomLeft: const Radius.circular(16),
                   bottomRight: const Radius.circular(16),
                 ),
-                border: isAi ? Border.all(color: Colors.grey.shade300) : null,
+                border: isAi ? Border.all(color: scheme.outlineVariant) : null,
                 boxShadow: isAi
                     ? [
                         BoxShadow(
-                          color: _accent.withValues(alpha: 0.08),
+                          color: scheme.shadow.withValues(alpha: 0.08),
                           blurRadius: 12,
                           offset: const Offset(0, 2),
                         ),
@@ -383,13 +404,16 @@ class _MessageBubble extends StatelessWidget {
                     child: MarkdownBody(
                       data: message.data,
                       styleSheet: MarkdownStyleSheet(
-                        p: const TextStyle(height: 1.7),
+                        p: TextStyle(height: 1.7, color: scheme.onSurface),
                         code: TextStyle(
-                          backgroundColor: Colors.black.withValues(alpha: 0.06),
+                          backgroundColor: scheme.onSurface.withValues(
+                            alpha: 0.08,
+                          ),
                           fontSize: 13,
+                          color: scheme.onSurface,
                         ),
                         codeblockDecoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.06),
+                          color: scheme.onSurface.withValues(alpha: 0.08),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         codeblockPadding: const EdgeInsets.all(12),
@@ -413,17 +437,19 @@ class _InfoChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       decoration: BoxDecoration(
-        color: _accent.withValues(alpha: 0.08),
+        color: scheme.primary.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(
         label,
-        style: const TextStyle(
-          color: _accent,
+        style: TextStyle(
+          color: scheme.primary,
           fontSize: 11,
           fontWeight: FontWeight.w600,
         ),
@@ -437,6 +463,8 @@ class _ThinkingIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Row(
@@ -444,21 +472,21 @@ class _ThinkingIndicator extends StatelessWidget {
         children: [
           _AvatarIcon(
             icon: Icons.smart_toy_outlined,
-            backgroundColor: _accent.withValues(alpha: 0.09),
-            iconColor: _accent,
+            backgroundColor: scheme.primaryContainer.withValues(alpha: 0.5),
+            iconColor: scheme.primary,
           ),
           const SizedBox(width: 12),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: scheme.surfaceContainerHighest,
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(4),
                 topRight: Radius.circular(16),
                 bottomLeft: Radius.circular(16),
                 bottomRight: Radius.circular(16),
               ),
-              border: Border.all(color: Colors.grey.shade300),
+              border: Border.all(color: scheme.outlineVariant),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -468,13 +496,16 @@ class _ThinkingIndicator extends StatelessWidget {
                   height: 16,
                   child: CircularProgressIndicator(
                     strokeWidth: 2,
-                    color: _accent,
+                    color: scheme.primary,
                   ),
                 ),
                 const SizedBox(width: 12),
                 Text(
                   'thinking...',
-                  style: TextStyle(color: Colors.grey.shade600, fontSize: 14),
+                  style: TextStyle(
+                    color: scheme.onSurfaceVariant,
+                    fontSize: 14,
+                  ),
                 ),
               ],
             ),
@@ -525,6 +556,9 @@ class _ChatInputBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final sendEnabled = !sending && canSend;
+
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Row(
@@ -539,22 +573,23 @@ class _ChatInputBar extends StatelessWidget {
               textDirection: TextDirection.rtl,
               textInputAction: TextInputAction.send,
               onSubmitted: (_) => onSend(),
+              style: TextStyle(color: scheme.onSurface),
               decoration: InputDecoration(
                 hintText: 'پیام خود را بنویسید...',
                 hintTextDirection: TextDirection.rtl,
                 filled: true,
-                fillColor: const Color(0xFFF8FAFB),
+                fillColor: scheme.surfaceContainerHighest,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
-                  borderSide: BorderSide(color: Colors.grey.shade300),
+                  borderSide: BorderSide(color: scheme.outlineVariant),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
-                  borderSide: BorderSide(color: Colors.grey.shade300),
+                  borderSide: BorderSide(color: scheme.outlineVariant),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
-                  borderSide: const BorderSide(color: _accentLight),
+                  borderSide: BorderSide(color: scheme.primary, width: 1.5),
                 ),
                 contentPadding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -565,19 +600,21 @@ class _ChatInputBar extends StatelessWidget {
           ),
           const SizedBox(width: 12),
           Material(
-            color: sending || !canSend ? Colors.grey.shade300 : _accent,
+            color: sendEnabled
+                ? scheme.primary
+                : scheme.onSurface.withValues(alpha: 0.12),
             borderRadius: BorderRadius.circular(14),
             child: InkWell(
-              onTap: sending || !canSend ? null : onSend,
+              onTap: sendEnabled ? onSend : null,
               borderRadius: BorderRadius.circular(14),
               child: SizedBox(
                 width: 48,
                 height: 48,
                 child: Icon(
                   Icons.send_rounded,
-                  color: sending || !canSend
-                      ? Colors.grey.shade500
-                      : Colors.white,
+                  color: sendEnabled
+                      ? scheme.onPrimary
+                      : scheme.onSurface.withValues(alpha: 0.38),
                 ),
               ),
             ),

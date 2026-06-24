@@ -40,11 +40,11 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
     });
   }
 
-  // void _selectPage(int index) {
-  //   setState(() {
-  //     _selectedPageIndex = index;
-  //   });
-  // }
+  void _selectPage(int index) {
+    setState(() {
+      _selectedPageIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -107,18 +107,18 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
         ],
       ),
       // drawer: HomeDrawer(),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: _selectedPageIndex,
-      //   onTap: _selectPage,
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.elevator),
-      //       activeIcon: Icon(Icons.elevator, color: Colors.red),
-      //       label: 'app',
-      //     ),
-      //     BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat Ai'),
-      //   ],
-      // ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedPageIndex,
+        onTap: _selectPage,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.elevator),
+            activeIcon: Icon(Icons.elevator, color: Colors.red),
+            label: 'app',
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat Ai'),
+        ],
+      ),
       body: activeScreen,
     );
   }

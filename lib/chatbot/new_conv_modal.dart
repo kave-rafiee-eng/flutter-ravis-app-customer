@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-const _accent = Color(0xFF1B3C53);
-const _accentLight = Color(0xFF456882);
-
 const _categories = ['کدهای خطا برد راویس', 'yaskawa l1000a'];
 
 Future<void> showNewConversationModal(
@@ -53,8 +50,11 @@ class _NewConvDialogState extends State<_NewConvDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+
     return Dialog(
       insetPadding: const EdgeInsets.symmetric(horizontal: 16),
+      backgroundColor: scheme.surface,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 460),
@@ -64,9 +64,11 @@ class _NewConvDialogState extends State<_NewConvDialog> {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-              decoration: const BoxDecoration(
-                color: _accent,
-                borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+              decoration: BoxDecoration(
+                color: scheme.primary,
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(16),
+                ),
               ),
               child: Row(
                 children: [
@@ -74,33 +76,33 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.12),
+                      color: scheme.onPrimary.withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.add_comment_outlined,
-                      color: Colors.white,
+                      color: scheme.onPrimary,
                     ),
                   ),
                   const SizedBox(width: 12),
-                  const Expanded(
+                  Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'New Conversation',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: scheme.onPrimary,
                             fontSize: 18,
                             fontWeight: FontWeight.w700,
                             height: 1.2,
                           ),
                         ),
-                        SizedBox(height: 2),
+                        const SizedBox(height: 2),
                         Text(
                           'choose topics for this chat',
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: scheme.onPrimary.withValues(alpha: 0.75),
                             fontSize: 12,
                           ),
                         ),
@@ -117,12 +119,16 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                 children: [
                   Row(
                     children: [
-                      const Icon(Icons.category_outlined, color: _accent, size: 20),
+                      Icon(
+                        Icons.category_outlined,
+                        color: scheme.primary,
+                        size: 20,
+                      ),
                       const SizedBox(width: 8),
-                      const Text(
+                      Text(
                         'Categories',
                         style: TextStyle(
-                          color: _accent,
+                          color: scheme.primary,
                           fontWeight: FontWeight.w700,
                           fontSize: 14,
                         ),
@@ -135,13 +141,13 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                             vertical: 4,
                           ),
                           decoration: BoxDecoration(
-                            color: _accent.withValues(alpha: 0.07),
+                            color: scheme.primary.withValues(alpha: 0.12),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
                             '$_selectedCount selected',
-                            style: const TextStyle(
-                              color: _accent,
+                            style: TextStyle(
+                              color: scheme.primary,
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                             ),
@@ -157,8 +163,8 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                       padding: const EdgeInsets.only(bottom: 10),
                       child: Material(
                         color: isSelected
-                            ? _accent.withValues(alpha: 0.03)
-                            : Colors.white,
+                            ? scheme.primaryContainer.withValues(alpha: 0.4)
+                            : scheme.surfaceContainerLow,
                         borderRadius: BorderRadius.circular(12),
                         child: InkWell(
                           onTap: () => _toggle(index),
@@ -171,8 +177,10 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               border: Border.all(
-                                color: isSelected ? _accent : Colors.grey.shade300,
-                                width: 2,
+                                color: isSelected
+                                    ? scheme.primary
+                                    : scheme.outlineVariant,
+                                width: isSelected ? 2 : 1,
                               ),
                             ),
                             child: Row(
@@ -180,8 +188,15 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                                 Checkbox(
                                   value: isSelected,
                                   onChanged: (_) => _toggle(index),
-                                  activeColor: _accent,
-                                  side: const BorderSide(color: _accentLight),
+                                  fillColor: WidgetStateProperty.resolveWith((
+                                    states,
+                                  ) {
+                                    if (states.contains(WidgetState.selected)) {
+                                      return scheme.primary;
+                                    }
+                                    return null;
+                                  }),
+                                  side: BorderSide(color: scheme.outline),
                                   materialTapTargetSize:
                                       MaterialTapTargetSize.shrinkWrap,
                                 ),
@@ -190,6 +205,7 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                                     _categories[index],
                                     textDirection: TextDirection.rtl,
                                     style: TextStyle(
+                                      color: scheme.onSurface,
                                       fontWeight: isSelected
                                           ? FontWeight.w600
                                           : FontWeight.w500,
@@ -197,9 +213,9 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                                   ),
                                 ),
                                 if (isSelected)
-                                  const Icon(
+                                  Icon(
                                     Icons.check_circle_outline,
-                                    color: _accent,
+                                    color: scheme.primary,
                                     size: 20,
                                   ),
                               ],
@@ -209,15 +225,15 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                       ),
                     );
                   }),
-                  const Divider(height: 32),
+                  Divider(height: 32, color: scheme.outlineVariant),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       OutlinedButton(
                         onPressed: () => Navigator.of(context).pop(),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.grey.shade700,
-                          side: BorderSide(color: Colors.grey.shade300),
+                          foregroundColor: scheme.onSurfaceVariant,
+                          side: BorderSide(color: scheme.outlineVariant),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -232,9 +248,14 @@ class _NewConvDialogState extends State<_NewConvDialog> {
                       FilledButton(
                         onPressed: _selectedCount == 0 ? null : _create,
                         style: FilledButton.styleFrom(
-                          backgroundColor: _accent,
-                          disabledBackgroundColor: Colors.grey.shade300,
-                          foregroundColor: Colors.white,
+                          backgroundColor: scheme.primary,
+                          disabledBackgroundColor: scheme.onSurface.withValues(
+                            alpha: 0.12,
+                          ),
+                          foregroundColor: scheme.onPrimary,
+                          disabledForegroundColor: scheme.onSurface.withValues(
+                            alpha: 0.38,
+                          ),
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
