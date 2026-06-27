@@ -14,7 +14,8 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:uuid/uuid.dart';
 
-const serverBaseUrl = 'http://109.125.149.108:3000';
+// const serverBaseUrl = 'http://109.125.149.108:3000';
+const serverBaseUrl = 'http://127.0.0.1:3000';
 const pdfUrl = '$serverBaseUrl/pdf/download';
 
 const _dataEndpoints = {
@@ -101,6 +102,22 @@ class _ServerconnectionStartState extends ConsumerState<ServerconnectionStart> {
 
 class ServerAndStorage {
   static const _appDataFileName = 'AppInternalData.json';
+
+  Future<bool> checkForLogin() async {
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}/$_appDataFileName');
+    return file.exists();
+  }
+
+  Future<void> saveUserIdAfterLogin(String userId) async {
+    await _saveAppInternalData(
+      AppInternalData(
+        appId: userId,
+        dataVersion: 'pending',
+        openByUpdate: false,
+      ),
+    );
+  }
 
   Future<AppInternalData> readAppInternalDataFromFile() async {
     final directory = await getApplicationDocumentsDirectory();
