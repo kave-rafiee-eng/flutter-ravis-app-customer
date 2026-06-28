@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
-// import 'package:flutter_application_1/lcd_simulation/mainLcd.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
+import 'package:flutter_application_1/screens/userInfo.dart';
 import 'package:flutter_application_1/utils/ravis_localization.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -23,7 +23,7 @@ class HomeDrawer extends ConsumerWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Text(
-              bilingualText('ماژول‌ها', 'Modules', language),
+              bilingualText('حساب کاربری', 'Account', language),
               style: theme.textTheme.labelLarge?.copyWith(
                 color: theme.colorScheme.onSurfaceVariant,
                 fontWeight: FontWeight.w600,
@@ -31,6 +31,16 @@ class HomeDrawer extends ConsumerWidget {
               ),
               textDirection: textDir,
             ),
+          ),
+          _DrawerMenuItem(
+            icon: Icons.person_outline_rounded,
+            iconColor: theme.colorScheme.primary,
+            titleFa: 'پروفایل کاربر',
+            titleEn: 'User Profile',
+            subtitleFa: 'مشاهده اطلاعات حساب و حافظه دستیار',
+            subtitleEn: 'View account info and agent memory',
+            language: language,
+            onTap: () => _navigateTo(context, const UserInfo()),
           ),
           const Spacer(),
           const Divider(height: 1),
@@ -61,10 +71,10 @@ class HomeDrawer extends ConsumerWidget {
     );
   }
 
-  // void _navigateTo(BuildContext context, Widget page) {
-  //   Navigator.pop(context);
-  //   Navigator.push(context, MaterialPageRoute(builder: (_) => page));
-  // }
+  void _navigateTo(BuildContext context, Widget page) {
+    Navigator.pop(context);
+    Navigator.push(context, MaterialPageRoute(builder: (_) => page));
+  }
 }
 
 class _DrawerHeader extends ConsumerWidget {

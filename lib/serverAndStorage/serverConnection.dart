@@ -14,8 +14,8 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:uuid/uuid.dart';
 
-// const serverBaseUrl = 'http://109.125.149.108:3000';
-const serverBaseUrl = 'http://127.0.0.1:3000';
+const serverBaseUrl = 'http://109.125.149.108:3000';
+// const serverBaseUrl = 'http://127.0.0.1:3000';
 const pdfUrl = '$serverBaseUrl/pdf/download';
 
 const _dataEndpoints = {
@@ -103,19 +103,45 @@ class _ServerconnectionStartState extends ConsumerState<ServerconnectionStart> {
 class ServerAndStorage {
   static const _appDataFileName = 'AppInternalData.json';
 
+  Future<bool> deletAppDataFile() async {
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}/$_appDataFileName');
+
+    if (await file.exists()) {
+      await file.delete();
+      return true;
+    }
+    return false;
+  }
+
   Future<bool> checkForLogin() async {
     final directory = await getApplicationDocumentsDirectory();
     final file = File('${directory.path}/$_appDataFileName');
-    return file.exists();
+
+    if (!await file.exists()) {
+      return false;
+    }
+
+    final appData = await readAppInternalDataFromFile();
+    final response = await http
+        .get(
+          Uri.parse(
+            '$serverBaseUrl/user/${Uri.encodeComponent(appData.appId)}',
+          ),
+        )
+        .timeout(const Duration(seconds: 10));
+
+    switch (response.statusCode) {
+      case 404:
+        return false;
+      default:
+        return true;
+    }
   }
 
   Future<void> saveUserIdAfterLogin(String userId) async {
     await _saveAppInternalData(
-      AppInternalData(
-        appId: userId,
-        dataVersion: 'pending',
-        openByUpdate: false,
-      ),
+      AppInternalData(appId: userId, dataVersion: '0', openByUpdate: false),
     );
   }
 
@@ -134,7 +160,8 @@ class ServerAndStorage {
     }
 
     final appData = AppInternalData(
-      appId: const Uuid().v4(),
+      // appId: const Uuid().v4(),
+      appId: "default",
       dataVersion: 'error creat new',
       openByUpdate: false,
     );

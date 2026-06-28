@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_application_1/chatbot/chatbot_history.dart';
 import 'package:http/http.dart' as http;
 
-const chatbotApiBaseUrl = 'http://10.250.212.126:8000';
+const chatbotApiBaseUrl = 'http://109.125.149.108:8000';
 
 class ChatbotResponse {
   final String answer;
@@ -17,14 +17,18 @@ class ChatbotApi {
     required String query,
     required List<LangChainHistoryMessage> history,
     bool executionReport = false,
+    required String userId,
   }) async {
+    print(chatbotApiBaseUrl);
+
     final response = await http.post(
       Uri.parse('$chatbotApiBaseUrl/agent'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
+        'userid': userId,
         'query': query,
         'history': history.map((e) => e.toJson()).toList(),
-        'executionReport': executionReport,
+        'executionReport': false,
       }),
     );
 

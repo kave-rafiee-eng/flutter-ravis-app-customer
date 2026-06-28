@@ -3,10 +3,13 @@ import 'package:flutter_application_1/chatbot/chatbot_api.dart';
 import 'package:flutter_application_1/chatbot/chatbot_history.dart';
 import 'package:flutter_application_1/chatbot/message_type.dart';
 import 'package:flutter_application_1/chatbot/new_conv_modal.dart';
+import 'package:flutter_application_1/serverAndStorage/models/appInternalData.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 
 class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key});
+  const ChatScreen({super.key, required this.appData});
+
+  final AppInternalData appData;
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -62,6 +65,8 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   Future<void> _sendQuery(String query) async {
+    print('_sendQuery');
+
     final trimmed = query.trim();
     if (trimmed.isEmpty || _sending) return;
 
@@ -72,6 +77,7 @@ class _ChatScreenState extends State<ChatScreen> {
       final response = await ChatbotApi.sendQuery(
         query: trimmed,
         history: createHistory(_messages),
+        userId: widget.appData.appId,
       );
       final duration =
           DateTime.now().difference(startTime).inMilliseconds / 1000;
@@ -200,7 +206,7 @@ class _ChatHeader extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'test responses and agent speed',
+                  'Rivas ai agent',
                   style: TextStyle(
                     color: scheme.onPrimary.withValues(alpha: 0.75),
                     fontSize: 12,

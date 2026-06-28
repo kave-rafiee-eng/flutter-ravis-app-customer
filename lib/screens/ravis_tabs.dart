@@ -3,7 +3,7 @@ import 'package:flutter_application_1/chatbot/chatbotScreen.dart';
 import 'package:flutter_application_1/screens/HomeScreen.dart';
 import 'package:flutter_application_1/serverAndStorage/models/appInternalData.dart';
 import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
-// import 'package:flutter_application_1/widgets/home_drawer.dart';
+import 'package:flutter_application_1/widgets/home_drawer.dart';
 // import 'package:flutter_application_1/providers/languageProvider.dart';
 import 'package:flutter_application_1/providers/themeModeProvider.dart';
 import 'package:flutter_application_1/widgets/selectLanguage.dart';
@@ -23,11 +23,6 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
   @override
   void initState() {
     super.initState();
-    appData = AppInternalData(
-      appId: 'sdsdsd',
-      dataVersion: 'sss',
-      openByUpdate: false,
-    );
     _loadData();
   }
 
@@ -54,7 +49,7 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
 
     Widget activeScreen = Homescreen();
     if (_selectedPageIndex == 1) {
-      activeScreen = ChatScreen();
+      activeScreen = ChatScreen(appData: appData);
       // activeScreen = Center(
       //   child: Column(
       //     children: [
@@ -106,7 +101,7 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
           ),
         ],
       ),
-      // drawer: HomeDrawer(),
+      drawer: HomeDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedPageIndex,
         onTap: _selectPage,

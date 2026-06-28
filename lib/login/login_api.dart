@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter_application_1/login/user_profile.dart';
 import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
 import 'package:http/http.dart' as http;
 
@@ -14,6 +15,18 @@ class LoginApiException implements Exception {
 
 class LoginApi {
   static const _timeout = Duration(seconds: 20);
+
+  static Future<UserProfile> readProfileById(String id) async {
+    final response = await http
+        .get(Uri.parse('$serverBaseUrl/user/$id'))
+        .timeout(_timeout);
+
+    if (response.statusCode == 200) {
+      return UserProfile.fromJson(_decodeUser(response));
+    }
+
+    throw LoginApiException(extractErrorMessage(response));
+  }
 
   static Future<void> verifyCode({
     required String phone,
@@ -57,8 +70,7 @@ class LoginApi {
         )
         .timeout(_timeout);
 
-    if (createResponse.statusCode != 200 &&
-        createResponse.statusCode != 201) {
+    if (createResponse.statusCode != 200 && createResponse.statusCode != 201) {
       throw LoginApiException(extractErrorMessage(createResponse));
     }
 
