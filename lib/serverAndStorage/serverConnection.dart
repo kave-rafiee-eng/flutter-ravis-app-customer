@@ -122,20 +122,24 @@ class ServerAndStorage {
       return false;
     }
 
-    final appData = await readAppInternalDataFromFile();
-    final response = await http
-        .get(
-          Uri.parse(
-            '$serverBaseUrl/user/${Uri.encodeComponent(appData.appId)}',
-          ),
-        )
-        .timeout(const Duration(seconds: 10));
+    try {
+      final appData = await readAppInternalDataFromFile();
+      final response = await http
+          .get(
+            Uri.parse(
+              '$serverBaseUrl/user/${Uri.encodeComponent(appData.appId)}',
+            ),
+          )
+          .timeout(const Duration(seconds: 10));
 
-    switch (response.statusCode) {
-      case 404:
-        return false;
-      default:
-        return true;
+      switch (response.statusCode) {
+        case 404:
+          return false;
+        default:
+          return true;
+      }
+    } catch (err) {
+      return true;
     }
   }
 
