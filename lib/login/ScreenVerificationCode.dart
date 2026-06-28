@@ -315,46 +315,46 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
   }
 }
 
-class _VerificationHeader extends StatelessWidget {
-  final ColorScheme scheme;
+// class _VerificationHeader extends StatelessWidget {
+//   final ColorScheme scheme;
 
-  const _VerificationHeader({required this.scheme});
+//   const _VerificationHeader({required this.scheme});
 
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+//   @override
+//   Widget build(BuildContext context) {
+//     final theme = Theme.of(context);
 
-    return Column(
-      children: [
-        Container(
-          width: 72,
-          height: 72,
-          decoration: BoxDecoration(
-            color: scheme.surface,
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: scheme.primary.withValues(alpha: 0.15),
-                blurRadius: 20,
-                offset: const Offset(0, 6),
-              ),
-            ],
-            border: Border.all(
-              color: scheme.outlineVariant.withValues(alpha: 0.4),
-            ),
-          ),
-          child: Icon(Icons.sms_outlined, size: 36, color: scheme.primary),
-        ),
-        const SizedBox(height: 16),
-        Text(
-          'تأیید شماره موبایل',
-          textDirection: TextDirection.rtl,
-          style: theme.textTheme.titleMedium?.copyWith(
-            fontWeight: FontWeight.w700,
-            color: scheme.primary,
-          ),
-        ),
-      ],
-    );
-  }
-}
+//     return Column(
+//       children: [
+//         Container(
+//           width: 72,
+//           height: 72,
+//           decoration: BoxDecoration(
+//             color: scheme.surface,
+//             borderRadius: BorderRadius.circular(20),
+//             boxShadow: [
+//               BoxShadow(
+//                 color: scheme.primary.withValues(alpha: 0.15),
+//                 blurRadius: 20,
+//                 offset: const Offset(0, 6),
+//               ),
+//             ],
+//             border: Border.all(
+//               color: scheme.outlineVariant.withValues(alpha: 0.4),
+//             ),
+//           ),
+//           child: Icon(Icons.sms_outlined, size: 36, color: scheme.primary),
+//         ),
+//         const SizedBox(height: 16),
+//         Text(
+//           'تأیید شماره موبایل',
+//           textDirection: TextDirection.rtl,
+//           style: theme.textTheme.titleMedium?.copyWith(
+//             fontWeight: FontWeight.w700,
+//             color: scheme.primary,
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }

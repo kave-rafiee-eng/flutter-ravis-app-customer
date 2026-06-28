@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/lcd_simulation/lcdBuffer.dart';
 import 'package:flutter_application_1/lcd_simulation/lcd_functions.dart';
-import 'package:flutter_application_1/lcd_simulation/widgets/cardDescription.dart';
+// import 'package:flutter_application_1/lcd_simulation/widgets/cardDescription.dart';
 import 'package:flutter_application_1/lcd_simulation/widgets/ShowRendered.dart';
 import 'package:flutter_application_1/lcd_simulation/widgets/textSelector.dart';
 import 'package:flutter_application_1/lcd_simulation/models/menu_model.dart';
-import 'dart:async';
+// import 'dart:async';
 
 class RendererSettingMultiGroupTerseData {
   final List<SettingMultyGroupType> items;

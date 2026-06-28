@@ -12,7 +12,7 @@ import 'package:flutter_application_1/serverAndStorage/widgets/SyncPartialView.d
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
-import 'package:uuid/uuid.dart';
+// import 'package:uuid/uuid.dart';
 
 const serverBaseUrl = 'http://109.125.149.108:3000';
 // const serverBaseUrl = 'http://127.0.0.1:3000';
