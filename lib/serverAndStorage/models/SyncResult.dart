@@ -4,11 +4,13 @@ class SyncResult {
   final AppInternalData appData;
   final List<String> savedFiles;
   final List<String> failedFiles;
+  final int unreadedTicketsCount;
 
   SyncResult({
     required this.appData,
     required this.savedFiles,
     required this.failedFiles,
+    required this.unreadedTicketsCount,
   });
 
   bool get hasAnySuccess => savedFiles.isNotEmpty;

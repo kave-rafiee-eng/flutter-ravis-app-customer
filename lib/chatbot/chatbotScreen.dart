@@ -17,7 +17,7 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _textController = TextEditingController(
-    text: 'hello',
+    text: 'سلام',
   );
   final ScrollController _scrollController = ScrollController();
   final List<MessageType> _messages = [];

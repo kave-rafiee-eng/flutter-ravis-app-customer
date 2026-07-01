@@ -9,6 +9,7 @@ import 'package:flutter_application_1/serverAndStorage/models/appInternalData.da
 import 'package:flutter_application_1/serverAndStorage/widgets/SyncErrorView.dart';
 import 'package:flutter_application_1/serverAndStorage/widgets/SyncLoadingView.dart';
 import 'package:flutter_application_1/serverAndStorage/widgets/SyncPartialView.dart';
+import 'package:flutter_application_1/tickets/ticket_api.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
@@ -50,10 +51,10 @@ class _ServerconnectionStartState extends ConsumerState<ServerconnectionStart> {
     });
   }
 
-  void _openApp() {
-    Navigator.of(
-      context,
-    ).pushReplacement(MaterialPageRoute(builder: (_) => const RavisTabs()));
+  void _openApp([SyncResult? syncResult]) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => RavisTabs(syncResult: syncResult)),
+    );
   }
 
   @override
@@ -69,7 +70,7 @@ class _ServerconnectionStartState extends ConsumerState<ServerconnectionStart> {
           return SyncErrorView(
             message: '${snapshot.error}',
             onRetry: _retrySync,
-            onContinue: _openApp,
+            onContinue: () => _openApp(),
           );
         }
 
@@ -78,19 +79,19 @@ class _ServerconnectionStartState extends ConsumerState<ServerconnectionStart> {
           return SyncErrorView(
             message: result.message,
             onRetry: _retrySync,
-            onContinue: _openApp,
+            onContinue: () => _openApp(result),
           );
         }
 
         if (result.failedFiles.isNotEmpty) {
           return SyncPartialView(
             result: result,
-            onContinue: _openApp,
+            onContinue: () => _openApp(result),
             onRetry: _retrySync,
           );
         }
 
-        WidgetsBinding.instance.addPostFrameCallback((_) => _openApp());
+        WidgetsBinding.instance.addPostFrameCallback((_) => _openApp(result));
         return const SyncLoadingView(
           title: 'Starting app...',
           subtitle: 'Sync completed successfully',
@@ -237,11 +238,23 @@ class ServerAndStorage {
       await _saveAppInternalData(currentData);
     }
 
+    final unreadedTicketsCount = await _fetchUnreadTicketsCount(appData.appId);
+
     return SyncResult(
       appData: currentData,
       savedFiles: savedFiles,
       failedFiles: failedFiles,
+      unreadedTicketsCount: unreadedTicketsCount,
     );
+  }
+
+  Future<int> _fetchUnreadTicketsCount(String userId) async {
+    try {
+      final count = await TicketApi.numOfUserUnreadedTickets(userId);
+      return count.toInt();
+    } catch (_) {
+      return 0;
+    }
   }
 
   Future<SyncResult> syncOnStartup() async {
@@ -260,7 +273,10 @@ class ServerAndStorage {
     appData.openByUpdate = false;
     await _saveAppInternalData(appData);
 
+    final unreadedTicketsCount = await _fetchUnreadTicketsCount(appData.appId);
+
     return SyncResult(
+      unreadedTicketsCount: unreadedTicketsCount,
       appData: appData,
       savedFiles: _dataEndpoints.keys.toList(),
       failedFiles: [],

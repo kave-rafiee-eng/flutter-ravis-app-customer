@@ -184,33 +184,32 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                                   ],
                                 ),
                               ),
-                              if (kDebugMode) ...[
-                                const SizedBox(height: 12),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 12,
-                                    vertical: 8,
+                              // if (kDebugMode) ...[
+                              const SizedBox(height: 12),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 12,
+                                  vertical: 8,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: scheme.tertiaryContainer.withValues(
+                                    alpha: 0.5,
                                   ),
-                                  decoration: BoxDecoration(
-                                    color: scheme.tertiaryContainer.withValues(
-                                      alpha: 0.5,
-                                    ),
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      color: scheme.outlineVariant,
-                                    ),
-                                  ),
-                                  child: Text(
-                                    'کد تست: ${widget.code}',
-                                    textAlign: TextAlign.center,
-                                    textDirection: TextDirection.rtl,
-                                    style: theme.textTheme.labelMedium
-                                        ?.copyWith(
-                                          color: scheme.onSurfaceVariant,
-                                        ),
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    color: scheme.outlineVariant,
                                   ),
                                 ),
-                              ],
+                                child: Text(
+                                  'کد تست: ${widget.code}',
+                                  textAlign: TextAlign.center,
+                                  textDirection: TextDirection.rtl,
+                                  style: theme.textTheme.labelMedium?.copyWith(
+                                    color: scheme.onSurfaceVariant,
+                                  ),
+                                ),
+                              ),
+                              // ],
                               const SizedBox(height: 24),
                               TextFormField(
                                 controller: _codeController,

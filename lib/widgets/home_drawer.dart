@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/lcd_simulation/enums/Language_enums.dart';
 import 'package:flutter_application_1/providers/languageProvider.dart';
 import 'package:flutter_application_1/screens/userInfo.dart';
+import 'package:flutter_application_1/tickets/Screens/listTicketsScreen.dart';
 import 'package:flutter_application_1/utils/ravis_localization.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -42,6 +43,17 @@ class HomeDrawer extends ConsumerWidget {
             language: language,
             onTap: () => _navigateTo(context, const UserInfo()),
           ),
+          _DrawerMenuItem(
+            icon: Icons.confirmation_number_outlined,
+            iconColor: theme.colorScheme.tertiary,
+            titleFa: 'تیکت‌های پشتیبانی',
+            titleEn: 'Support Tickets',
+            subtitleFa: 'مشاهده و پیگیری درخواست‌های پشتیبانی',
+            subtitleEn: 'View and track your support requests',
+            language: language,
+            onTap: () => _navigateTo(context, const ListTicketsScreen()),
+          ),
+
           const Spacer(),
           const Divider(height: 1),
           Padding(
