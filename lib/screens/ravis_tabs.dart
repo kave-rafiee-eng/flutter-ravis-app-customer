@@ -5,6 +5,7 @@ import 'package:flutter_application_1/serverAndStorage/models/SyncResult.dart';
 import 'package:flutter_application_1/serverAndStorage/models/appInternalData.dart';
 import 'package:flutter_application_1/serverAndStorage/serverConnection.dart';
 import 'package:flutter_application_1/tickets/Screens/listTicketsScreen.dart';
+import 'package:flutter_application_1/webview/WebViewTestPage.dart';
 import 'package:flutter_application_1/widgets/home_drawer.dart';
 import 'package:flutter_application_1/providers/themeModeProvider.dart';
 import 'package:flutter_application_1/widgets/selectLanguage.dart';
@@ -108,6 +109,8 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
     Widget activeScreen = Homescreen();
     if (_selectedPageIndex == 1) {
       activeScreen = ChatScreen(appData: appData);
+    } else if (_selectedPageIndex == 2) {
+      activeScreen = const WebViewTestPage();
     }
 
     return Scaffold(
@@ -153,6 +156,7 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedPageIndex,
         onTap: _selectPage,
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.elevator),
@@ -160,6 +164,7 @@ class _RavisTabsState extends ConsumerState<RavisTabs> {
             label: 'app',
           ),
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat Ai'),
+          BottomNavigationBarItem(icon: Icon(Icons.language), label: 'IOT'),
         ],
       ),
       body: activeScreen,

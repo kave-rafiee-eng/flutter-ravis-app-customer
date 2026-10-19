@@ -50,6 +50,7 @@ dependencies:
   flutter_launcher_icons: ^0.14.4
   flutter_markdown_plus: ^1.0.7
   intl_phone_number_input: ^0.7.5
+  webview_flutter: ^4.13.0
 
 dev_dependencies:
   flutter_test:
